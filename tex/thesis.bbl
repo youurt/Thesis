@@ -1,0 +1,383 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Rosenblatt}{report}{}
+      \name{author}{1}{}{%
+        {{hash=1750cd87a34d44119e7a4aab9b8012c6}{%
+           family={Rosenblatt},
+           familyi={R\bibinitperiod},
+           given={F},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{fullhash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{bibnamehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{authorbibnamehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{authornamehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{authorfullhash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Psychological Review}
+      \field{number}{6}
+      \field{title}{{THE PERCEPTRON: A PROBABILISTIC MODEL FOR INFORMATION STORAGE AND ORGANIZATION IN THE BRAIN 1}}
+      \field{type}{techreport}
+      \field{volume}{65}
+      \field{pages}{19\bibrangedash 27}
+      \range{pages}{9}
+    \endentry
+    \entry{Werbos1990}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3f6ba0fa8bc8542632efe7f31c9ee2e8}{%
+           family={Werbos},
+           familyi={W\bibinitperiod},
+           given={Paul\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \strng{fullhash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \strng{bibnamehash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \strng{authorbibnamehash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \strng{authornamehash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \strng{authorfullhash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Backpropagation is now the most widely used tool in the field of artificial neural networks. At the core of backpropagation is a method for calculating derivatives exactly and efficiently in any large system made up of elementary subsystems or calculations which are represented by known, differentiable functions; thus, backpropagation has many applications which do not involve neural networks as such. This paper first reviews basic backpropagation, a simple method which is now being widely used in areas like pattern recognition and fault diagnosis. Next, it presents the basic equations for back-propagation through time, and discusses applications to areas like pattern recognition involving dynamic systems, systems identification, and control. Finally, it describes further extensions of this method, to deal with systems other than neural networks, systems involving simultaneous equations or true recurrent networks, and other practical issues which arise with this method. Pseudocode is provided to clarify the algorithms. The chain rule forordered derivatives—the theorem which underlies backpropagation—is briefly discussed. {©} 1990, IEEE}
+      \field{issn}{15582256}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{number}{10}
+      \field{title}{{Backpropagation Through Time: What It Does and How to Do It}}
+      \field{volume}{78}
+      \field{year}{1990}
+      \field{pages}{1550\bibrangedash 1560}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/5.58337
+      \endverb
+    \endentry
+    \entry{Hinton}{report}{}
+      \name{author}{2}{}{%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=643f92e8f89f2746a4c1aa077d225755}{%
+           family={Osindero},
+           familyi={O\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{cdfb09be61c835ae48863e4d278a5539}
+      \strng{fullhash}{cdfb09be61c835ae48863e4d278a5539}
+      \strng{bibnamehash}{cdfb09be61c835ae48863e4d278a5539}
+      \strng{authorbibnamehash}{cdfb09be61c835ae48863e4d278a5539}
+      \strng{authornamehash}{cdfb09be61c835ae48863e4d278a5539}
+      \strng{authorfullhash}{cdfb09be61c835ae48863e4d278a5539}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We show how to use "complementary priors" to eliminate the explaining-away effects that make inference difficult in densely connected belief nets that have many hidden layers. Using complementary priors, we derive a fast, greedy algorithm that can learn deep, directed belief networks one layer at a time, provided the top two layers form an undirected associa-tive memory. The fast, greedy algorithm is used to initialize a slower learning procedure that fine-tunes the weights using a contrastive version of the wake-sleep algorithm. After fine-tuning, a network with three hidden layers forms a very good generative model of the joint distribution of handwritten digit images and their labels. This generative model gives better digit classification than the best discriminative learning algorithms. The low-dimensional manifolds on which the digits lie are modeled by long ravines in the free-energy landscape of the top-level associative memory, and it is easy to explore these ravines by using the directed connections to display what the associative memory has in mind.}
+      \field{title}{{A Fast Learning Algorithm for Deep Belief Nets Yee-Whye Teh}}
+      \field{type}{techreport}
+      \verb{file}
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Hinton, Osindero - Unknown - A Fast Learning Algorithm for Deep Belief Nets Yee-Whye Teh.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Schmidhuber2014}{report}{}
+      \name{author}{1}{}{%
+        {{hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={J{ü}rgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{288bdbcfe1b91ad7484d7a24f74f99ed}
+      \strng{fullhash}{288bdbcfe1b91ad7484d7a24f74f99ed}
+      \strng{bibnamehash}{288bdbcfe1b91ad7484d7a24f74f99ed}
+      \strng{authorbibnamehash}{288bdbcfe1b91ad7484d7a24f74f99ed}
+      \strng{authornamehash}{288bdbcfe1b91ad7484d7a24f74f99ed}
+      \strng{authorfullhash}{288bdbcfe1b91ad7484d7a24f74f99ed}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In recent years, deep artificial neural networks (including recurrent ones) have won numerous contests in pattern recognition and machine learning. This historical survey compactly summarises relevant work, much of it from the previous millennium. Shallow and deep learners are distinguished by the depth of their credit assignment paths, which are chains of possibly learnable, causal links between actions and effects. I review deep supervised learning (also recapitulating the history of backpropagation), unsupervised learning, reinforcement learning {\&} evolutionary computation, and indirect search for short programs encoding deep and large networks. LATEX source: Preface This is the preprint of an invited Deep Learning (DL) overview. One of its goals is to assign credit to those who contributed to the present state of the art. I acknowledge the limitations of attempting to achieve this goal. The DL research community itself may be viewed as a continually evolving, deep network of scientists who have influenced each other in complex ways. Starting from recent DL results, I tried to trace back the origins of relevant ideas through the past half century and beyond, sometimes using "local search" to follow citations of citations backwards in time. Since not all DL publications properly acknowledge earlier relevant work, additional global search strategies were employed , aided by consulting numerous neural network experts. As a result, the present preprint mostly consists of references. Nevertheless, through an expert selection bias I may have missed important work. A related bias was surely introduced by my special familiarity with the work of my own DL research group in the past quarter-century. For these reasons, this work should be viewed as merely a snapshot of an ongoing credit assignment process. To help improve it, please do not hesitate to send corrections and suggestions to juergen@idsia.ch.}
+      \field{eprinttype}{arXiv}
+      \field{title}{{Deep Learning in Neural Networks: An Overview}}
+      \field{type}{techreport}
+      \field{year}{2014}
+      \verb{eprint}
+      \verb 1404.7828v4
+      \endverb
+      \verb{file}
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Schmidhuber - 2014 - Deep Learning in Neural Networks An Overview.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.idsia.ch/˜juergen/DeepLearning8Oct2014.texCompleteBIBTEXfile
+      \endverb
+      \verb{url}
+      \verb http://www.idsia.ch/%CB%9Cjuergen/DeepLearning8Oct2014.texCompleteBIBTEXfile
+      \endverb
+    \endentry
+    \entry{Rumelhart1986}{article}{}
+      \name{author}{3}{}{%
+        {{hash=55cd5380bb5b15032a6d5a2015f56e3f}{%
+           family={Rumelhart},
+           familyi={R\bibinitperiod},
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6cbc29ad7fd57ffdb9ed4728418fd988}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Ronald\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{fullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{bibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authorbibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authornamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authorfullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We describe a new learning procedure, back-propagation, for networks of neurone-like units. The procedure repeatedly adjusts the weights of the connections in the network so as to minimize a measure of the difference between the actual output vector of the net and the desired output vector. As a result of the weight adjustments, internal 'hidden' units which are not part of the input or output come to represent important features of the task domain, and the regularities in the task are captured by the interactions of these units. The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure 1. {©} 1986 Nature Publishing Group.}
+      \field{issn}{00280836}
+      \field{journaltitle}{Nature}
+      \field{number}{6088}
+      \field{title}{{Learning representations by back-propagating errors}}
+      \field{volume}{323}
+      \field{year}{1986}
+      \verb{doi}
+      \verb 10.1038/323533a0
+      \endverb
+    \endentry
+    \entry{Herculano-Houzel2009}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=844747f22b37db160509d1c43124abcb}{%
+           family={Herculano-Houzel},
+           familyi={H\bibinithyphendelim H\bibinitperiod},
+           given={Suzana},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{844747f22b37db160509d1c43124abcb}
+      \strng{fullhash}{844747f22b37db160509d1c43124abcb}
+      \strng{bibnamehash}{844747f22b37db160509d1c43124abcb}
+      \strng{authorbibnamehash}{844747f22b37db160509d1c43124abcb}
+      \strng{authornamehash}{844747f22b37db160509d1c43124abcb}
+      \strng{authorfullhash}{844747f22b37db160509d1c43124abcb}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The human brain has often been viewed as outstanding among mammalian brains: the most cognitively able, the largest-than-expected from body size, endowed with an overdeveloped cerebral cortex that represents over 80{\%} of brain mass, and purportedly containing 100 billion neurons and 10× more glial cells. Such uniqueness was seemingly necessary to justify the superior cognitive abilities of humans over larger-brained mammals such as elephants and whales. However, our recent studies using a novel method to determine the cellular composition of the brain of humans and other primates as well as of rodents and insectivores show that, since different cellular scaling rules apply to the brains within these orders, brain size can no longer be considered a proxy for the number of neurons in the brain. These studies also showed that the human brain is not exceptional in its cellular composition, as it was found to contain as many neuronal and non-neuronal cells as would be expected of a primate brain of its size. Additionally, the so-called overdeveloped human cerebral cortex holds only 19{\%} of all brain neurons, a fraction that is similar to that found in other mammals. In what regards absolute numbers of neurons, however, the human brain does have two advantages compared to other mammalian brains: compared to rodents, and probably to whales and elephants as well, it is built according to the very economical, space-saving scaling rules that apply to other primates; and, among economically built primate brains, it is the largest, hence containing the most neurons. These findings argue in favor of a view of cognitive abilities that is centered on absolute numbers of neurons, rather than on body size or encephalization, and call for a re-examination of several concepts related to the exceptionality of the human brain. {©} 2009 Herculano-Houzel.}
+      \field{booktitle}{Frontiers in Human Neuroscience}
+      \field{issn}{16625161}
+      \field{number}{NOV}
+      \field{title}{{The human brain in numbers: A linearly scaled-up primate brain}}
+      \field{volume}{3}
+      \field{year}{2009}
+      \verb{doi}
+      \verb 10.3389/neuro.09.031.2009
+      \endverb
+    \endentry
+    \entry{IanGoodfellowYoshuaBengio2016}{book}{}
+      \name{author}{1}{}{%
+        {{hash=66d6169bd5781eda3520264ffcff3d02}{%
+           family={{Ian Goodfellow, Yoshua Bengio}},
+           familyi={I\bibinitperiod},
+           given={Aaron\bibnamedelima Courville},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{66d6169bd5781eda3520264ffcff3d02}
+      \strng{fullhash}{66d6169bd5781eda3520264ffcff3d02}
+      \strng{bibnamehash}{66d6169bd5781eda3520264ffcff3d02}
+      \strng{authorbibnamehash}{66d6169bd5781eda3520264ffcff3d02}
+      \strng{authornamehash}{66d6169bd5781eda3520264ffcff3d02}
+      \strng{authorfullhash}{66d6169bd5781eda3520264ffcff3d02}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Prmu}
+      \field{title}{{Deep Learning}}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{file}
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Ian Goodfellow, Yoshua Bengio - 2016 - Deep Learning.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Suah2017}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e78141b9fd51644bcf4ac1c177789c9d}{%
+           family={Suah},
+           familyi={S\bibinitperiod},
+           given={Faiz\bibnamedelimb Bukhari\bibnamedelima Mohd},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e78141b9fd51644bcf4ac1c177789c9d}
+      \strng{fullhash}{e78141b9fd51644bcf4ac1c177789c9d}
+      \strng{bibnamehash}{e78141b9fd51644bcf4ac1c177789c9d}
+      \strng{authorbibnamehash}{e78141b9fd51644bcf4ac1c177789c9d}
+      \strng{authornamehash}{e78141b9fd51644bcf4ac1c177789c9d}
+      \strng{authorfullhash}{e78141b9fd51644bcf4ac1c177789c9d}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A greener analytical procedure based on automated flow through system with an optical sensor is proposed for determination of Co(II). The flow through system consisted of polymer inclusion membrane (PIM) containing potassium thiocyanate (KSCN) that was placed between the measuring cell and fixed with optical sensor probe as an optical sensor for monitoring of Co(II) at 625 nm. In the presence of Co(II) ions, the colourless membrane changes to blue. The sensing membrane was prepared by incorporating SCN into a non plasticized PIM. The prepared PIM were found to be homogenous, transparent and mechanically stable. The optode shows reversible optical response in the range of 1.00 × 10−6 – 1.00 × 10−3 mol L−1 with detection limit of 6.10 × 10−7 mol L−1. The optode can be regenerated by using 0.1 mol L−1 of ethylenediaminetetraacetic acid (EDTA). The main parameters of the computer controlled flow system incorporating the flow-through optode, a multi-port selection valve and peristaltic pump were optimized too. The calculated Relative Standard Deviation (R.S.D) of the repeatability and reproducibility of the method are 0.76{\%} and 4.73{\%}, respectively. This green system has been applied to the determination of Co(II) in wastewater samples with reduced reagents and samples consumption and minimum waste generation.}
+      \field{issn}{22141812}
+      \field{journaltitle}{Analytical Chemistry Research}
+      \field{title}{{Preparation and characterization of a novel Co(II) optode based on polymer inclusion membrane}}
+      \field{volume}{12}
+      \field{year}{2017}
+      \field{pages}{40\bibrangedash 46}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/j.ancr.2017.02.001
+      \endverb
+      \verb{file}
+      \verb :Users/ugurtigu/Downloads/Zeiler-Fergus2014{\_}Chapter{\_}VisualizingAndUnderstandingCon.pdf:pdf
+      \endverb
+      \keyw{Aliquat 336,Cobalt(II),Flow through system,Green analytical chemistry,Optode,Polymer inclusion membrane}
+    \endentry
+    \entry{Taylor2017}{book}{}
+      \name{author}{1}{}{%
+        {{hash=5efe73c0ef8f0e873d520c4ea41f807e}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{5efe73c0ef8f0e873d520c4ea41f807e}
+      \strng{fullhash}{5efe73c0ef8f0e873d520c4ea41f807e}
+      \strng{bibnamehash}{5efe73c0ef8f0e873d520c4ea41f807e}
+      \strng{authorbibnamehash}{5efe73c0ef8f0e873d520c4ea41f807e}
+      \strng{authornamehash}{5efe73c0ef8f0e873d520c4ea41f807e}
+      \strng{authorfullhash}{5efe73c0ef8f0e873d520c4ea41f807e}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The Math of Neural Networks}}
+      \field{year}{2017}
+      \verb{file}
+      \verb :Users/ugurtigu/Downloads/The Math of Neural Networks by Michael Taylor, Mark Koning (z-lib.org).epub.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Nielsen}{report}{}
+      \name{author}{1}{}{%
+        {{hash=3b32fb3a134f406f7b5107358d27befe}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b32fb3a134f406f7b5107358d27befe}
+      \strng{fullhash}{3b32fb3a134f406f7b5107358d27befe}
+      \strng{bibnamehash}{3b32fb3a134f406f7b5107358d27befe}
+      \strng{authorbibnamehash}{3b32fb3a134f406f7b5107358d27befe}
+      \strng{authornamehash}{3b32fb3a134f406f7b5107358d27befe}
+      \strng{authorfullhash}{3b32fb3a134f406f7b5107358d27befe}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Neural Networks and Deep Learning}}
+      \field{type}{techreport}
+      \verb{file}
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Nielsen - Unknown - Neural Networks and Deep Learning.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://neuralnetworksanddeeplearning.com
+      \endverb
+      \verb{url}
+      \verb http://neuralnetworksanddeeplearning.com
+      \endverb
+    \endentry
+    \entry{Chollet2017}{book}{}
+      \name{author}{1}{}{%
+        {{hash=5836fc1fa037e340c8b5591da3207608}{%
+           family={Chollet},
+           familyi={C\bibinitperiod},
+           given={Francois},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{5836fc1fa037e340c8b5591da3207608}
+      \strng{fullhash}{5836fc1fa037e340c8b5591da3207608}
+      \strng{bibnamehash}{5836fc1fa037e340c8b5591da3207608}
+      \strng{authorbibnamehash}{5836fc1fa037e340c8b5591da3207608}
+      \strng{authornamehash}{5836fc1fa037e340c8b5591da3207608}
+      \strng{authorfullhash}{5836fc1fa037e340c8b5591da3207608}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780996452762}
+      \field{title}{{Deep learning with Python}}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.23919/ICIF.2018.8455530
+      \endverb
+      \verb{file}
+      \verb :Users/ugurtigu/Downloads/Deep learning with Python by Chollet, Francois (z-lib.org).pdf:pdf
+      \endverb
+    \endentry
+    \entry{AntonioGuili;AmitaKapoor;SujitPal2019}{book}{}
+      \name{author}{1}{}{%
+        {{hash=5be3f653849a463589c05d6840a52369}{%
+           family={{Antonio Guili; Amita Kapoor; Sujit Pal}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{5be3f653849a463589c05d6840a52369}
+      \strng{fullhash}{5be3f653849a463589c05d6840a52369}
+      \strng{bibnamehash}{5be3f653849a463589c05d6840a52369}
+      \strng{authorbibnamehash}{5be3f653849a463589c05d6840a52369}
+      \strng{authornamehash}{5be3f653849a463589c05d6840a52369}
+      \strng{authorfullhash}{5be3f653849a463589c05d6840a52369}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{2nd ed. Predicting house price using linear regression Deep Learning with TensorFlow 2 and Keras, Second Edition teaches deep learning techniques alongside TensorFlow (TF) and Keras. The book introduces neural networks with TensorFlow, runs through the main applications, covers two working example apps, and then dives into TF and cloudin production, TF mobile, and using TensorFlow with AutoML. Cover -- Copyright -- Packt Page -- Contributors -- Table of Contents -- Preface -- Chapter 1: Neural Network Foundations with TensorFlow 2.0 -- What is TensorFlow (TF)? -- What is Keras? -- What are the most important changes in TensorFlow 2.0? -- Introduction to neural networks -- Perceptron -- A first example of TensorFlow 2.0 code -- Multi-layer perceptron -- our first example of a network -- Problems in training the perceptron and their solutions -- Activation function -- sigmoid -- Activation function -- tanh -- Activation function -- ReLU Two additional activation functions -- ELU and LeakyReLU -- Activation functions -- In short -- what are neural networks after all? -- A real example -- recognizing handwritten digits -- One-hot encoding (OHE) -- Defining a simple neural network in TensorFlow 2.0 -- Running a simple TensorFlow 2.0 net and establishing a baseline -- Improving the simple net in TensorFlow 2.0 with hidden layers -- Further improving the simple net in TensorFlow with Dropout -- Testing different optimizers in TensorFlow 2.0 -- Increasing the number of epochs -- Controlling the optimizer learning rate Increasing the number of internal hidden neurons -- Increasing the size of batch computation -- Summarizing experiments run for recognizing handwritten charts -- Regularization -- Adopting regularization to avoid overfitting -- Understanding BatchNormalization -- Playing with Google Colab -- CPUs, GPUs, and TPUs -- Sentiment analysis -- Hyperparameter tuning and AutoML -- Predicting output -- A practical overview of backpropagation -- What have we learned so far? -- Towards a deep learning approach -- References -- Chapter 2: TensorFlow 1.x and 2.x -- Understanding TensorFlow 1.x TensorFlow 1.x computational graph program structure -- Computational graphs -- Working with constants, variables, and placeholders -- Examples of operations -- Constants -- Sequences -- Random tensors -- Variables -- An example of TensorFlow 1.x in TensorFlow 2.x -- Understanding TensorFlow 2.x -- Eager execution -- AutoGraph -- Keras APIs -- three programming models -- Sequential API -- Functional API -- Model subclassing -- Callbacks -- Saving a model and weights -- Training from tf.data.datasets -- tf.keras or Estimators? -- Ragged tensors -- Custom training Distributed training in TensorFlow 2.x -- Multiple GPUs -- MultiWorkerMirroredStrategy -- TPUStrategy -- ParameterServerStrategy -- Changes in namespaces -- Converting from 1.x to 2.x -- Using TensorFlow 2.x effectively -- The TensorFlow 2.x ecosystem -- Language bindings -- Keras or tf.keras? -- Summary -- Chapter 3: Regression -- What is regression? -- Prediction using linear regression -- Simple linear regression -- Multiple linear regression -- Multivariate linear regression -- TensorFlow Estimators -- Feature columns -- Input functions -- MNIST using TensorFlow Estimator API}
+      \field{isbn}{9781838823412}
+      \field{title}{{Deep Learning with TensorFlow 2 and Keras: Regression, ConvNets, GANs, RNNs, NLP, and More with TensorFlow 2 and the Keras API}}
+      \field{year}{2019}
+      \verb{file}
+      \verb :Users/ugurtigu/Downloads/Deep Learning with TensorFlow 2.0 and Keras Regression, ConvNets, GANs, RNNs, NLP more with TF 2.0 and the Keras API by Antonio Gulli, Amita Kapoor, Sujit Pal (z-lib.org).pdf:pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,39 @@
+% -------------------------------------------------------
+% Daten für die Arbeit
+% Wenn hier alles korrekt eingetragen wurde, wird das Titelblatt
+% automatisch generiert. D.h. die Datei titelblatt.tex muss nicht mehr
+% angepasst werden.
+
+% Titel der Arbeit auf Deutsch
+\newcommand{\hsmatitelde}{Clientseitiges Deep Learning durch Klassifizierung von deutschsprachigen Clickbaits}
+
+% Titel der Arbeit auf Englisch
+\newcommand{\hsmatitelen}{Client-side deep learning through classification of German clickbaits}
+
+% Weitere Informationen zur Arbeit
+\newcommand{\hsmaort}{Aachen}    % Ort
+\newcommand{\hsmaautorvname}{Ugur} % Vorname(n)
+\newcommand{\hsmaautornname}{Tigu} % Nachname(n)
+\newcommand{\hsmadatum}{\today} % Datum der Abgabe
+\newcommand{\hsmajahr}{2020} % Jahr der Abgabe
+\newcommand{\hsmafirma}{} % Firma bei der die Arbeit durchgeführt wurde
+\newcommand{\hsmabetreuer}{Prof. Dr.-Ing. Madjid Fathi, Universität Siegen} % Betreuer an der Hochschule
+\newcommand{\hsmazweitkorrektor}{Johannes Zenkert, Universität Siegen} % Betreuer im Unternehmen oder Zweitkorrektor
+\newcommand{\hsmafakultaet}{I} % I für Informatik oder E, S, B, D, M, N, W, V
+\newcommand{\hsmastudiengang}{IB} % IB IMB UIB CSB IM MTB (weitere siehe titleblatt.tex)
+
+% Zustimmung zur Veröffentlichung
+\setboolean{hsmapublizieren}{true}   % Einer Veröffentlichung wird zugestimmt
+\setboolean{hsmasperrvermerk}{false} % Die Arbeit hat keinen Sperrvermerk
+
+% -------------------------------------------------------
+% Abstract
+% Achtung: Wenn Sie im Abstrakt Anführungszeichen verwenden wollen, dann benutzen Sie
+%          nicht "` und "', sondern \enquote{}. "` und "' werden nicht richtig
+%          erkannt.
+
+% Kurze (maximal halbseitige) Beschreibung, worum es in der Arbeit geht auf Deutsch
+\newcommand{\hsmaabstractde}{Ein im Internet weit verbreitetes Phänomen sind \textit{Clickbaits-Nachrichten} (auf deutsch \enquote{Klickköder}). Ziel dieser Arbeit ist die Entwicklung eines Deep Learning Verfahrens, welches deutsche Clickbait Nachrichten automatisch erkennen soll. Die Arbeit stellt einen Datensatz vor, welches aus zwei Klassen von Nachrichten Überschriften besteht und zum trainieren eines Deep Learning Ansatzes verwendet wird. Dieser Datensatz wird durch Web Scraping erstellt und gelabelt. Das Ergebnis dieser Arbeit ist ein Modell für die Textklassifizierung, entwickelt in TensorFlow.js. Dieses Modell wird vollständig clientseitig in den Browser eingebettet und benötigt somit keinen Server.}
+
+% Kurze (maximal halbseitige) Beschreibung, worum es in der Arbeit geht auf Englisch
+\newcommand{\hsmaabstracten}{A widespread phenomenon on the Internet are clickbaits. The aim of this thesis is the development of a deep learning model which should automatically recognize German clickbait titles. The thesis presents a data set, which consists of two classes of news headlines and is used to train a deep learning approach. This data set is created using web scraping and hand-labeled. The result of this work is a model for text classification, developed in TensorFlow.js. This model is completely embedded in the browser on the client side and therefore does not require a server.}
