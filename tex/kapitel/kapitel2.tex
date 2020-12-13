@@ -35,6 +35,8 @@ Aus $wx + b$ ist die Grenzhyperebene definiert, die die Position gemäß den $w$
 
 Mit anderen Worten, ist dies ein sehr einfacher, aber effektiver Algorithmus. Beispielsweise kann das Perzeptron bei drei Eingabemerkmalen  (Rot, Grün und Blau) unterscheiden, ob die Farbe weiß ist oder nicht. Es soll beachtet werden, dass das Perzeptron keine \enquote{Vielleicht}-Antwort ausdrücken kann. Es kann mit \enquote{Ja} (1) oder \enquote{Nein} (0) antworten. Das Perzeptron-Modell kann also benutzt werden, indem durch Anpassung von $w$ und $b$, das Modell \enquote{trainiert} wird.
 
+\section{Bias}
+Der Bias kann als Maß dafür vorgestellt werden, wie einfach es ist, das Perzeptron dazu zu bringen, um eine 1 auszugeben. Um es biologischer auszudrücken, ist der Bias ein Maß dafür, wie einfach es ist, das Perzeptron zum Feuern zu bringen. Für ein Perzeptron mit einem wirklich großen Bias ist es für das Perzeptron extrem einfach, eine 1 auszugeben. Wenn der Bias jedoch sehr negativ ist, ist es für das Perzeptron schwierig, eine 1 auszugeben \cite*[7]{Nielsen2015}.
 
 \section{Mehrschichtiges Perzeptron}
 In der Vergangenheit war \enquote{Perzeptron} der Name eines Modells mit einer einzigen linearen Schicht. Wenn es mehrere Schichten hat, wurde es daher als mehrschichtiges Perzeptron (Multi-layer perceptron / MLP) bezeichnet. Die Eingabe- und Ausgabeebene  ist von außen sichtbar, während alle anderen Ebenen in der Mitte ausgeblendet sind - daher der Name ausgeblendete Ebenen (hidden layers). In diesem Zusammenhang ist eine einzelne Schicht einfach eine lineare Funktion, und der MLP wird daher erhalten, indem mehrere einzelne Schichten nacheinander gestapelt werden (siehe Abbildung~\ref{Kap2:Multi}).
@@ -57,7 +59,7 @@ Dieser Ansatz scheint sehr intuitiv zu sein, erfordert jedoch eine kleine Änder
 \section{Sigmoid-Neuron}
 Das Verhalten des Perzeptron ist sehr  \enquote{uneben}, sodass ein \enquote{glatteres} nötig ist. Wir brauchen eine Funktion, die sich ohne Diskontinuität schrittweise von 0 auf 1 ändert. Mathematisch bedeutet dies, dass wir eine stetige Funktion benötigen, mit der wir die Ableitung berechnen können.
 
-Dieses Problem kann überwunden werden, indem einen neuer Typ eines künstlichen Neurons eingeführt wird, der als Sigmoid-Neuron. Sigmoidneuronen ähneln Perzeptronen, sind jedoch so modifiziert, dass kleine Änderungen ihres Gewichts und ihres Bias nur eine geringe Änderung ihrer Leistung bewirken. Dies ist die entscheidende Tatsache, die es einem Netzwerk von Sigmoidneuronen ermöglicht, zu lernen \cite*[S. 8]{Nielsen}.
+Dieses Problem kann überwunden werden, indem einen neuer Typ eines künstlichen Neurons eingeführt wird, der als Sigmoid-Neuron. Sigmoidneuronen ähneln Perzeptronen, sind jedoch so modifiziert, dass kleine Änderungen ihres Gewichts und ihres Bias nur eine geringe Änderung ihrer Leistung bewirken. Dies ist die entscheidende Tatsache, die es einem Netzwerk von Sigmoidneuronen ermöglicht, zu lernen \cite*[8]{Nielsen2015}.
 
 Genau wie ein Perzeptron hat das Sigmoid-Neuron die Eingaben $x_1, x_2, ...$, aber anstatt nur 0 oder 1 zu sein, können diese Eingänge auch beliebige Werte zwischen 0 und 1 annehmen. Also zum Beispiel 0,123 welches eine gültige Eingabe für ein Sigmoid-Neuron ist. Ebenso wie ein Perzeptron hat das Sigmoid-Neuron Gewichte für jede Eingabe, $w_1, w_2, ...$ und einen Bias, $b$. Die Ausgabe ist jedoch nicht 0 oder 1, stattdessen ist es $\sigma$, $(wx + b)$, wobei $\sigma$ als Sigmoidfunktion bezeichnet wird und durch Formel~\ref{Formel2_2} definiert ist.
 
@@ -70,8 +72,8 @@ Genau wie ein Perzeptron hat das Sigmoid-Neuron die Eingaben $x_1, x_2, ...$, ab
 Ohne eine Aktivierungsfunktion (auch als Nichtlinearität bezeichnet) würde die dichte Schicht (dense layer) nuraus zwei linearen Operationen bestehen - einem Punktprodukt und einer Addition: $Ausgabe = Punkt (w, Eingabe) + b$. Die Schicht konnte also nur lineare Transformationen (affine Transformationen) der Eingabedaten lernen. Um Zugang zu einem viel umfangreicheren Hypothesenraum zu erhalten, wird eine Nichtlinearitäts- oder Aktivierungsfunktion benötigt \cite*[S. 72]{Chollet2017}. Es gibt weitaus mehr Aktivierungsfunktionen, als die in die in diesem Abschnitt beschriebenen. Es sollen hier nur die gängigsten 3 vorgestellt werden.
 
 \subsection{Sigmoid}
-Die Sigmoidfunktion wurde bereits mit der Formel~\ref{Formel2_2} definiert und in der Abbildung~\ref{Kap2:Sigmoid_plot} dargestellt. Sie hat kleine Ausgangsänderungen im Bereich (0, 1), wenn der Eingang im Bereich $(-\infty, \infty)$ variiert. Mathematisch ist die Funktion stetig. Ein Neuron kann das Sigmoid zur Berechnung der nichtlinearen Funktion $\sigma(z = wx + b)$ verwenden.
-Wenn $z = wx + b$ sehr groß und positiv ist, dann wird $e^z \rightarrow 0$ also $\sigma(z) \rightarrow 1$, während wenn $z = wx + b$ sehr groß und negativ ist dann wird $e^{-z} \rightarrow 0$ also $\sigma(z) \rightarrow 0$. Mit anderen Worten, ein Neuron mit Sigmoidaktivierung hat ein ähnliches Verhalten wie das Perzeptron, aber die Änderungen sind allmählich und Ausgabewerte wie 0,54321 oder 0,12345 sind vollkommen legitim. In diesem Sinne kann ein Sigmoid-Neuron \enquote{vielleicht} antworten \cite*[S. 10]{AntonioGuili;AmitaKapoor;SujitPal2019}.
+Die Sigmoidfunktion wurde bereits mit der Formel~\ref{Formel2_2} definiert und in der Abbildung~\ref{Kap2:Sigmoid_plot} dargestellt, die Ableitung der Sigmoidfunktion ist in der Formel~\ref{Formel2_2Abl}. Sie hat kleine Ausgangsänderungen im Bereich (0, 1), wenn der Eingang im Bereich $(-\infty, \infty)$ variiert. Mathematisch ist die Funktion stetig. Ein Neuron kann das Sigmoid zur Berechnung der nichtlinearen Funktion $\sigma(z = wx + b)$ verwenden.
+Wenn $z = wx + b$ sehr groß und positiv ist, dann wird $e^z \rightarrow 0$ also $\sigma(z) \rightarrow 1$, während wenn $z = wx + b$ sehr groß und negativ ist dann wird $e^{-z} \rightarrow 0$ also $\sigma(z) \rightarrow 0$. Mit anderen Worten, ein Neuron mit Sigmoidaktivierung hat ein ähnliches Verhalten wie das Perzeptron, aber die Änderungen sind allmählich und Ausgabewerte wie 0,54321 oder 0,12345 sind vollkommen legitim. In diesem Sinne kann ein Sigmoid-Neuron \enquote{vielleicht} antworten \cite*[10]{AntonioGuili;AmitaKapoor;SujitPal2019}.
 \begin{figure}[H]
   \centering
   \includegraphics[width=8cm]{kapitel2/sig_plot.png}
@@ -79,11 +81,30 @@ Wenn $z = wx + b$ sehr groß und positiv ist, dann wird $e^z \rightarrow 0$ also
   \label{Kap2:Sigmoid_plot}
 \end{figure}
 
+
+\begin{equation} \label{Formel2_2Abl}
+  \begin{array}{ c }
+    \sigma '(z)\ =\ \frac{d}{dz}\left(\frac{1}{1+e^{-z}}\right) =\frac{1}{\left( 1+e^{-z}\right)^{-2}}\frac{d}{dz} =\left( e^{-z}\right) \ =\frac{e^{-z}}{\left( 1+e^{-z}\right)}\frac{1}{\left( 1+e^{-z}\right)} \ =  \\
+    \\
+    \frac{e^{-z} +1-1}{\left( 1+e^{-z}\right)}\frac{1}{\left( 1+e^{-z}\right)} =\left(\frac{\left( 1+e^{-z}\right)}{\left( 1+e^{-z}\right)} -\frac{1}{\left( 1+e^{-z}\right)}\right)\frac{1}{\left( 1+e^{-z}\right)} = \\
+    \\
+    \left( 1-\frac{1}{\left( 1+e^{-z}\right)}\right)\left(\frac{1}{\left( 1+e^{-z}\right)}\right) =\ (1-\sigma (z))\sigma (z)
+  \end{array}
+\end{equation}
+
 \subsection{Tanh}
-Die Tanh-Aktivierungsfunktion wird mit der Formel~\ref{Formel2_3} definiert. Sie hat ihre Ausgangsänderungen im Bereich (-1, 1). Sie hat eine Struktur, die der Sigmoid-Funktion sehr ähnlich ist. Der Vorteil gegenüber der Sigmoidfunktion besteht darin, dass ihre Ableitung steiler ist, was bedeutet, dass sie mehr Wert erhalten kann (vergleiche Abbildung~\ref{Kap2:Tanh_plot}).
+Die Tanh-Aktivierungsfunktion wird mit der Formel~\ref{Formel2_3} definiert. Sie hat ihre Ausgangsänderungen im Bereich (-1, 1). Sie hat eine Struktur, die der Sigmoid-Funktion sehr ähnlich ist. Der Vorteil gegenüber der Sigmoidfunktion besteht darin, dass ihre Ableitung steiler ist, was bedeutet, dass sie mehr Wert erhalten kann (vergleiche Abbildung~\ref{Kap2:Tanh_plot}). Für die Ableitung der Tanh-Aktivierungsfunktion gilt, $e^z = \frac{d}{dz}e^z$ und $e^{-z} = \frac{d}{dz}e^{-z}$, somit ist die Abletiung dieser Funktion in der Formel~\ref{Formel2_3Abl} angegeben.
 
 \begin{equation} \label{Formel2_3}
   tanh(z) = \frac{e^{z}-e^{-z}}{e^{z}-e^{-z}}
+\end{equation}
+
+\begin{equation} \label{Formel2_3Abl}
+  \begin{array}{ c }
+    \frac{d}{dz} tanh( x) =\frac{\left( e^{z} +e^{-z}\right)\left( e^{z} +e^{-z}\right) -\left( e^{z} -e^{-z}\right)\left( e^{z} -e^{-z}\right)}{\left( e^{z} +e^{-z}\right)^{2}} = \\
+    \\
+    1-\frac{\left( e^{z} -e^{-z}\right)^{2}}{\left( e^{z} +e^{-z}\right)^{2}} \ =\ 1\ -tanh^{2}( z)
+  \end{array}
 \end{equation}
 
 \begin{figure}[H]
@@ -94,12 +115,19 @@ Die Tanh-Aktivierungsfunktion wird mit der Formel~\ref{Formel2_3} definiert. Sie
 \end{figure}
 
 \subsection{ReLu}
-Vor kurzem wurde eine sehr einfache Funktion namens ReLU (REctified Linear Unit) sehr beliebt, da sie dazu beiträgt, einige bei Sigmoiden beobachtete Optimierungsprobleme zu lösen \cite*[S. 11]{AntonioGuili;AmitaKapoor;SujitPal2019}. Eine ReLU wird relativ einfach in und wird in der Formel~\ref{Formel2_4} definiert. Wie in Abbildung~\ref{Kap2:ReLu_plot} zu sehen, ist die Funktion für negative Werte Null und wächst für positive Werte linear. Die ReLU ist auch sehr einfach zu implementieren (im Allgemeinen reichen drei Anweisungen aus), während das Sigmoid einige Größenordnungen mehr benötigt.
+Vor kurzem wurde eine sehr einfache Funktion namens ReLU (REctified Linear Unit) sehr beliebt, da sie dazu beiträgt, einige bei Sigmoiden beobachtete Optimierungsprobleme zu lösen \cite*[11]{AntonioGuili;AmitaKapoor;SujitPal2019}. Eine ReLU wird relativ einfach in und wird in der Formel~\ref{Formel2_4} definiert, die zugehörige Ableitungsfunktion ist in der Formel~\ref{Formel2_4Abl}. Wie in Abbildung~\ref{Kap2:ReLu_plot} zu sehen, ist die Funktion für negative Werte Null und wächst für positive Werte linear. Die ReLU ist relativ einfach zu implementieren (im Allgemeinen reichen drei Anweisungen aus), während das Sigmoid einige Größenordnungen mehr benötigt.
 
 \begin{equation} \label{Formel2_4}
   f( x) \ =\ \begin{cases}
-    0 & \textrm{\textit{für}}\ x < \ 0   \\
-    x & \textrm{\textit{für}}\ x\geq \ 0
+    0 & wenn\ x\  <\ 0    \\
+    x & wenn\ x\  \geq\ 0 \\
+  \end{cases}
+\end{equation}
+
+\begin{equation} \label{Formel2_4Abl}
+  f'( x) \ =\ \begin{cases}
+    1, & wenn\ x\  >\ 0 \\
+    0, & sonst
   \end{cases}
 \end{equation}
 
@@ -111,24 +139,163 @@ Vor kurzem wurde eine sehr einfache Funktion namens ReLU (REctified Linear Unit)
 \end{figure}
 
 
+\section{Optimierungsalgorithmen}
+Die meisten Deep-Learning-Algorithmen beinhalten irgendeine Art von Optimierung. Optimierung bezieht sich auf die Aufgabe, eine Funktion $f(x)$ durch Ändern von $x$ entweder zu minimieren oder zu maximieren. Wir formulieren die meisten Optimierungsprobleme normalerweise in Bezug auf die Minimierung von $f(x)$. Die Maximierung kann über einen Minimierungsalgorithmus durch Minimieren von $-$$f(x)$ erreicht werden. Die Funktion, die wir minimieren oder maximieren möchten, wird als \enquote{objektive Funktion} oder \enquote{Kriterium} bezeichnet. Wenn wir es minimieren, können wir es auch als Kostenfunktion, Verlustfunktion oder Fehlerfunktion bezeichnen. Die Funktion $x^{*} = arg\ min\ f( x)$ ist eine solche Funktion.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=14cm]{kapitel2/gradient.png}
+      \caption[Der Gradientenabstieg]{Darstellung des Gradientenabstiegs, entnommen aus \cite*{IanGoodfellowYoshuaBengio2016}. Der Algorithmus nimmt die Ableitung der Funktion bis hin zum Minimum.}
+      \label{Kap2:Grad}
+    \end{figure}
+
+    Beim Gradientenabstieg können wir uns die Qualität der Vorhersagen unseres Netzwerks als Landschaft vorstellen. Die Hügel stellen Orte (Parameterwerte oder Gewichte) dar, die viele Vorhersagefehler verursachen. Täler repräsentieren Orte mit weniger Fehlern. Wir wählen einen Punkt in dieser Landschaft, an dem wir unser anfängliches Gewicht platzieren möchten. Wir können dann das Anfangsgewicht basierend auf dem Domänenwissen auswählen (wenn wir ein Netzwerk trainieren, um eine Blumenart zu klassifizieren, wissen wir, dass die Blütenblattlänge wichtig ist, die Farbe jedoch nicht). Wenn wir das Netzwerk die ganze Arbeit machen lassen, wählen wir die Anfangsgewichte möglicherweise zufällig aus. Der Zweck besteht darin, dieses Gewicht so schnell wie möglich bergab in Bereiche mit geringerem Fehler zu bewegen. Ein Optimierungsalgorithmus wie der Gradientenabstieg kann die tatsächliche Neigung der Hügel in Bezug auf jedes Gewicht erfassen. Das heißt, es weiß, in welche Richtung es geht. Der Gefälle-Abstieg misst die Steigung (die durch eine Gewichtsänderung verursachte Fehleränderung) und nimmt das Gewicht einen Schritt in Richtung Talboden \cite*[34]{Patterson2019} (siehe Abbildung Abbildung~\ref{Kap2:Grad}).
+
+    % \paragraph{Lernrate}
+    % Die Größe des Lernens, also wird als Lernrate bezeichnet. Mit einer hohen Lernrate können wir mit jedem Schritt mehr abdecken, aber wir riskieren, den tiefsten Punkt zu überschreiten, da sich die Neigung des Hügels ständig ändert. Mit einer sehr niedrigen Lernrate können wir uns sicher in Richtung des negativen Gradienten bewegen, da wir ihn so häufig neu berechnen. Eine niedrige Lernrate ist genauer, aber die Berechnung des Gradienten ist zeitaufwändig, sodass wir sehr lange brauchen, um auf den Grund zu gehen.
 
 
-\section{Verlustfunktion und Kreuzentropie}
-Innerhalb eines neuronalen Netzwerks wandelt eine Verlustfunktion alle möglichen Fehler, in eine Zahl um, die den Gesamtfehler des Netzwerks darstellt. Im Wesentlichen ist es ein Maß dafür, wie falsch ein Netzwerk ist. Auf einer technischeren Ebene werden ein Ereignis oder Werte einer oder mehrerer Variablen einer reellen Zahl zugeordnet. Diese reelle Zahl stellt  den \enquote{Verlust} oder die \enquote{Kosten} dar, die mit dem Ereignis oder den Werten verbunden sind \cite*[S. 41]{Taylor2017}.
+    Es gibt drei Varianten des Gradientenabfalls, die sich darin unterscheiden, wie viele Daten wir zur Berechnung des Gradienten der Zielfunktion verwenden. Abhängig von der Datenmenge machen wir einen Kompromiss zwischen der Genauigkeit der Parameteraktualisierung und der Zeit, die für die Durchführung einer Aktualisierung benötigt wird \cite*{Ruder2016}. In den nächsten beiden Abschnitten werden zwei Varianten vorgestellt.
 
-\subsection{Mittlere quadratische Abweichung}
-Wie der Name sagt, wird mit der mittleren quadratischen Abweichung (MSE), der Verlust berechnet, indem der Mittelwert der quadratischen Differenzen zwischen tatsächlichen Ziel- und vorhergesagten Werten genommen wird. Sie wird in Formel~\ref{Formel2_5} definiert.
+    \subsection{Batch Gradientenabstiegsverfahren}
+    Der Standart Gradientenabstiegsverfahren, auch Batch-Gradientenabstiegsverfahren genannt, berechnet den Gradienten der Kostenfunktion zu den Parametern $\theta$ für den gesamten Trainingsdatensatz.
 
-\begin{equation} \label{Formel2_5}
-  MSE\ =\frac{1}{n}{\displaystyle \sum ^{n}_{i=1}( d-y)^2}
+
+    \begin{equation} \label{FormelGradBatch}
+      \theta = \theta - \eta \cdot \nabla_{\theta}J(\theta)
+    \end{equation}
+
+    Da der gesamte Datensatz berechnet werden muss, um nur eine Aktualisierung durchzuführen, kann der Batch-Gradientenabstieg sehr langsam sein und ist für Datensätze, die nicht in den Speicher passen, nicht zu handhaben. Der Batch-Gradientenabstieg ermöglicht es auch nicht, das Modell mit neuen Beispielen im laufenden Betrieb zu aktualisieren \cite*{Ruder2016}.
+
+    \subsection{Stochastische Gradientenabstiegsverfahren}
+
+    Im Gegensatz dazu führt der stochastische Gradientenabstiegsverfahren (SGD) eine Parameteraktualisierung für jedes Trainingsbeispiel durch. Der Batch-Gradientenabstieg führt redundante Berechnungen für große Datenmengen durch, da Gradienten für ähnliche Beispiele vor jeder Parameteraktualisierung neu berechnet werden. Der Stochastische Gradientenabstiegsverfahren beseitigt diese Redundanz, indem jeweils ein Update durchgeführt wird. Es ist daher in der Regel viel schneller und kann auch beim laufenden Lernen verwendet werden \cite*{Ruder2016}.
+
+    \begin{equation} \label{FormelGradStoch}
+      \theta = \theta - \eta \cdot \nabla_{\theta}J(\theta;x^{(i)};y^{(i)})
+    \end{equation}
+
+
+
+    \section{Lernrate im Deep Learning}
+    Die Lernrate beeinflusst den Betrag, um den die Parameter während der Optimierung angepasst werden, um den Fehler des neuronalen Netzwerks zu minimieren. Es ist ein Koeffizient, der die Größe der Schritte (Aktualisierungen) skaliert, die ein neuronales Netzwerk auf seinen Parameter (Vektor $x$) ausführt, wenn es den Verlustfunktionsraum durchquert. Ein großer Lernratenkoeffizient (z. B. 1) lässt die Parameter Sprünge machen, und kleine (z. B. 0,00001) lassen ihn langsam voranschreiten. Im Gegensatz dazu sollten kleine Lernraten letztendlich zu einem Fehlerminimum führen (es kann eher ein lokales als ein globales Minimum sein), aber sie können sehr lange dauern und die Belastung eines bereits rechenintensiven Prozesses erhöhen  \cite*[77]{Patterson2019}.
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=10cm]{kapitel2/learnrate.png}
+      \caption[Einfluss der Lernrate auf den Verlust]{Vergleich unterschiedlicher Lernraten und deren Effekt auf den Verlust. Bei niedrigen Lernraten ist eine \enquote{lineare} Verbesserungen zu sehen. Mit hohen Lernraten werden sie exponentieller. Höhere Lernraten verringern den Verlust schneller, bleiben jedoch bei schlechteren Verlustwerten hängen (grüne Linie). Dies liegt daran, dass die Optimierung zu viel \enquote{Energie} enthält und die Parameter \enquote{chaotisch herumspringen} und sich nicht an einem Ort in der Optimierungslandschaft niederlassen können (in Anlehnung an \cite*{StanfordUniversityCoursecs231n2018}). }
+      \label{Kap2:Lern}
+    \end{figure}
+
+    \section{Unteranpassung und Überanpassung}
+    Optimierungsalgorithmen versuchen zunächst, das Problem der Unteranpassung \enquote{Underfitting} zu lösen. Das heißt, eine Linie zu nehmen, die sich den Daten nicht gut annähert, und sie besser an die Daten heranzuführen. Eine gerade Linie, die über ein gekrümmtes Streudiagramm schneidet, wäre ein gutes Beispiel für eine Unteranpassung, wie in Abbildung~\ref{Kap2:OverUnder} dargestellt. Wenn die Linie zu gut zu den Daten passt, haben wir das gegenteilige Problem, das als Überanpassung \enquote{Overfitting} bezeichnet wird \cite*[27]{Patterson2019}.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=10cm]{kapitel2/overundefit.png}
+      \caption[Vergleich der Unteranpassung mit der Überanpassung]{Die Abbildung vergleicht die Überanpassung mit der Unteranpassung. Die einzelnen Punkte passen sich dem trainierten Model zu sehr an, der Verlust wird also so klein, dass die das Modell nicht mehr zuverlässige Ergebnisse liefern kann. Dies ist darauf zurückzuführen, dass das Modell \enquote{zu viel} aus dem Trainingsdatensatz gelernt hat. Unteranpassung ist der Fall, wenn das Modell aus den Trainingsdaten \enquote{nicht genug gelernt} hat, was zu einer geringen Verallgemeinerung und unzuverlässigen Vorhersagen führt (Grafik entnommen aus \cite*[27]{Patterson2019}). }
+      \label{Kap2:OverUnder}
+    \end{figure}
+
+    \section{Regularisierung}
+    Die Regularisierung hilft bei den Auswirkungen von außer Kontrolle geratenen Parametern, indem verschiedene Methoden verwendet werden, um die Parametergröße im Laufe der Zeit zu minimieren. Der Hauptzweck der Regularisierung besteht darin, die Überanpassung zu kontrollieren \cite*[79]{Patterson2019}.
+
+    Ein zentrales Problem beim maschinellen Lernen besteht darin, einen Algorithmus zu erstellen, der nicht nur bei den Trainingsdaten, sondern auch bei neuen Eingaben eine gute Leistung erbringt. Viele beim maschinellen Lernen verwendete Strategien sind explizit darauf ausgelegt, den Testfehler zu reduzieren, möglicherweise auf Kosten eines erhöhten Trainingsfehlers. Diese Strategien werden zusammen als Regularisierung bezeichnet. Tatsächlich war die Entwicklung effektiverer Regularisierungsstrategien eine der wichtigsten Forschungsanstrengungen auf diesem Gebiet, in den folgenden Abschnitten sollen sollen einige Strategien dargestellt werden. Regularisierung kann schließlich definiert werden als \enquote{jede Änderung, die wir an einem Lernalgorithmus vornehmen, um dessen Generalisierungsfehler, aber nicht seinen Trainingsfehler zu reduzieren} \cite*[228]{IanGoodfellowYoshuaBengio2016}.
+
+    \subsection{Early Stopping}
+    Wenn große Modelle mit trainiert werden, um eine bestimmte Aufgabe lösen, wird häufig festgestellt, dass der Trainingsfehler mit der Zeit stetig abnimmt, der Fehler des Validierungssatzes jedoch wieder zunimmt. Dies bedeutet, dass ein Modell mit einem besseren Validierungssatzfehler (und damit  einem besseren Testsatzfehler) erhalten werden kann, indem zu dem Zeitpunkt mit dem niedrigsten Validierungssatzfehler zur Parametereinstellung zurückgekehrt wird. Jedes Mal, wenn sich der Fehler im Validierungssatz verbessert, wird eine Kopie der Modellparameter gespeichert. Wenn der Trainingsalgorithmus beendet wird, wird diese Parameter anstelle der neuesten Parameter zurückgegeben. Diese Strategie wird als Early Sopping \enquote{frühes Stoppen} bezeichnet. Es ist wahrscheinlich die am häufigsten verwendete Form der Regularisierung. Seine Popularität ist sowohl auf seine Wirksamkeit als auch auf seine Einfachheit zurückzuführen \cite*[246]{IanGoodfellowYoshuaBengio2016}.
+
+
+    \subsection{Dropout}
+    Eine weitere Strategie um Überanpassung zu vermeiden wird in \cite*{Srivastava2014} dargestellt. Dropout bietet eine rechnerisch kostengünstige, aber leistungsstarke Methode zur Regularisierung dar. Es ist das aufteilen von mehreren Ensembles großer Netzwerke. Es wird also ein Ensemble, welches aus mehreren Subnetzwerken (sub-networks) gebildet wird \cite*[258]{IanGoodfellowYoshuaBengio2016}.
+
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=10cm]{kapitel2/dropout.png}
+      \caption[Umwandlung eines Basis-Netzwerks in ein Ensemble von Sub-Netzwerken ]{Dropout trainiert ein Ensemble. Ein Ensemble besteht aus allen Teilnetzwerken. Es wird durch das entfernen von Einheiten aufgebaut. Das Ensemble besteht aus 16 Teilmengen, aus den vier Einheiten des Basis-Netzwerks. Die 16 Subnetze werden durch das Löschen verschiedener Teilmengen von Einheiten aus dem ursprünglichen Netzwerk gebildet (entnommen aus \cite*[260]{IanGoodfellowYoshuaBengio2016}).}
+      \label{Kap2:Dropout}
+    \end{figure}
+
+    \subsection{L1 und L2}
+
+
+
+
+
+
+    \section{Verlustfunktion und Kreuzentropie}
+    \subsection{Verlustfunktionen}
+    Innerhalb eines neuronalen Netzwerks wandelt eine Verlustfunktion alle möglichen Fehler, in eine Zahl um, die den Gesamtfehler des Netzwerks darstellt. Im Wesentlichen ist es ein Maß dafür, wie falsch ein Netzwerk ist. Auf einer technischeren Ebene werden ein Ereignis oder Werte einer oder mehrerer Variablen einer reellen Zahl zugeordnet. Diese reelle Zahl stellt  den \enquote{Verlust} oder die \enquote{Kosten} dar, die mit dem Ereignis oder den Werten verbunden sind \cite*[61-62]{Taylor2017}.
+
+    Das Neuron durch lern dadurch, indem es den Gewicht und den Bias mit einer Rate ändert, die durch die partiellen Ableitungen der Kostenfunktion $\partial$$C$/$\partial$$w$ und $\partial$$C$/$\partial$$b$ bestimmt wird. Zu sagen, dass  das \enquote{Lernen langsam ist}, ist also dasselbe wie zu sagen, dass diese partiellen Ableitungen klein sind. Die Herausforderung besteht darin zu verstehen, warum sie klein sind. Um dies zu verstehen, berechnen wir die partiellen Ableitungen \cite*[61]{Nielsen2015}. Gegeben sei die quadratische Verlustfunktion:
+
+    \begin{equation} \label{Formel2_5}
+      C=\frac{( y-a)^{2}}{2},
+    \end{equation}
+
+    dabei ist $a$ die Ausgabe des Neurons, wenn die Trainingseingabe $x = 1$ ist, und $y = 0$ die entsprechende gewünschte Ausgabe. Um dies in Bezug auf Gewicht und Bias expliziter zu schreiben, sei daran erinnert, dass $a = \sigma(z)$ ist, wobei $z = wx + b$ ist. Es ergeben sich durch die Anwendung der Kettenregel folgende Gleichungen:
+
+    \begin{equation} \label{Formel2_6}
+      \frac{\partial C}{\partial w} =( a-y) \sigma '( z) x=a\sigma '( z)
+    \end{equation}
+
+    \begin{equation} \label{Formel2_7}
+      \frac{\partial C}{\partial b} =( a-y) \sigma '( z) =a\sigma '( z).
+    \end{equation}
+
+    Aus der Abbildung~\ref{Kap2:Sigmoid_plot} ist die Kurve der Sigmoidfunktion zu sehen, welches. Die Kurve wird sehr flach, wenn der Ausgang des Neurons nahe bei 1 liegt, und daher wird $\sigma'(z)$ sehr klein. Die Gleichungen~\ref{Formel2_6} und ~\ref{Formel2_7} sagen uns dann, dass $\partial$$C$/$\partial$$w$  und  $\partial$$C$/$\partial$$b$ sehr klein werden. Dies ist der Grund warum das lernen langsamer wird.
+
+  \subsection{Kreuzentropie}
+  Nach \cite*[62]{Nielsen2015} kann die Lernverlangsamung gelöst werden, indem die quadratischen Verlustfunktion durch eine andere Verlustfunktion ersetzt wird. Diese Funktion wird als als Kreuzentropie bezeichnet. Die Abbildung~\ref{Kap2:Entropie} zeigt die Kreuzentropie mit mehreren Eingabevariablen und entsprechenden Gewichten und dem Bias. Die Ausgabe des Neurons ist $a = \sigma(z)$, wobei $z =  \sum _{j} w_{j} b_{j} + b$ ist, die gewichtete Summe des Inputs. Wir definieren die Kreuzentropiekostenfunktion für dieses Neuron durch:
+
+  \begin{equation} \label{Formel2_8}
+    C=\ -\frac{1}{n}\sum _{x}[ y\ ln\ a\ +\ ( 1-y) \ ln( 1-a)]
+  \end{equation}
+
+  wobei $n$ die Gesamtzahl der Trainingselemente darstellt. Die Summe gibt die entsprechende gewünschte Ausgabe $x$ und $y$ über alle Trainingseingaben an. Zusammenfassend ist die Kreuzentropie positiv und tendiert gegen Null, wenn das Neuron
+  \enquote{besser} wird in der Berechnung der gewünschten Ausgabe $y$ für alle Trainingseingaben $x$.  Die entropieübergreifende Kostenfunktion hat jedoch den Vorteil, dass sie im Gegensatz zu den quadratischen Kosten das Problem der Verlangsamung des Lernens vermeidet. Um dies zu sehen, berechnen wir die partielle Ableitung der Kreuzentropiekosten in Bezug auf die Gewichte \cite*[63]{Nielsen2015}.
+
+  \begin{gather} \label{Formel2_9}
+    \frac{\partial C}{\partial w_{j}} =-\frac{1}{n}\sum _{x}\left(\frac{y}{\sigma ( z)} -\frac{1-y}{1-\sigma ( z)}\right)\frac{\partial \sigma }{\partial w_{j}} = \notag\\
+    \notag\\
+    -\frac{1}{n}\sum _{x}\left(\frac{y}{\sigma ( z)} -\frac{1-y}{1-\sigma ( z)}\right) \sigma '( z) x_{j} \notag\\
+  \end{gather}
+
+  \begin{equation} \label{Formel2_10}
+    \frac{\partial C}{\partial w_{j}} \ =\ \frac{1}{n}\sum _{x}\frac{\sigma '( z) x_{j}}{\sigma ( z)( 1-\sigma ( z))}( \sigma ( z) -y)
+  \end{equation}
+
+  \begin{equation} \label{Formel2_11}
+    \frac{\partial C}{\partial w_{j}} \ =\ \frac{1}{n}\sum _{x} x_{j}( \sigma ( z) -y)
+  \end{equation}
+
+
+  Die Gleichungen~\ref{Formel2_9}, ~\ref{Formel2_10} und ~\ref{Formel2_11} zeigen dass die Geschwindigkeit, mit der das Gewicht $w$  lernt, durch $\sigma(z) - y$ gesteuert wird, also durch den Fehler in der Ausgabe. Je größer der Fehler wird, desto schneller lernt das Neuron. Dies ist genau das ein gewünschtes Verhalten. Insbesondere wird die Lernverlangsamung vermieden, die durch den Term $\sigma'(z)$ in der analogen Gleichung für die quadratischen Kostenfunktion~\ref{Formel2_6} verursacht wird. Wenn wir die Kreuzentropie verwenden, wird der Term $\sigma'(z)$ aufgehoben, und wir brauchen uns keine Sorgen mehr darüber zu machen, dass er klein ist. Diese Aufhebung ist das besondere, das durch die Kreuzentropie-Kostenfunktion gewährleistet wird \cite[63-64]{Nielsen2015}.
+
+Analog zur Gleichung\label{Formel2_9}, \label{Formel2_10} und \label{Formel2_11} ergibt die Berechnung für den Bias folgende Gleichung:
+
+\begin{equation}
+  \frac{\partial C}{\partial b} \ =\ \frac{1}{n}\sum _{x}( \sigma ( z) -y).
 \end{equation}
 
-Diese Funktion ist der Durchschnitt aller Fehler, die in jeder Vorhersage gemacht wurden. Wenn eine Vorhersage weit vom wahren Wert entfernt ist, wird dieser Abstand durch die \enquote{Quadrierungsoperation} deutlicher. Außerdem kann das Quadrat den Fehler addieren, unabhängig davon, ob ein bestimmter Wert positiv oder negativ ist \cite*[17]{AntonioGuili;AmitaKapoor;SujitPal2019}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=8cm]{kapitel2/entropie.png}
+  \caption[Darstellung der Kreuzentropie am beispiel eines Neurons]{Das Neuron wird mit 3 Eingabewerten $(x_1, x_2, x_3)$ den dazugehörigen Gewichten $(W_1, W_2, W_3)$ trainiert. Der Bias ist durch $b$ angegeben und die Ausgabe mit $a = \sigma(z)$ (in Anlehnung an \cite*{Nielsen2015})}
+  \label{Kap2:Entropie}
+\end{figure}
 
-Grundsätzlich kann diese Verlustfunktion verwendet werden, wenn die Ausgabe eine reelle Zahl ist. Die MSE-Verlustfunktion wird meistens für Regressionsaufgaben verwendet.
+%   \section{Backpropagation}
+%   Wenn vorwärts gerichtetes neuronales Netzwerk (\enquote{feedforward neural network}) verwenden, um eine Eingabe $x$ zu anzunehmen und eine Ausgabe $y$ zu erzeugen, fließen die Informationen durch das Netzwerk vorwärts. Die Eingaben $x$ liefern die initialen Informationen, die sich dann bis zu den verborgenen Einheiten (\enquote{hidden layers}) auf jeder Schicht ausbreiten und schließlich die Ausgabe erzeugen. Dies wird als (\enquote{forward propagation}) bezeichnet. Während des Trainings kann die also die Ausbereitung nach vorne fortgesetzt werden. Der Back-Propagation-Algorithmus \cite*{Rumelhart1986}, oft einfach Backprop genannt, ermöglicht es den Informationen, rückwärts durch das Netzwerk zu fließen \cite[204]{IanGoodfellowYoshuaBengio2016}.
 
-\subsection{Binäre Kreuzentropie}
-\subsection{Kategoriale Kreuzentropie}
+%   Das Herzstück der Backpropagation ist ein Ausdruck aus der partiellen Ableitung, $\partial C$ / $\partial w$ wo die Kostenfunktion $C$ in Bezug auf ein beliebiges Gewicht $w$ (oder einen Bias $b$) im Netzwerk ist. Der Ausdruck sagt uns, wie schnell sich \enquote{die Kosten ändern}, wenn wir die Gewichte und den Bias ändern. Backpropagation gibt uns detaillierte Einblicke, wie das Ändern der Gewichte und des Bias das Gesamtverhalten des Netzwerks verändert \cite*[39]{Nielsen2015}.
+
+% Das Training eines neuronalen Netzwerks bedeutet im Grunde, alle \enquote{Gewichte} zu kalibrieren, indem zwei Schritte wiederholt werden: Forward Pagation und Backpropagation. Beim Forward Pagation wenden wir eine Reihe von Gewichten auf die Eingabedaten an und berechnen eine Ausgabe. Für die erste Forward Pagation werden die Gewichte zufällig ausgewählt. Beim Backpropagation messen wir die Fehlerquote der Ausgabe und passen die Gewichte entsprechend an, um den Fehler zu verringern. Neuronale Netze wiederholen sowohl die Forward Pagation als auch die Backpropagation, bis die Gewichte kalibriert sind, um eine Ausgabe genau vorherzusagen \cite{Miller}.
+
+% Durch Forward Pagation machen neuronale Netze also Vorhersagen. Eingabedaten werden Schicht für Schicht durch das Netzwerk an die letzte Schicht weitergeleitet, die eine Vorhersage ausgibt. Die Ziele der Backpropagation sind das Anpassen jedes Gewicht im Netzwerk proportional dazu, wie viel es zum Gesamtfehler beiträgt. Wenn wir den Fehler jedes Gewichts iterativ reduzieren, haben wir schließlich eine Reihe von Gewichten, die gute Vorhersagen liefern.
 
 
 % \section{Formelsatz}
