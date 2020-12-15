@@ -8,31 +8,31 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration eines Deep-Learning-Modells}}{5}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Das mehrschichtige Perzeptron}}{6}{figure.caption.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Das mehrschichtige Perzeptron}}{7}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Darstellung der Sigmoid-Aktivierungsfunktion}}{8}{figure.caption.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Darstellung der Sigmoid-Aktivierungsfunktion}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Darstellung der Tanh-Aktivierungsfunktion}}{9}{figure.caption.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Darstellung der Tanh-Aktivierungsfunktion}}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Darstellung der ReLu-Aktivierungsfunktion}}{10}{figure.caption.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Darstellung der ReLu-Aktivierungsfunktion}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Der Gradientenabstieg}}{11}{figure.caption.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Der Gradientenabstieg}}{12}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Einfluss der Lernrate auf den Verlust}}{14}{figure.caption.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Einfluss der Lernrate auf den Verlust}}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Vergleich der Unteranpassung mit der Überanpassung}}{15}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Vergleich der Unteranpassung mit der Überanpassung}}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Basis-Netzwerks und Ensemble im Vergleich}}{16}{figure.caption.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Basis-Netzwerks und Ensemble im Vergleich}}{17}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Darstellung der Kreuzentropie am beispiel eines Neurons}}{20}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Darstellung der Kreuzentropie am beispiel eines Neurons}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Vergleich eines NN mit einem CNN}}{21}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Vergleich eines NN mit einem CNN}}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Die Faltung in einem CNN}}{22}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Die Faltung in einem CNN}}{23}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Max-Pooling}}{24}{figure.caption.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Max-Pooling}}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces CNN in der Textverarbeitung}}{26}{figure.caption.18}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
