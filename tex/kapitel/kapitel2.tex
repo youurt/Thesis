@@ -21,16 +21,16 @@ Es wird geschätzt, dass V1 aus etwa 140 Millionen Neuronen besteht, zwischen de
 Das Perzeptron kann ins deutsche mit dem Begriff der \enquote{Wahrnehmung} übersetzt werden. Das Perzeptron ist ein einfacher Algorithmus mit einem Eingabevektor $x$ mit $m$ Werten $(x_2, ..., x_m)$. Es wird oft wird als \enquote{Eingabe-Features} oder einfach als \enquote{Features} bezeichnet und zurückgegeben wird entweder eine $1$ \enquote{Ja} oder eine $0$ \enquote{Nein} (siehe Formel~\ref{Formel2_1}).
 
 In Formel~\ref{Formel2_1}  ist $w$ ein Vektor welches das Gewicht darstellt, und $wx$ das Punktprodukt aus $\begin{array}{l}
-    {\textstyle \sum ^{m}_{j=1}} w_{j} x_{j} \\
-  \end{array}$, $b$ ist der Bias.
+        {\textstyle \sum ^{m}_{j=1}} w_{j} x_{j} \\
+    \end{array}$, $b$ ist der Bias.
 Aus $wx + b$ ist die Grenzhyperebene definiert, die die Position gemäß den $w$ und $b$ zugewiesenen Werten ändert.
 
 \begin{equation}
-  fx=\begin{cases}
-    1 & wx+b >0   \\
-    0 & ansonsten
-  \end{cases}
-  \label{Formel2_1}
+    fx=\begin{cases}
+        1 & wx+b >0   \\
+        0 & ansonsten
+    \end{cases}
+    \label{Formel2_1}
 \end{equation}
 
 Mit anderen Worten, ist dies ein sehr einfacher, aber effektiver Algorithmus. Beispielsweise kann das Perzeptron bei drei Eingabemerkmalen  (Rot, Grün und Blau) unterscheiden, ob die Farbe weiß ist oder nicht. Es soll beachtet werden, dass das Perzeptron keine \enquote{Vielleicht}-Antwort ausdrücken kann. Es kann mit \enquote{Ja} (1) oder \enquote{Nein} (0) antworten. Das Perzeptron-Modell kann also benutzt werden, indem durch Anpassung von $w$ und $b$, das Modell \enquote{trainiert} wird.
@@ -42,10 +42,10 @@ Der Bias kann als Maß dafür vorgestellt werden, wie einfach es ist, das Perzep
 In der Vergangenheit war \enquote{Perzeptron} der Name eines Modells mit einer einzigen linearen Schicht. Wenn es mehrere Schichten hat, wurde es daher als mehrschichtiges Perzeptron (Multi-layer perceptron / MLP) bezeichnet. Die Eingabe- und Ausgabeebene  ist von außen sichtbar, während alle anderen Ebenen in der Mitte ausgeblendet sind - daher der Name ausgeblendete Ebenen (hidden layers). In diesem Zusammenhang ist eine einzelne Schicht einfach eine lineare Funktion, und der MLP wird daher erhalten, indem mehrere einzelne Schichten nacheinander gestapelt werden (siehe Abbildung~\ref{Kap2:Multi}).
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{kapitel2/multilayer.png}
-  \caption[Das mehrschichtige Perzeptron]{Ein Beispiel für ein mehrschichtiges Perzeptron in Anlehnung an \cite{Taylor2017}: Jeder Knoten in der ersten verborgenen Schicht empfängt eine Eingabe und \enquote{feuert} eine 0 oder 1 gemäß den Werten der zugehörigen linearen Funktion. Dann wird die Ausgabe der ersten verborgenen Schicht an die zweite Schicht übergeben, wo eine andere lineare Funktion angewendet wird, deren Ergebnisse an die endgültige Ausgabeschicht übergeben werden. Die letzte Schicht besteht nur aus einem einzelnen Neuron. Es ist interessant festzustellen, dass diese geschichtete Organisation vage der Organisation des menschlichen Sichtsystems ähnelt, wie zuvor besprochen.}
-  \label{Kap2:Multi}
+    \centering
+    \includegraphics[width=12cm]{kapitel2/multilayer.png}
+    \caption[Das mehrschichtige Perzeptron]{Ein Beispiel für ein mehrschichtiges Perzeptron in Anlehnung an \cite{Taylor2017}: Jeder Knoten in der ersten verborgenen Schicht empfängt eine Eingabe und \enquote{feuert} eine 0 oder 1 gemäß den Werten der zugehörigen linearen Funktion. Dann wird die Ausgabe der ersten verborgenen Schicht an die zweite Schicht übergeben, wo eine andere lineare Funktion angewendet wird, deren Ergebnisse an die endgültige Ausgabeschicht übergeben werden. Die letzte Schicht besteht nur aus einem einzelnen Neuron. Es ist interessant festzustellen, dass diese geschichtete Organisation vage der Organisation des menschlichen Sichtsystems ähnelt, wie zuvor besprochen.}
+    \label{Kap2:Multi}
 \end{figure}
 
 Was sind die besten Entscheidungen für das Gewicht $w$ und den Bias $b$? Um diese Frage zu beantworten, wird nur ein einzelnes Neuron (ein einzelner Knoten) betrachtet.
@@ -64,7 +64,7 @@ Dieses Problem kann überwunden werden, indem einen neuer Typ eines künstlichen
 Genau wie ein Perzeptron hat das Sigmoid-Neuron die Eingaben $x_1, x_2, ...$, aber anstatt nur 0 oder 1 zu sein, können diese Eingänge auch beliebige Werte zwischen 0 und 1 annehmen. Also zum Beispiel 0,123 welches eine gültige Eingabe für ein Sigmoid-Neuron ist. Ebenso wie ein Perzeptron hat das Sigmoid-Neuron Gewichte für jede Eingabe, $w_1, w_2, ...$ und einen Bias, $b$. Die Ausgabe ist jedoch nicht 0 oder 1, stattdessen ist es $\sigma$, $(wx + b)$, wobei $\sigma$ als Sigmoidfunktion bezeichnet wird und durch Formel~\ref{Formel2_2} definiert ist.
 
 \begin{equation} \label{Formel2_2}
-  \sigma (z) = \frac{1}{1+e^{-z}}
+    \sigma (z) = \frac{1}{1+e^{-z}}
 \end{equation}
 
 
@@ -75,284 +75,284 @@ Ohne eine Aktivierungsfunktion (auch als Nichtlinearität bezeichnet) würde die
 Die Sigmoidfunktion wurde bereits mit der Formel~\ref{Formel2_2} definiert und in der Abbildung~\ref{Kap2:Sigmoid_plot} dargestellt, die Ableitung der Sigmoidfunktion ist in der Formel~\ref{Formel2_2Abl}. Sie hat kleine Ausgangsänderungen im Bereich (0, 1), wenn der Eingang im Bereich $(-\infty, \infty)$ variiert. Mathematisch ist die Funktion stetig. Ein Neuron kann das Sigmoid zur Berechnung der nichtlinearen Funktion $\sigma(z = wx + b)$ verwenden.
 Wenn $z = wx + b$ sehr groß und positiv ist, dann wird $e^z \rightarrow 0$ also $\sigma(z) \rightarrow 1$, während wenn $z = wx + b$ sehr groß und negativ ist dann wird $e^{-z} \rightarrow 0$ also $\sigma(z) \rightarrow 0$. Mit anderen Worten, ein Neuron mit Sigmoidaktivierung hat ein ähnliches Verhalten wie das Perzeptron, aber die Änderungen sind allmählich und Ausgabewerte wie 0,54321 oder 0,12345 sind vollkommen legitim. In diesem Sinne kann ein Sigmoid-Neuron \enquote{vielleicht} antworten \cite*[10]{AntonioGuili;AmitaKapoor;SujitPal2019}.
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=8cm]{kapitel2/sig_plot.png}
-  \caption[Darstellung der Sigmoid-Aktivierungsfunktion]{Darstellung der Sigmoid-Aktivierungsfunktion (eigene Darstellung)}
-  \label{Kap2:Sigmoid_plot}
+    \centering
+    \includegraphics[width=8cm]{kapitel2/sig_plot.png}
+    \caption[Darstellung der Sigmoid-Aktivierungsfunktion]{Darstellung der Sigmoid-Aktivierungsfunktion (eigene Darstellung)}
+    \label{Kap2:Sigmoid_plot}
 \end{figure}
 
 
 \begin{equation} \label{Formel2_2Abl}
-  \begin{array}{ c }
-    \sigma '(z)\ =\ \frac{d}{dz}\left(\frac{1}{1+e^{-z}}\right) =\frac{1}{\left( 1+e^{-z}\right)^{-2}}\frac{d}{dz} =\left( e^{-z}\right) \ =\frac{e^{-z}}{\left( 1+e^{-z}\right)}\frac{1}{\left( 1+e^{-z}\right)} \ =  \\
-    \\
-    \frac{e^{-z} +1-1}{\left( 1+e^{-z}\right)}\frac{1}{\left( 1+e^{-z}\right)} =\left(\frac{\left( 1+e^{-z}\right)}{\left( 1+e^{-z}\right)} -\frac{1}{\left( 1+e^{-z}\right)}\right)\frac{1}{\left( 1+e^{-z}\right)} = \\
-    \\
-    \left( 1-\frac{1}{\left( 1+e^{-z}\right)}\right)\left(\frac{1}{\left( 1+e^{-z}\right)}\right) =\ (1-\sigma (z))\sigma (z)
-  \end{array}
+    \begin{array}{ c }
+        \sigma '(z)\ =\ \frac{d}{dz}\left(\frac{1}{1+e^{-z}}\right) =\frac{1}{\left( 1+e^{-z}\right)^{-2}}\frac{d}{dz} =\left( e^{-z}\right) \ =\frac{e^{-z}}{\left( 1+e^{-z}\right)}\frac{1}{\left( 1+e^{-z}\right)} \ =  \\
+        \\
+        \frac{e^{-z} +1-1}{\left( 1+e^{-z}\right)}\frac{1}{\left( 1+e^{-z}\right)} =\left(\frac{\left( 1+e^{-z}\right)}{\left( 1+e^{-z}\right)} -\frac{1}{\left( 1+e^{-z}\right)}\right)\frac{1}{\left( 1+e^{-z}\right)} = \\
+        \\
+        \left( 1-\frac{1}{\left( 1+e^{-z}\right)}\right)\left(\frac{1}{\left( 1+e^{-z}\right)}\right) =\ (1-\sigma (z))\sigma (z)
+    \end{array}
 \end{equation}
 
 \subsection{Tanh}
 Die Tanh-Aktivierungsfunktion wird mit der Formel~\ref{Formel2_3} definiert. Sie hat ihre Ausgangsänderungen im Bereich (-1, 1). Sie hat eine Struktur, die der Sigmoid-Funktion sehr ähnlich ist. Der Vorteil gegenüber der Sigmoidfunktion besteht darin, dass ihre Ableitung steiler ist, was bedeutet, dass sie mehr Wert erhalten kann (vergleiche Abbildung~\ref{Kap2:Tanh_plot}). Für die Ableitung der Tanh-Aktivierungsfunktion gilt, $e^z = \frac{d}{dz}e^z$ und $e^{-z} = \frac{d}{dz}e^{-z}$, somit ist die Abletiung dieser Funktion in der Formel~\ref{Formel2_3Abl} angegeben.
 
 \begin{equation} \label{Formel2_3}
-  tanh(z) = \frac{e^{z}-e^{-z}}{e^{z}-e^{-z}}
+    tanh(z) = \frac{e^{z}-e^{-z}}{e^{z}-e^{-z}}
 \end{equation}
 
 \begin{equation} \label{Formel2_3Abl}
-  \begin{array}{ c }
-    \frac{d}{dz} tanh( x) =\frac{\left( e^{z} +e^{-z}\right)\left( e^{z} +e^{-z}\right) -\left( e^{z} -e^{-z}\right)\left( e^{z} -e^{-z}\right)}{\left( e^{z} +e^{-z}\right)^{2}} = \\
-    \\
-    1-\frac{\left( e^{z} -e^{-z}\right)^{2}}{\left( e^{z} +e^{-z}\right)^{2}} \ =\ 1\ -tanh^{2}( z)
-  \end{array}
+    \begin{array}{ c }
+        \frac{d}{dz} tanh( x) =\frac{\left( e^{z} +e^{-z}\right)\left( e^{z} +e^{-z}\right) -\left( e^{z} -e^{-z}\right)\left( e^{z} -e^{-z}\right)}{\left( e^{z} +e^{-z}\right)^{2}} = \\
+        \\
+        1-\frac{\left( e^{z} -e^{-z}\right)^{2}}{\left( e^{z} +e^{-z}\right)^{2}} \ =\ 1\ -tanh^{2}( z)
+    \end{array}
 \end{equation}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=8cm]{kapitel2/tanh_plot.png}
-  \caption[Darstellung der Tanh-Aktivierungsfunktion]{Darstellung der Tanh-Aktivierungsfunktion (eigene Darstellung)}
-  \label{Kap2:Tanh_plot}
+    \centering
+    \includegraphics[width=8cm]{kapitel2/tanh_plot.png}
+    \caption[Darstellung der Tanh-Aktivierungsfunktion]{Darstellung der Tanh-Aktivierungsfunktion (eigene Darstellung)}
+    \label{Kap2:Tanh_plot}
 \end{figure}
 
 \subsection{ReLu}
 Vor kurzem wurde eine sehr einfache Funktion namens ReLU (REctified Linear Unit) sehr beliebt, da sie dazu beiträgt, einige bei Sigmoiden beobachtete Optimierungsprobleme zu lösen \cite*[11]{AntonioGuili;AmitaKapoor;SujitPal2019}. Eine ReLU wird relativ einfach in und wird in der Formel~\ref{Formel2_4} definiert, die zugehörige Ableitungsfunktion ist in der Formel~\ref{Formel2_4Abl}. Wie in Abbildung~\ref{Kap2:ReLu_plot} zu sehen, ist die Funktion für negative Werte Null und wächst für positive Werte linear. Die ReLU ist relativ einfach zu implementieren (im Allgemeinen reichen drei Anweisungen aus), während das Sigmoid einige Größenordnungen mehr benötigt.
 
 \begin{equation} \label{Formel2_4}
-  f( x) \ =\ \begin{cases}
-    0 & wenn\ x\  <\ 0    \\
-    x & wenn\ x\  \geq\ 0 \\
-  \end{cases}
+    f( x) \ =\ \begin{cases}
+        0 & wenn\ x\  <\ 0    \\
+        x & wenn\ x\  \geq\ 0 \\
+    \end{cases}
 \end{equation}
 
 \begin{equation} \label{Formel2_4Abl}
-  f'( x) \ =\ \begin{cases}
-    1, & wenn\ x\  >\ 0 \\
-    0, & sonst
-  \end{cases}
+    f'( x) \ =\ \begin{cases}
+        1, & wenn\ x\  >\ 0 \\
+        0, & sonst
+    \end{cases}
 \end{equation}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=8cm]{kapitel2/relu_plot.png}
-  \caption[Darstellung der ReLu-Aktivierungsfunktion]{Darstellung der ReLu-Aktivierungsfunktion (eigene Darstellung)}
-  \label{Kap2:ReLu_plot}
+    \centering
+    \includegraphics[width=8cm]{kapitel2/relu_plot.png}
+    \caption[Darstellung der ReLu-Aktivierungsfunktion]{Darstellung der ReLu-Aktivierungsfunktion (eigene Darstellung)}
+    \label{Kap2:ReLu_plot}
 \end{figure}
 
 \subsection{softmax}
 Die grundlegende Schwierigkeit bei der Durchführung kontinuierlicher Mathematik auf einem digitalen Computer besteht darin, dass wir unendlich viele reelle Zahlen mit einer endlichen Anzahl von Bitmustern darstellen müssen. Dies bedeutet, dass für fast alle reellen Zahlen ein Näherungsfehler auftritt, wenn wir die Zahl im Computer darstellen. In vielen Fällen ist dies nur ein Rundungsfehler. Rundungsfehler sind problematisch, insbesondere wenn sie sich über viele Operationen hinweg zusammensetzen, und können dazu führen, dass theoretisch funktionierende Algorithmen in der Praxis fehlschlagen, wenn sie nicht darauf ausgelegt sind, die Anhäufung von Rundungsfehlern zu minimieren. Ein Beispiel für eine Funktion, die gegen Rundungsfehler stabilisiert, ist die Softmax-Funktion \cite*[80-81]{IanGoodfellowYoshuaBengio2016}.
 
 \begin{equation} \label{FormelSoft}
-  softmax( x)_{i} =\frac{exp( x_{i})}{\sum ^{n}_{j=1} exp( x_{j})}
+    softmax( x)_{i} =\frac{exp( x_{i})}{\sum ^{n}_{j=1} exp( x_{j})}
 \end{equation}
 
 \section{Optimierungsalgorithmen}
 Die meisten Deep-Learning-Algorithmen beinhalten irgendeine Art von Optimierung. Optimierung bezieht sich auf die Aufgabe, eine Funktion $f(x)$ durch Ändern von $x$ entweder zu minimieren oder zu maximieren. Wir formulieren die meisten Optimierungsprobleme normalerweise in Bezug auf die Minimierung von $f(x)$. Die Maximierung kann über einen Minimierungsalgorithmus durch Minimieren von $-$$f(x)$ erreicht werden. Die Funktion, die wir minimieren oder maximieren möchten, wird als \enquote{objektive Funktion} oder \enquote{Kriterium} bezeichnet. Wenn wir es minimieren, können wir es auch als Kostenfunktion, Verlustfunktion oder Fehlerfunktion bezeichnen. Die Funktion $x^{*} = arg\ min\ f( x)$ ist eine solche Funktion.
 
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=14cm]{kapitel2/gradient.png}
+            \caption[Der Gradientenabstieg]{Darstellung des Gradientenabstiegs, entnommen aus \cite*{IanGoodfellowYoshuaBengio2016}. Der Algorithmus nimmt die Ableitung der Funktion bis hin zum Minimum.}
+            \label{Kap2:Grad}
+        \end{figure}
+
+        Beim Gradientenabstieg können wir uns die Qualität der Vorhersagen unseres Netzwerks als Landschaft vorstellen. Die Hügel stellen Orte (Parameterwerte oder Gewichte) dar, die viele Vorhersagefehler verursachen. Täler repräsentieren Orte mit weniger Fehlern. Wir wählen einen Punkt in dieser Landschaft, an dem wir unser anfängliches Gewicht platzieren möchten. Wir können dann das Anfangsgewicht basierend auf dem Domänenwissen auswählen (wenn wir ein Netzwerk trainieren, um eine Blumenart zu klassifizieren, wissen wir, dass die Blütenblattlänge wichtig ist, die Farbe jedoch nicht). Wenn wir das Netzwerk die ganze Arbeit machen lassen, wählen wir die Anfangsgewichte möglicherweise zufällig aus. Der Zweck besteht darin, dieses Gewicht so schnell wie möglich bergab in Bereiche mit geringerem Fehler zu bewegen. Ein Optimierungsalgorithmus wie der Gradientenabstieg kann die tatsächliche Neigung der Hügel in Bezug auf jedes Gewicht erfassen. Das heißt, es weiß, in welche Richtung es geht. Der Gefälle-Abstieg misst die Steigung (die durch eine Gewichtsänderung verursachte Fehleränderung) und nimmt das Gewicht einen Schritt in Richtung Talboden \cite*[34]{Patterson2019} (siehe Abbildung Abbildung~\ref{Kap2:Grad}).
+
+        % \paragraph{Lernrate}
+        % Die Größe des Lernens, also wird als Lernrate bezeichnet. Mit einer hohen Lernrate können wir mit jedem Schritt mehr abdecken, aber wir riskieren, den tiefsten Punkt zu überschreiten, da sich die Neigung des Hügels ständig ändert. Mit einer sehr niedrigen Lernrate können wir uns sicher in Richtung des negativen Gradienten bewegen, da wir ihn so häufig neu berechnen. Eine niedrige Lernrate ist genauer, aber die Berechnung des Gradienten ist zeitaufwändig, sodass wir sehr lange brauchen, um auf den Grund zu gehen.
+
+
+        Es gibt drei Varianten des Gradientenabfalls, die sich darin unterscheiden, wie viele Daten wir zur Berechnung des Gradienten der Zielfunktion verwenden. Abhängig von der Datenmenge machen wir einen Kompromiss zwischen der Genauigkeit der Parameteraktualisierung und der Zeit, die für die Durchführung einer Aktualisierung benötigt wird \cite*{Ruder2016}. In den nächsten beiden Abschnitten werden zwei Varianten vorgestellt.
+
+        \subsection{Batch Gradientenabstiegsverfahren}
+        Der Standart Gradientenabstiegsverfahren, auch Batch-Gradientenabstiegsverfahren genannt, berechnet den Gradienten der Kostenfunktion zu den Parametern $\theta$ für den gesamten Trainingsdatensatz.
+
+
+        \begin{equation} \label{FormelGradBatch}
+            \theta = \theta - \eta \cdot \nabla_{\theta}J(\theta)
+        \end{equation}
+
+        Da der gesamte Datensatz berechnet werden muss, um nur eine Aktualisierung durchzuführen, kann der Batch-Gradientenabstieg sehr langsam sein und ist für Datensätze, die nicht in den Speicher passen, nicht zu handhaben. Der Batch-Gradientenabstieg ermöglicht es auch nicht, das Modell mit neuen Beispielen im laufenden Betrieb zu aktualisieren \cite*{Ruder2016}.
+
+        \subsection{Stochastische Gradientenabstiegsverfahren}
+
+        Im Gegensatz dazu führt der stochastische Gradientenabstiegsverfahren (SGD) eine Parameteraktualisierung für jedes Trainingsbeispiel durch. Der Batch-Gradientenabstieg führt redundante Berechnungen für große Datenmengen durch, da Gradienten für ähnliche Beispiele vor jeder Parameteraktualisierung neu berechnet werden. Der Stochastische Gradientenabstiegsverfahren beseitigt diese Redundanz, indem jeweils ein Update durchgeführt wird. Es ist daher in der Regel viel schneller und kann auch beim laufenden Lernen verwendet werden \cite*{Ruder2016}.
+
+        \begin{equation} \label{FormelGradStoch}
+            \theta = \theta - \eta \cdot \nabla_{\theta}J(\theta;x^{(i)};y^{(i)})
+        \end{equation}
+
+
+
+        \section{Lernrate im Deep Learning}
+        Die Lernrate beeinflusst den Betrag, um den die Parameter während der Optimierung angepasst werden, um den Fehler des neuronalen Netzwerks zu minimieren. Es ist ein Koeffizient, der die Größe der Schritte (Aktualisierungen) skaliert, die ein neuronales Netzwerk auf seinen Parameter (Vektor $x$) ausführt, wenn es den Verlustfunktionsraum durchquert. Ein großer Lernratenkoeffizient (z. B. 1) lässt die Parameter Sprünge machen, und kleine (z. B. 0,00001) lassen ihn langsam voranschreiten. Im Gegensatz dazu sollten kleine Lernraten letztendlich zu einem Fehlerminimum führen (es kann eher ein lokales als ein globales Minimum sein), aber sie können sehr lange dauern und die Belastung eines bereits rechenintensiven Prozesses erhöhen  \cite*[77]{Patterson2019}.
+
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=10cm]{kapitel2/learnrate.png}
+            \caption[Einfluss der Lernrate auf den Verlust]{Vergleich unterschiedlicher Lernraten und deren Effekt auf den Verlust. Bei niedrigen Lernraten ist eine \enquote{lineare} Verbesserungen zu sehen. Mit hohen Lernraten werden sie exponentieller. Höhere Lernraten verringern den Verlust schneller, bleiben jedoch bei schlechteren Verlustwerten hängen (grüne Linie). Dies liegt daran, dass die Optimierung zu viel \enquote{Energie} enthält und die Parameter \enquote{chaotisch herumspringen} und sich nicht an einem Ort in der Optimierungslandschaft niederlassen können (in Anlehnung an \cite*{StanfordUniversityCoursecs231n2018}). }
+            \label{Kap2:Lern}
+        \end{figure}
+
+        \section{Unteranpassung und Überanpassung}
+        Optimierungsalgorithmen versuchen zunächst, das Problem der Unteranpassung \enquote{Underfitting} zu lösen. Das heißt, eine Linie zu nehmen, die sich den Daten nicht gut annähert, und sie besser an die Daten heranzuführen. Eine gerade Linie, die über ein gekrümmtes Streudiagramm schneidet, wäre ein gutes Beispiel für eine Unteranpassung, wie in Abbildung~\ref{Kap2:OverUnder} dargestellt. Wenn die Linie zu gut zu den Daten passt, haben wir das gegenteilige Problem, das als Überanpassung \enquote{Overfitting} bezeichnet wird \cite*[27]{Patterson2019}.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=10cm]{kapitel2/overundefit.png}
+            \caption[Vergleich der Unteranpassung mit der Überanpassung]{Die Abbildung vergleicht die Überanpassung mit der Unteranpassung. Die einzelnen Punkte passen sich dem trainierten Model zu sehr an, der Verlust wird also so klein, dass die das Modell nicht mehr zuverlässige Ergebnisse liefern kann. Dies ist darauf zurückzuführen, dass das Modell \enquote{zu viel} aus dem Trainingsdatensatz gelernt hat. Unteranpassung ist der Fall, wenn das Modell aus den Trainingsdaten \enquote{nicht genug gelernt} hat, was zu einer geringen Verallgemeinerung und unzuverlässigen Vorhersagen führt (Grafik entnommen aus \cite*[27]{Patterson2019}). }
+            \label{Kap2:OverUnder}
+        \end{figure}
+
+        \section{Regularisierung}
+        Die Regularisierung hilft bei den Auswirkungen von außer Kontrolle geratenen Parametern, indem verschiedene Methoden verwendet werden, um die Parametergröße im Laufe der Zeit zu minimieren. Der Hauptzweck der Regularisierung besteht darin, die Überanpassung zu kontrollieren \cite*[79]{Patterson2019}.
+
+        Ein zentrales Problem beim maschinellen Lernen besteht darin, einen Algorithmus zu erstellen, der nicht nur bei den Trainingsdaten, sondern auch bei neuen Eingaben eine gute Leistung erbringt. Viele beim maschinellen Lernen verwendete Strategien sind explizit darauf ausgelegt, den Testfehler zu reduzieren, möglicherweise auf Kosten eines erhöhten Trainingsfehlers. Diese Strategien werden zusammen als Regularisierung bezeichnet. Tatsächlich war die Entwicklung effektiverer Regularisierungsstrategien eine der wichtigsten Forschungsanstrengungen auf diesem Gebiet, in den folgenden Abschnitten sollen sollen einige Strategien dargestellt werden. Regularisierung kann schließlich definiert werden als \enquote{jede Änderung, die wir an einem Lernalgorithmus vornehmen, um dessen Generalisierungsfehler, aber nicht seinen Trainingsfehler zu reduzieren} \cite*[228]{IanGoodfellowYoshuaBengio2016}.
+
+        \subsection{Early Stopping}
+        Wenn große Modelle mit trainiert werden, um eine bestimmte Aufgabe lösen, wird häufig festgestellt, dass der Trainingsfehler mit der Zeit stetig abnimmt, der Fehler des Validierungssatzes jedoch wieder zunimmt. Dies bedeutet, dass ein Modell mit einem besseren Validierungssatzfehler (und damit  einem besseren Testsatzfehler) erhalten werden kann, indem zu dem Zeitpunkt mit dem niedrigsten Validierungssatzfehler zur Parametereinstellung zurückgekehrt wird. Jedes Mal, wenn sich der Fehler im Validierungssatz verbessert, wird eine Kopie der Modellparameter gespeichert. Wenn der Trainingsalgorithmus beendet wird, wird diese Parameter anstelle der neuesten Parameter zurückgegeben. Diese Strategie wird als Early Sopping \enquote{frühes Stoppen} bezeichnet. Es ist wahrscheinlich die am häufigsten verwendete Form der Regularisierung. Seine Popularität ist sowohl auf seine Wirksamkeit als auch auf seine Einfachheit zurückzuführen \cite*[246]{IanGoodfellowYoshuaBengio2016}.
+
+
+        \subsection{Dropout}
+        Eine weitere Strategie um Überanpassung zu vermeiden wird in \cite*{Srivastava2014} dargestellt. Dropout bietet eine rechnerisch kostengünstige, aber leistungsstarke Methode zur Regularisierung dar. Es ist das aufteilen von mehreren Ensembles großer Netzwerke. Es wird also ein Ensemble, welches aus mehreren Subnetzwerken (sub-networks) gebildet wird \cite*[258]{IanGoodfellowYoshuaBengio2016}.
+
+
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=10cm]{kapitel2/dropout.png}
+            \caption[Basis-Netzwerks und Ensemble im Vergleich]{Dropout trainiert ein Ensemble. Ein Ensemble besteht aus allen Teilnetzwerken. Es wird durch das entfernen von Einheiten aufgebaut. Das Ensemble besteht aus 16 Teilmengen, aus den vier Einheiten des Basis-Netzwerks. Die 16 Subnetze werden durch das Löschen verschiedener Teilmengen von Einheiten aus dem ursprünglichen Netzwerk gebildet (entnommen aus \cite*[260]{IanGoodfellowYoshuaBengio2016}).}
+            \label{Kap2:Dropout}
+        \end{figure}
+
+        \subsection{L1 und L2}
+        Eine weitere Strategie der Regularisierung ist die Modifikation der L1 und L2 Gewichte. Manchmal müssen wir die Größe eines Vektors messen. Beim Deep Learning wird die Größe von Vektoren mit einer Funktion, die als \enquote{Norm} bezeichnet wird \cite*[39]{IanGoodfellowYoshuaBengio2016}. Formal ist die $L^p$ gegeben als:
+
+        \begin{equation} \label{FormelNorm2}
+            \Vert x\Vert \ =\ \left(\sum _{i}\bigr| x_{i}\bigr|^{p}\right)^{\frac{1}{p}}.
+        \end{equation}
+
+        Normen, einschließlich der $L^p$-Norm, sind Funktionen, die Vektoren auf nicht negative Werte abbilden. Auf einer intuitiven Ebene misst die Norm eines Vektors $x$ den Abstand vom Ursprung zum Punkt $x$. Die $L^2$-Norm mit $p = 2$ ist als euklidische Norm bekannt. Es ist der euklidische Abstand vom Ursprung zum Punkt $x$. Die $L^2$-Norm wird beim maschinellen Lernen häufig verwendet, sie wird einfach als $\Vert x\Vert$ bezeichnet, wobei der Index 2 weggelassen wird \cite*[39]{IanGoodfellowYoshuaBengio2016}.
+
+        Wenn zwischen Elementen zu unterscheiden werden soll, die genau Null sind, und Elementen, die klein, aber ungleich Null sind wird eine Funktion angewendet, die an allen Standorten mit der gleichen Geschwindigkeit wächst, aber die mathematische Einfachheit beibehält: die L1-Norm. Die $L^1$-Norm kann vereinfacht werden als:
+
+        \begin{equation} \label{FormelNorm1}
+            \Vert x\Vert 1\ =\ \sum _{i}\bigr| x_{i}\bigr|.
+        \end{equation}
+
+        Die $L^2$-Norm wird üblicherweise beim maschinellen Lernen verwendet, wenn der Unterschied zwischen Null- und Nicht-Null-Elementen sehr wichtig ist \cite*[40]{IanGoodfellowYoshuaBengio2016}.
+
+
+        \section{Verlustfunktion und Kreuzentropie}
+        \subsection{Verlustfunktionen}
+        Innerhalb eines neuronalen Netzwerks wandelt eine Verlustfunktion alle möglichen Fehler, in eine Zahl um, die den Gesamtfehler des Netzwerks darstellt. Im Wesentlichen ist es ein Maß dafür, wie falsch ein Netzwerk ist. Auf einer technischeren Ebene werden ein Ereignis oder Werte einer oder mehrerer Variablen einer reellen Zahl zugeordnet. Diese reelle Zahl stellt  den \enquote{Verlust} oder die \enquote{Kosten} dar, die mit dem Ereignis oder den Werten verbunden sind \cite*[61-62]{Taylor2017}.
+
+        Das Neuron durch lern dadurch, indem es den Gewicht und den Bias mit einer Rate ändert, die durch die partiellen Ableitungen der Kostenfunktion $\partial$$C$/$\partial$$w$ und $\partial$$C$/$\partial$$b$ bestimmt wird. Zu sagen, dass  das \enquote{Lernen langsam ist}, ist also dasselbe wie zu sagen, dass diese partiellen Ableitungen klein sind. Die Herausforderung besteht darin zu verstehen, warum sie klein sind. Um dies zu verstehen, berechnen wir die partiellen Ableitungen \cite*[61]{Nielsen2015}. Gegeben sei die quadratische Verlustfunktion:
+
+        \begin{equation} \label{Formel2_5}
+            C=\frac{( y-a)^{2}}{2},
+        \end{equation}
+
+        dabei ist $a$ die Ausgabe des Neurons, wenn die Trainingseingabe $x = 1$ ist, und $y = 0$ die entsprechende gewünschte Ausgabe. Um dies in Bezug auf Gewicht und Bias expliziter zu schreiben, sei daran erinnert, dass $a = \sigma(z)$ ist, wobei $z = wx + b$ ist. Es ergeben sich durch die Anwendung der Kettenregel folgende Gleichungen:
+
+        \begin{equation} \label{Formel2_6}
+            \frac{\partial C}{\partial w} =( a-y) \sigma '( z) x=a\sigma '( z)
+        \end{equation}
+
+        \begin{equation} \label{Formel2_7}
+            \frac{\partial C}{\partial b} =( a-y) \sigma '( z) =a\sigma '( z).
+        \end{equation}
+
+        Aus der Abbildung~\ref{Kap2:Sigmoid_plot} ist die Kurve der Sigmoidfunktion zu sehen, welches. Die Kurve wird sehr flach, wenn der Ausgang des Neurons nahe bei 1 liegt, und daher wird $\sigma'(z)$ sehr klein. Die Gleichungen~\ref{Formel2_6} und ~\ref{Formel2_7} sagen uns dann, dass $\partial$$C$/$\partial$$w$  und  $\partial$$C$/$\partial$$b$ sehr klein werden. Dies ist der Grund warum das lernen langsamer wird.
+
+    \subsection{Kreuzentropie}
+    Nach \cite*[62]{Nielsen2015} kann die Lernverlangsamung gelöst werden, indem die quadratischen Verlustfunktion durch eine andere Verlustfunktion ersetzt wird. Diese Funktion wird als als Kreuzentropie bezeichnet. Die Abbildung~\ref{Kap2:Entropie} zeigt die Kreuzentropie mit mehreren Eingabevariablen und entsprechenden Gewichten und dem Bias. Die Ausgabe des Neurons ist $a = \sigma(z)$, wobei $z =  \sum _{j} w_{j} b_{j} + b$ ist, die gewichtete Summe des Inputs. Wir definieren die Kreuzentropiekostenfunktion für dieses Neuron durch:
+
+    \begin{equation} \label{Formel2_8}
+        C=\ -\frac{1}{n}\sum _{x}[ y\ ln\ a\ +\ ( 1-y) \ ln( 1-a)]
+    \end{equation}
+
+    wobei $n$ die Gesamtzahl der Trainingselemente darstellt. Die Summe gibt die entsprechende gewünschte Ausgabe $x$ und $y$ über alle Trainingseingaben an. Zusammenfassend ist die Kreuzentropie positiv und tendiert gegen Null, wenn das Neuron
+    \enquote{besser} wird in der Berechnung der gewünschten Ausgabe $y$ für alle Trainingseingaben $x$.  Die entropieübergreifende Kostenfunktion hat jedoch den Vorteil, dass sie im Gegensatz zu den quadratischen Kosten das Problem der Verlangsamung des Lernens vermeidet. Um dies zu sehen, berechnen wir die partielle Ableitung der Kreuzentropiekosten in Bezug auf die Gewichte \cite*[63]{Nielsen2015}.
+
+    \begin{gather} \label{Formel2_9}
+        \frac{\partial C}{\partial w_{j}} =-\frac{1}{n}\sum _{x}\left(\frac{y}{\sigma ( z)} -\frac{1-y}{1-\sigma ( z)}\right)\frac{\partial \sigma }{\partial w_{j}} = \notag\\
+        \notag\\
+        -\frac{1}{n}\sum _{x}\left(\frac{y}{\sigma ( z)} -\frac{1-y}{1-\sigma ( z)}\right) \sigma '( z) x_{j} \notag\\
+    \end{gather}
+
+    \begin{equation} \label{Formel2_10}
+        \frac{\partial C}{\partial w_{j}} \ =\ \frac{1}{n}\sum _{x}\frac{\sigma '( z) x_{j}}{\sigma ( z)( 1-\sigma ( z))}( \sigma ( z) -y)
+    \end{equation}
+
+    \begin{equation} \label{Formel2_11}
+        \frac{\partial C}{\partial w_{j}} \ =\ \frac{1}{n}\sum _{x} x_{j}( \sigma ( z) -y)
+    \end{equation}
+
+
+    Die Gleichungen~\ref{Formel2_9}, ~\ref{Formel2_10} und ~\ref{Formel2_11} zeigen dass die Geschwindigkeit, mit der das Gewicht $w$  lernt, durch $\sigma(z) - y$ gesteuert wird, also durch den Fehler in der Ausgabe. Je größer der Fehler wird, desto schneller lernt das Neuron. Dies ist genau das ein gewünschtes Verhalten. Insbesondere wird die Lernverlangsamung vermieden, die durch den Term $\sigma'(z)$ in der analogen Gleichung für die quadratischen Kostenfunktion~\ref{Formel2_6} verursacht wird. Wenn wir die Kreuzentropie verwenden, wird der Term $\sigma'(z)$ aufgehoben, und wir brauchen uns keine Sorgen mehr darüber zu machen, dass er klein ist. Diese Aufhebung ist das besondere, das durch die Kreuzentropie-Kostenfunktion gewährleistet wird \cite[63-64]{Nielsen2015}.
+
+    Analog zur Gleichung\label{Formel2_9}, \label{Formel2_10} und \label{Formel2_11} ergibt die Berechnung für den Bias folgende Gleichung:
+
+    \begin{equation}
+        \frac{\partial C}{\partial b} \ =\ \frac{1}{n}\sum _{x}( \sigma ( z) -y).
+    \end{equation}
+
     \begin{figure}[H]
-      \centering
-      \includegraphics[width=14cm]{kapitel2/gradient.png}
-      \caption[Der Gradientenabstieg]{Darstellung des Gradientenabstiegs, entnommen aus \cite*{IanGoodfellowYoshuaBengio2016}. Der Algorithmus nimmt die Ableitung der Funktion bis hin zum Minimum.}
-      \label{Kap2:Grad}
+        \centering
+        \includegraphics[width=8cm]{kapitel2/entropie.png}
+        \caption[Darstellung der Kreuzentropie am beispiel eines Neurons]{Das Neuron wird mit 3 Eingabewerten $(x_1, x_2, x_3)$ den dazugehörigen Gewichten $(W_1, W_2, W_3)$ trainiert. Der Bias ist durch $b$ angegeben und die Ausgabe mit $a = \sigma(z)$ (in Anlehnung an \cite*{Nielsen2015})}
+        \label{Kap2:Entropie}
     \end{figure}
 
-    Beim Gradientenabstieg können wir uns die Qualität der Vorhersagen unseres Netzwerks als Landschaft vorstellen. Die Hügel stellen Orte (Parameterwerte oder Gewichte) dar, die viele Vorhersagefehler verursachen. Täler repräsentieren Orte mit weniger Fehlern. Wir wählen einen Punkt in dieser Landschaft, an dem wir unser anfängliches Gewicht platzieren möchten. Wir können dann das Anfangsgewicht basierend auf dem Domänenwissen auswählen (wenn wir ein Netzwerk trainieren, um eine Blumenart zu klassifizieren, wissen wir, dass die Blütenblattlänge wichtig ist, die Farbe jedoch nicht). Wenn wir das Netzwerk die ganze Arbeit machen lassen, wählen wir die Anfangsgewichte möglicherweise zufällig aus. Der Zweck besteht darin, dieses Gewicht so schnell wie möglich bergab in Bereiche mit geringerem Fehler zu bewegen. Ein Optimierungsalgorithmus wie der Gradientenabstieg kann die tatsächliche Neigung der Hügel in Bezug auf jedes Gewicht erfassen. Das heißt, es weiß, in welche Richtung es geht. Der Gefälle-Abstieg misst die Steigung (die durch eine Gewichtsänderung verursachte Fehleränderung) und nimmt das Gewicht einen Schritt in Richtung Talboden \cite*[34]{Patterson2019} (siehe Abbildung Abbildung~\ref{Kap2:Grad}).
+    \section{Convolutional Neural Network}
+    Convolutional Neural Networks (CNNs) arbeiten mit gitterstrukturierten Eingaben, die in lokalen Regionen des Netzes starke räumliche Abhängigkeiten aufweisen. Das offensichtlichste Beispiel für gitterstrukturierte Daten ist ein zweidimensionales Bild. Diese Art von Daten weist auch räumliche Abhängigkeiten auf, da benachbarte räumliche Orte in einem Bild häufig ähnliche Farbwerte der einzelnen Pixel aufweisen. Eine zusätzliche Dimension erfasst die verschiedenen Farben, wodurch ein dreidimensionales Eingabevolumen entsteht. Daher weisen die Merkmale in einem CNN Abhängigkeiten untereinander auf, die auf räumlichen Abständen beruhen. Andere Formen von sequentiellen Daten wie Text, Zeitreihen und Sequenzen können ebenfalls als Sonderfälle von Daten mit Gitterstruktur mit verschiedenen Arten von Beziehungen zwischen benachbarten Elementen betrachtet werden. Die überwiegende Mehrheit der Anwendungen von CNNs konzentriert sich auf Bilddaten, obwohl man diese Netze auch für alle Arten von zeitlichen, räumlichen und raumzeitlichen Daten verwenden kann. Ein wichtiges definierendes Merkmal von CNNs ist eine Operation, die als Faltung (convolution) bezeichnet wird. \cite*[315-316]{Aggarwal2018}.
 
-    % \paragraph{Lernrate}
-    % Die Größe des Lernens, also wird als Lernrate bezeichnet. Mit einer hohen Lernrate können wir mit jedem Schritt mehr abdecken, aber wir riskieren, den tiefsten Punkt zu überschreiten, da sich die Neigung des Hügels ständig ändert. Mit einer sehr niedrigen Lernrate können wir uns sicher in Richtung des negativen Gradienten bewegen, da wir ihn so häufig neu berechnen. Eine niedrige Lernrate ist genauer, aber die Berechnung des Gradienten ist zeitaufwändig, sodass wir sehr lange brauchen, um auf den Grund zu gehen.
+    \subsection{Architektur}
+    In CNNs sind mehrere Schichten miteinander verbunden und jeder Schicht hat  Gitterstruktur. Die Bezihungen zwischen den Schichten werden von einer Schicht zur nächsten vererbt, da jeder Merkmalswert auf einem kleinen lokalen Bereich aus der vorherigen Schicht basiert. Es ist wichtig, diese räumlichen Beziehungen zwischen den Gitterzellen aufrechtzuerhalten, da die Faltungsoperation und die Transformation zur nächsten Schicht von diesen Beziehungen abhängen. Jede Schicht im Faltungsnetzwerk ist eine dreidimensionale Gitterstruktur mit einer Höhe, Breite und Tiefe. Die Tiefe einer Schicht in einem Faltungsnetzwerk ist nicht die Tiefe des Netzwerks selbst. Das Wort \enquote{Tiefe} bezieht sich auf die Anzahl der Kanäle in jeder Ebene, z. B. die Anzahl der Primärfarbkanäle (z. B. Blau, Grün und Rot) im Eingabebild \cite*[318]{Aggarwal2018}.
 
-
-    Es gibt drei Varianten des Gradientenabfalls, die sich darin unterscheiden, wie viele Daten wir zur Berechnung des Gradienten der Zielfunktion verwenden. Abhängig von der Datenmenge machen wir einen Kompromiss zwischen der Genauigkeit der Parameteraktualisierung und der Zeit, die für die Durchführung einer Aktualisierung benötigt wird \cite*{Ruder2016}. In den nächsten beiden Abschnitten werden zwei Varianten vorgestellt.
-
-    \subsection{Batch Gradientenabstiegsverfahren}
-    Der Standart Gradientenabstiegsverfahren, auch Batch-Gradientenabstiegsverfahren genannt, berechnet den Gradienten der Kostenfunktion zu den Parametern $\theta$ für den gesamten Trainingsdatensatz.
-
-
-    \begin{equation} \label{FormelGradBatch}
-      \theta = \theta - \eta \cdot \nabla_{\theta}J(\theta)
-    \end{equation}
-
-    Da der gesamte Datensatz berechnet werden muss, um nur eine Aktualisierung durchzuführen, kann der Batch-Gradientenabstieg sehr langsam sein und ist für Datensätze, die nicht in den Speicher passen, nicht zu handhaben. Der Batch-Gradientenabstieg ermöglicht es auch nicht, das Modell mit neuen Beispielen im laufenden Betrieb zu aktualisieren \cite*{Ruder2016}.
-
-    \subsection{Stochastische Gradientenabstiegsverfahren}
-
-    Im Gegensatz dazu führt der stochastische Gradientenabstiegsverfahren (SGD) eine Parameteraktualisierung für jedes Trainingsbeispiel durch. Der Batch-Gradientenabstieg führt redundante Berechnungen für große Datenmengen durch, da Gradienten für ähnliche Beispiele vor jeder Parameteraktualisierung neu berechnet werden. Der Stochastische Gradientenabstiegsverfahren beseitigt diese Redundanz, indem jeweils ein Update durchgeführt wird. Es ist daher in der Regel viel schneller und kann auch beim laufenden Lernen verwendet werden \cite*{Ruder2016}.
-
-    \begin{equation} \label{FormelGradStoch}
-      \theta = \theta - \eta \cdot \nabla_{\theta}J(\theta;x^{(i)};y^{(i)})
-    \end{equation}
-
-
-
-    \section{Lernrate im Deep Learning}
-    Die Lernrate beeinflusst den Betrag, um den die Parameter während der Optimierung angepasst werden, um den Fehler des neuronalen Netzwerks zu minimieren. Es ist ein Koeffizient, der die Größe der Schritte (Aktualisierungen) skaliert, die ein neuronales Netzwerk auf seinen Parameter (Vektor $x$) ausführt, wenn es den Verlustfunktionsraum durchquert. Ein großer Lernratenkoeffizient (z. B. 1) lässt die Parameter Sprünge machen, und kleine (z. B. 0,00001) lassen ihn langsam voranschreiten. Im Gegensatz dazu sollten kleine Lernraten letztendlich zu einem Fehlerminimum führen (es kann eher ein lokales als ein globales Minimum sein), aber sie können sehr lange dauern und die Belastung eines bereits rechenintensiven Prozesses erhöhen  \cite*[77]{Patterson2019}.
-
+    Ein ConvNet besteht aus Ebenen. Ein einfaches ConvNet ist eine Folge von Schichten, und jede Schicht eines ConvNet wandelt eine Schicht durch eine differenzierbare Funktion in ein anderes um. Es wird dabei drei Arten von Schichten geben um ein ConvNet Architekturen zu bauen: Faltungs-Schicht , Pooling-Schicht und die vollständig verbundene Schicht \cite*{StanfordUniversityCoursecs231n2018a}.
 
     \begin{figure}[H]
-      \centering
-      \includegraphics[width=10cm]{kapitel2/learnrate.png}
-      \caption[Einfluss der Lernrate auf den Verlust]{Vergleich unterschiedlicher Lernraten und deren Effekt auf den Verlust. Bei niedrigen Lernraten ist eine \enquote{lineare} Verbesserungen zu sehen. Mit hohen Lernraten werden sie exponentieller. Höhere Lernraten verringern den Verlust schneller, bleiben jedoch bei schlechteren Verlustwerten hängen (grüne Linie). Dies liegt daran, dass die Optimierung zu viel \enquote{Energie} enthält und die Parameter \enquote{chaotisch herumspringen} und sich nicht an einem Ort in der Optimierungslandschaft niederlassen können (in Anlehnung an \cite*{StanfordUniversityCoursecs231n2018}). }
-      \label{Kap2:Lern}
+        \centering
+        \includegraphics[width=13cm]{kapitel2/conv.png}
+        \caption[Vergleich eines NN mit einem CNN]{Links: Ein reguläres 3-Schicht-Neuronales Netz. Rechts: Ein ConvNet ordnet seine Neuronen in drei Dimensionen (Breite, Höhe, Tiefe) an, wie in einer der Ebenen dargestellt. Jede Schicht eines ConvNet wandelt das 3D-Eingangsvolumen in ein 3D-Ausgangsvolumen von Neuronenaktivierungen um. In diesem Beispiel enthält die rote Eingabeebene das Bild, sodass seine Breite und Höhe den Abmessungen des Bildes entsprechen. Die \enquote{Tiefe} sind die 3 Farbkanäle (rot, grün, blau) aus \cite*{StanfordUniversityCoursecs231n2018a}.}
+        \label{Kap2:Conv}
     \end{figure}
 
-    \section{Unteranpassung und Überanpassung}
-    Optimierungsalgorithmen versuchen zunächst, das Problem der Unteranpassung \enquote{Underfitting} zu lösen. Das heißt, eine Linie zu nehmen, die sich den Daten nicht gut annähert, und sie besser an die Daten heranzuführen. Eine gerade Linie, die über ein gekrümmtes Streudiagramm schneidet, wäre ein gutes Beispiel für eine Unteranpassung, wie in Abbildung~\ref{Kap2:OverUnder} dargestellt. Wenn die Linie zu gut zu den Daten passt, haben wir das gegenteilige Problem, das als Überanpassung \enquote{Overfitting} bezeichnet wird \cite*[27]{Patterson2019}.
+    % Im folgenden werden die einzelnen Elemente einer CNN-Architektur vorgestellt, welches einen Bild als Eingabe hat:
+
+    % \begin{itemize}
+    %   \item Eingabe: Enthält die Rohpixelwerte des Bildes, in diesem Fall ein Bild mit einer Breite von 32, einer Höhe von 32 und drei Farbkanälen R, G, B.
+    %   \item Die CONV-Schicht: Berechnet die Ausgabe von Neuronen, die mit lokalen Regionen in der Eingabe verbunden sind, wobei jede ein Punktprodukt zwischen ihren Gewichten und einer kleinen Region berechnet, mit der sie im Eingabevolumen verbunden sind. Dies kann zu einem \enquote{Volumen} von [32x32x12] führen, wenn wir uns für die Verwendung von 12 Filtern entschieden haben.
+    %   \item Die RELU-Ebene: Wendet eine elementweise Aktivierungsfunktion an, z. B. die maximale $(0, x)$ Schwellwertbildung bei Null. Dadurch bleibt die Größe des Volumes unverändert ([32x32x12]).
+    %   \item Die POOL-Ebene: Führt einen \enquote{Downsampling-Vorgang} entlang der räumlichen Abmessungen (Breite, Höhe) durch, was zu einem Volumen von [16x16x12] führt.
+    %   \item Die Vollständig verbunde Schicht: Berechnet die Klassenbewertungen, was zu einem Volumen der Größe [1 × 1 × 10] führt, wobei jede der 10 Zahlen einer Klassenbewertung entspricht \cite*{StanfordUniversityCoursecs231n2018a}.
+    % \end{itemize}
+
+    \subsection{Convolutional Layer}
+
+    Die Parameter der CONV-Schicht bestehen aus einer Reihe von lernbaren Filtern. Jedes dieser Filter ist räumlich klein (Breite und Höhe), erstreckt sich jedoch über die gesamte Tiefe des Eingangsvolumens. Beispielsweise könnte ein typischer Filter auf einer ersten Schicht eines ConvNet die Größe 5 × 5 × 3 haben (d. H. 5 Pixel Breite und Höhe und 3, weil Bilder die Tiefe 3 haben, die Farbkanäle). Während des Vorwärtsdurchlaufs wird jedes der Filter über die Breite und Höhe des Eingangsvolumens gefaltet und es werden die Punktprodukte zwischen den Einträgen des Filters und dem Eingang an einer beliebigen Position berechnet. Wenn der Filter über die Breite und Höhe des Eingangsvolumens gefaltet wird, wird eine zweidimensionale Aktivierungskarte erstellt, die die Antworten dieses Filters an jeder räumlichen Position angibt. Intuitiv lernt das Netzwerk Filter, die aktiviert werden, wenn sie eine Art visuelles Merkmal sehen, z. B. eine Kante mit einer bestimmten Ausrichtung oder einen Farbfleck auf der ersten Ebene oder schließlich radähnliche Muster auf höheren Ebenen des Netzwerks. Es entstehen somit ein ganzer Satz von Filtern in jeder CONV-Schicht (z. B. 12 Filter), und jeder von ihnen erzeugt eine separate zweidimensionale Aktivierungskarte. Diese Karten werden entlang der Tiefendimension gestapelt und das Ausgabevolumen erzeugt \cite*{StanfordUniversityCoursecs231n2018a}.
 
     \begin{figure}[H]
-      \centering
-      \includegraphics[width=10cm]{kapitel2/overundefit.png}
-      \caption[Vergleich der Unteranpassung mit der Überanpassung]{Die Abbildung vergleicht die Überanpassung mit der Unteranpassung. Die einzelnen Punkte passen sich dem trainierten Model zu sehr an, der Verlust wird also so klein, dass die das Modell nicht mehr zuverlässige Ergebnisse liefern kann. Dies ist darauf zurückzuführen, dass das Modell \enquote{zu viel} aus dem Trainingsdatensatz gelernt hat. Unteranpassung ist der Fall, wenn das Modell aus den Trainingsdaten \enquote{nicht genug gelernt} hat, was zu einer geringen Verallgemeinerung und unzuverlässigen Vorhersagen führt (Grafik entnommen aus \cite*[27]{Patterson2019}). }
-      \label{Kap2:OverUnder}
+        \centering
+        \includegraphics[width=10cm]{kapitel2/conv_layers.png}
+        \caption[Die Faltung in einem CNN]{Die Faltungsoperation geschieht durch eine Punktprodukt Operation über des Filters, was über alle räumlichen Positionen wiederholt wird \enquote{Tiefe} sind die 3 Farbkanäle (rot, grün, blau) aus \cite*[321]{Aggarwal2018}.}
+        \label{Kap2:Conv}
     \end{figure}
 
-    \section{Regularisierung}
-    Die Regularisierung hilft bei den Auswirkungen von außer Kontrolle geratenen Parametern, indem verschiedene Methoden verwendet werden, um die Parametergröße im Laufe der Zeit zu minimieren. Der Hauptzweck der Regularisierung besteht darin, die Überanpassung zu kontrollieren \cite*[79]{Patterson2019}.
-
-    Ein zentrales Problem beim maschinellen Lernen besteht darin, einen Algorithmus zu erstellen, der nicht nur bei den Trainingsdaten, sondern auch bei neuen Eingaben eine gute Leistung erbringt. Viele beim maschinellen Lernen verwendete Strategien sind explizit darauf ausgelegt, den Testfehler zu reduzieren, möglicherweise auf Kosten eines erhöhten Trainingsfehlers. Diese Strategien werden zusammen als Regularisierung bezeichnet. Tatsächlich war die Entwicklung effektiverer Regularisierungsstrategien eine der wichtigsten Forschungsanstrengungen auf diesem Gebiet, in den folgenden Abschnitten sollen sollen einige Strategien dargestellt werden. Regularisierung kann schließlich definiert werden als \enquote{jede Änderung, die wir an einem Lernalgorithmus vornehmen, um dessen Generalisierungsfehler, aber nicht seinen Trainingsfehler zu reduzieren} \cite*[228]{IanGoodfellowYoshuaBengio2016}.
-
-    \subsection{Early Stopping}
-    Wenn große Modelle mit trainiert werden, um eine bestimmte Aufgabe lösen, wird häufig festgestellt, dass der Trainingsfehler mit der Zeit stetig abnimmt, der Fehler des Validierungssatzes jedoch wieder zunimmt. Dies bedeutet, dass ein Modell mit einem besseren Validierungssatzfehler (und damit  einem besseren Testsatzfehler) erhalten werden kann, indem zu dem Zeitpunkt mit dem niedrigsten Validierungssatzfehler zur Parametereinstellung zurückgekehrt wird. Jedes Mal, wenn sich der Fehler im Validierungssatz verbessert, wird eine Kopie der Modellparameter gespeichert. Wenn der Trainingsalgorithmus beendet wird, wird diese Parameter anstelle der neuesten Parameter zurückgegeben. Diese Strategie wird als Early Sopping \enquote{frühes Stoppen} bezeichnet. Es ist wahrscheinlich die am häufigsten verwendete Form der Regularisierung. Seine Popularität ist sowohl auf seine Wirksamkeit als auch auf seine Einfachheit zurückzuführen \cite*[246]{IanGoodfellowYoshuaBengio2016}.
-
-
-    \subsection{Dropout}
-    Eine weitere Strategie um Überanpassung zu vermeiden wird in \cite*{Srivastava2014} dargestellt. Dropout bietet eine rechnerisch kostengünstige, aber leistungsstarke Methode zur Regularisierung dar. Es ist das aufteilen von mehreren Ensembles großer Netzwerke. Es wird also ein Ensemble, welches aus mehreren Subnetzwerken (sub-networks) gebildet wird \cite*[258]{IanGoodfellowYoshuaBengio2016}.
-
-
-
-    \begin{figure}[H]
-      \centering
-      \includegraphics[width=10cm]{kapitel2/dropout.png}
-      \caption[Basis-Netzwerks und Ensemble im Vergleich]{Dropout trainiert ein Ensemble. Ein Ensemble besteht aus allen Teilnetzwerken. Es wird durch das entfernen von Einheiten aufgebaut. Das Ensemble besteht aus 16 Teilmengen, aus den vier Einheiten des Basis-Netzwerks. Die 16 Subnetze werden durch das Löschen verschiedener Teilmengen von Einheiten aus dem ursprünglichen Netzwerk gebildet (entnommen aus \cite*[260]{IanGoodfellowYoshuaBengio2016}).}
-      \label{Kap2:Dropout}
-    \end{figure}
-
-    \subsection{L1 und L2}
-    Eine weitere Strategie der Regularisierung ist die Modifikation der L1 und L2 Gewichte. Manchmal müssen wir die Größe eines Vektors messen. Beim Deep Learning wird die Größe von Vektoren mit einer Funktion, die als \enquote{Norm} bezeichnet wird \cite*[39]{IanGoodfellowYoshuaBengio2016}. Formal ist die $L^p$ gegeben als:
-
-    \begin{equation} \label{FormelNorm2}
-      \Vert x\Vert \ =\ \left(\sum _{i}\bigr| x_{i}\bigr|^{p}\right)^{\frac{1}{p}}.
-    \end{equation}
-
-    Normen, einschließlich der $L^p$-Norm, sind Funktionen, die Vektoren auf nicht negative Werte abbilden. Auf einer intuitiven Ebene misst die Norm eines Vektors $x$ den Abstand vom Ursprung zum Punkt $x$. Die $L^2$-Norm mit $p = 2$ ist als euklidische Norm bekannt. Es ist der euklidische Abstand vom Ursprung zum Punkt $x$. Die $L^2$-Norm wird beim maschinellen Lernen häufig verwendet, sie wird einfach als $\Vert x\Vert$ bezeichnet, wobei der Index 2 weggelassen wird \cite*[39]{IanGoodfellowYoshuaBengio2016}.
-
-    Wenn zwischen Elementen zu unterscheiden werden soll, die genau Null sind, und Elementen, die klein, aber ungleich Null sind wird eine Funktion angewendet, die an allen Standorten mit der gleichen Geschwindigkeit wächst, aber die mathematische Einfachheit beibehält: die L1-Norm. Die $L^1$-Norm kann vereinfacht werden als:
-
-    \begin{equation} \label{FormelNorm1}
-      \Vert x\Vert 1\ =\ \sum _{i}\bigr| x_{i}\bigr|.
-    \end{equation}
-
-    Die $L^2$-Norm wird üblicherweise beim maschinellen Lernen verwendet, wenn der Unterschied zwischen Null- und Nicht-Null-Elementen sehr wichtig ist \cite*[40]{IanGoodfellowYoshuaBengio2016}.
-
-
-    \section{Verlustfunktion und Kreuzentropie}
-    \subsection{Verlustfunktionen}
-    Innerhalb eines neuronalen Netzwerks wandelt eine Verlustfunktion alle möglichen Fehler, in eine Zahl um, die den Gesamtfehler des Netzwerks darstellt. Im Wesentlichen ist es ein Maß dafür, wie falsch ein Netzwerk ist. Auf einer technischeren Ebene werden ein Ereignis oder Werte einer oder mehrerer Variablen einer reellen Zahl zugeordnet. Diese reelle Zahl stellt  den \enquote{Verlust} oder die \enquote{Kosten} dar, die mit dem Ereignis oder den Werten verbunden sind \cite*[61-62]{Taylor2017}.
-
-    Das Neuron durch lern dadurch, indem es den Gewicht und den Bias mit einer Rate ändert, die durch die partiellen Ableitungen der Kostenfunktion $\partial$$C$/$\partial$$w$ und $\partial$$C$/$\partial$$b$ bestimmt wird. Zu sagen, dass  das \enquote{Lernen langsam ist}, ist also dasselbe wie zu sagen, dass diese partiellen Ableitungen klein sind. Die Herausforderung besteht darin zu verstehen, warum sie klein sind. Um dies zu verstehen, berechnen wir die partiellen Ableitungen \cite*[61]{Nielsen2015}. Gegeben sei die quadratische Verlustfunktion:
-
-    \begin{equation} \label{Formel2_5}
-      C=\frac{( y-a)^{2}}{2},
-    \end{equation}
-
-    dabei ist $a$ die Ausgabe des Neurons, wenn die Trainingseingabe $x = 1$ ist, und $y = 0$ die entsprechende gewünschte Ausgabe. Um dies in Bezug auf Gewicht und Bias expliziter zu schreiben, sei daran erinnert, dass $a = \sigma(z)$ ist, wobei $z = wx + b$ ist. Es ergeben sich durch die Anwendung der Kettenregel folgende Gleichungen:
-
-    \begin{equation} \label{Formel2_6}
-      \frac{\partial C}{\partial w} =( a-y) \sigma '( z) x=a\sigma '( z)
-    \end{equation}
-
-    \begin{equation} \label{Formel2_7}
-      \frac{\partial C}{\partial b} =( a-y) \sigma '( z) =a\sigma '( z).
-    \end{equation}
-
-    Aus der Abbildung~\ref{Kap2:Sigmoid_plot} ist die Kurve der Sigmoidfunktion zu sehen, welches. Die Kurve wird sehr flach, wenn der Ausgang des Neurons nahe bei 1 liegt, und daher wird $\sigma'(z)$ sehr klein. Die Gleichungen~\ref{Formel2_6} und ~\ref{Formel2_7} sagen uns dann, dass $\partial$$C$/$\partial$$w$  und  $\partial$$C$/$\partial$$b$ sehr klein werden. Dies ist der Grund warum das lernen langsamer wird.
-
-  \subsection{Kreuzentropie}
-  Nach \cite*[62]{Nielsen2015} kann die Lernverlangsamung gelöst werden, indem die quadratischen Verlustfunktion durch eine andere Verlustfunktion ersetzt wird. Diese Funktion wird als als Kreuzentropie bezeichnet. Die Abbildung~\ref{Kap2:Entropie} zeigt die Kreuzentropie mit mehreren Eingabevariablen und entsprechenden Gewichten und dem Bias. Die Ausgabe des Neurons ist $a = \sigma(z)$, wobei $z =  \sum _{j} w_{j} b_{j} + b$ ist, die gewichtete Summe des Inputs. Wir definieren die Kreuzentropiekostenfunktion für dieses Neuron durch:
-
-  \begin{equation} \label{Formel2_8}
-    C=\ -\frac{1}{n}\sum _{x}[ y\ ln\ a\ +\ ( 1-y) \ ln( 1-a)]
-  \end{equation}
-
-  wobei $n$ die Gesamtzahl der Trainingselemente darstellt. Die Summe gibt die entsprechende gewünschte Ausgabe $x$ und $y$ über alle Trainingseingaben an. Zusammenfassend ist die Kreuzentropie positiv und tendiert gegen Null, wenn das Neuron
-  \enquote{besser} wird in der Berechnung der gewünschten Ausgabe $y$ für alle Trainingseingaben $x$.  Die entropieübergreifende Kostenfunktion hat jedoch den Vorteil, dass sie im Gegensatz zu den quadratischen Kosten das Problem der Verlangsamung des Lernens vermeidet. Um dies zu sehen, berechnen wir die partielle Ableitung der Kreuzentropiekosten in Bezug auf die Gewichte \cite*[63]{Nielsen2015}.
-
-  \begin{gather} \label{Formel2_9}
-    \frac{\partial C}{\partial w_{j}} =-\frac{1}{n}\sum _{x}\left(\frac{y}{\sigma ( z)} -\frac{1-y}{1-\sigma ( z)}\right)\frac{\partial \sigma }{\partial w_{j}} = \notag\\
-    \notag\\
-    -\frac{1}{n}\sum _{x}\left(\frac{y}{\sigma ( z)} -\frac{1-y}{1-\sigma ( z)}\right) \sigma '( z) x_{j} \notag\\
-  \end{gather}
-
-  \begin{equation} \label{Formel2_10}
-    \frac{\partial C}{\partial w_{j}} \ =\ \frac{1}{n}\sum _{x}\frac{\sigma '( z) x_{j}}{\sigma ( z)( 1-\sigma ( z))}( \sigma ( z) -y)
-  \end{equation}
-
-  \begin{equation} \label{Formel2_11}
-    \frac{\partial C}{\partial w_{j}} \ =\ \frac{1}{n}\sum _{x} x_{j}( \sigma ( z) -y)
-  \end{equation}
-
-
-  Die Gleichungen~\ref{Formel2_9}, ~\ref{Formel2_10} und ~\ref{Formel2_11} zeigen dass die Geschwindigkeit, mit der das Gewicht $w$  lernt, durch $\sigma(z) - y$ gesteuert wird, also durch den Fehler in der Ausgabe. Je größer der Fehler wird, desto schneller lernt das Neuron. Dies ist genau das ein gewünschtes Verhalten. Insbesondere wird die Lernverlangsamung vermieden, die durch den Term $\sigma'(z)$ in der analogen Gleichung für die quadratischen Kostenfunktion~\ref{Formel2_6} verursacht wird. Wenn wir die Kreuzentropie verwenden, wird der Term $\sigma'(z)$ aufgehoben, und wir brauchen uns keine Sorgen mehr darüber zu machen, dass er klein ist. Diese Aufhebung ist das besondere, das durch die Kreuzentropie-Kostenfunktion gewährleistet wird \cite[63-64]{Nielsen2015}.
-
-  Analog zur Gleichung\label{Formel2_9}, \label{Formel2_10} und \label{Formel2_11} ergibt die Berechnung für den Bias folgende Gleichung:
-
-  \begin{equation}
-    \frac{\partial C}{\partial b} \ =\ \frac{1}{n}\sum _{x}( \sigma ( z) -y).
-  \end{equation}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[width=8cm]{kapitel2/entropie.png}
-    \caption[Darstellung der Kreuzentropie am beispiel eines Neurons]{Das Neuron wird mit 3 Eingabewerten $(x_1, x_2, x_3)$ den dazugehörigen Gewichten $(W_1, W_2, W_3)$ trainiert. Der Bias ist durch $b$ angegeben und die Ausgabe mit $a = \sigma(z)$ (in Anlehnung an \cite*{Nielsen2015})}
-    \label{Kap2:Entropie}
-  \end{figure}
-
-  \section{Convolutional Neural Network}
-  Convolutional Neural Networks (CNNs) arbeiten mit gitterstrukturierten Eingaben, die in lokalen Regionen des Netzes starke räumliche Abhängigkeiten aufweisen. Das offensichtlichste Beispiel für gitterstrukturierte Daten ist ein zweidimensionales Bild. Diese Art von Daten weist auch räumliche Abhängigkeiten auf, da benachbarte räumliche Orte in einem Bild häufig ähnliche Farbwerte der einzelnen Pixel aufweisen. Eine zusätzliche Dimension erfasst die verschiedenen Farben, wodurch ein dreidimensionales Eingabevolumen entsteht. Daher weisen die Merkmale in einem CNN Abhängigkeiten untereinander auf, die auf räumlichen Abständen beruhen. Andere Formen von sequentiellen Daten wie Text, Zeitreihen und Sequenzen können ebenfalls als Sonderfälle von Daten mit Gitterstruktur mit verschiedenen Arten von Beziehungen zwischen benachbarten Elementen betrachtet werden. Die überwiegende Mehrheit der Anwendungen von CNNs konzentriert sich auf Bilddaten, obwohl man diese Netze auch für alle Arten von zeitlichen, räumlichen und raumzeitlichen Daten verwenden kann. Ein wichtiges definierendes Merkmal von CNNs ist eine Operation, die als Faltung (convolution) bezeichnet wird. \cite*[315-316]{Aggarwal2018}.
-
-  \subsection{Architektur}
-  In CNNs sind mehrere Schichten miteinander verbunden und jeder Schicht hat  Gitterstruktur. Die Bezihungen zwischen den Schichten werden von einer Schicht zur nächsten vererbt, da jeder Merkmalswert auf einem kleinen lokalen Bereich aus der vorherigen Schicht basiert. Es ist wichtig, diese räumlichen Beziehungen zwischen den Gitterzellen aufrechtzuerhalten, da die Faltungsoperation und die Transformation zur nächsten Schicht von diesen Beziehungen abhängen. Jede Schicht im Faltungsnetzwerk ist eine dreidimensionale Gitterstruktur mit einer Höhe, Breite und Tiefe. Die Tiefe einer Schicht in einem Faltungsnetzwerk ist nicht die Tiefe des Netzwerks selbst. Das Wort \enquote{Tiefe} bezieht sich auf die Anzahl der Kanäle in jeder Ebene, z. B. die Anzahl der Primärfarbkanäle (z. B. Blau, Grün und Rot) im Eingabebild \cite*[318]{Aggarwal2018}.
-
-  Ein ConvNet besteht aus Ebenen. Ein einfaches ConvNet ist eine Folge von Schichten, und jede Schicht eines ConvNet wandelt eine Schicht durch eine differenzierbare Funktion in ein anderes um. Es wird dabei drei Arten von Schichten geben um ein ConvNet Architekturen zu bauen: Faltungs-Schicht , Pooling-Schicht und die vollständig verbundene Schicht \cite*{StanfordUniversityCoursecs231n2018a}.
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[width=13cm]{kapitel2/conv.png}
-    \caption[Vergleich eines NN mit einem CNN]{Links: Ein reguläres 3-Schicht-Neuronales Netz. Rechts: Ein ConvNet ordnet seine Neuronen in drei Dimensionen (Breite, Höhe, Tiefe) an, wie in einer der Ebenen dargestellt. Jede Schicht eines ConvNet wandelt das 3D-Eingangsvolumen in ein 3D-Ausgangsvolumen von Neuronenaktivierungen um. In diesem Beispiel enthält die rote Eingabeebene das Bild, sodass seine Breite und Höhe den Abmessungen des Bildes entsprechen. Die \enquote{Tiefe} sind die 3 Farbkanäle (rot, grün, blau) aus \cite*{StanfordUniversityCoursecs231n2018a}.}
-    \label{Kap2:Conv}
-  \end{figure}
-
-  % Im folgenden werden die einzelnen Elemente einer CNN-Architektur vorgestellt, welches einen Bild als Eingabe hat:
-
-  % \begin{itemize}
-  %   \item Eingabe: Enthält die Rohpixelwerte des Bildes, in diesem Fall ein Bild mit einer Breite von 32, einer Höhe von 32 und drei Farbkanälen R, G, B.
-  %   \item Die CONV-Schicht: Berechnet die Ausgabe von Neuronen, die mit lokalen Regionen in der Eingabe verbunden sind, wobei jede ein Punktprodukt zwischen ihren Gewichten und einer kleinen Region berechnet, mit der sie im Eingabevolumen verbunden sind. Dies kann zu einem \enquote{Volumen} von [32x32x12] führen, wenn wir uns für die Verwendung von 12 Filtern entschieden haben.
-  %   \item Die RELU-Ebene: Wendet eine elementweise Aktivierungsfunktion an, z. B. die maximale $(0, x)$ Schwellwertbildung bei Null. Dadurch bleibt die Größe des Volumes unverändert ([32x32x12]).
-  %   \item Die POOL-Ebene: Führt einen \enquote{Downsampling-Vorgang} entlang der räumlichen Abmessungen (Breite, Höhe) durch, was zu einem Volumen von [16x16x12] führt.
-  %   \item Die Vollständig verbunde Schicht: Berechnet die Klassenbewertungen, was zu einem Volumen der Größe [1 × 1 × 10] führt, wobei jede der 10 Zahlen einer Klassenbewertung entspricht \cite*{StanfordUniversityCoursecs231n2018a}.
-  % \end{itemize}
-
-  \subsection{Convolutional Layer}
-
-  Die Parameter der CONV-Schicht bestehen aus einer Reihe von lernbaren Filtern. Jedes dieser Filter ist räumlich klein (Breite und Höhe), erstreckt sich jedoch über die gesamte Tiefe des Eingangsvolumens. Beispielsweise könnte ein typischer Filter auf einer ersten Schicht eines ConvNet die Größe 5 × 5 × 3 haben (d. H. 5 Pixel Breite und Höhe und 3, weil Bilder die Tiefe 3 haben, die Farbkanäle). Während des Vorwärtsdurchlaufs wird jedes der Filter über die Breite und Höhe des Eingangsvolumens gefaltet und es werden die Punktprodukte zwischen den Einträgen des Filters und dem Eingang an einer beliebigen Position berechnet. Wenn der Filter über die Breite und Höhe des Eingangsvolumens gefaltet wird, wird eine zweidimensionale Aktivierungskarte erstellt, die die Antworten dieses Filters an jeder räumlichen Position angibt. Intuitiv lernt das Netzwerk Filter, die aktiviert werden, wenn sie eine Art visuelles Merkmal sehen, z. B. eine Kante mit einer bestimmten Ausrichtung oder einen Farbfleck auf der ersten Ebene oder schließlich radähnliche Muster auf höheren Ebenen des Netzwerks. Es entstehen somit ein ganzer Satz von Filtern in jeder CONV-Schicht (z. B. 12 Filter), und jeder von ihnen erzeugt eine separate zweidimensionale Aktivierungskarte. Diese Karten werden entlang der Tiefendimension gestapelt und das Ausgabevolumen erzeugt \cite*{StanfordUniversityCoursecs231n2018a}.
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[width=10cm]{kapitel2/conv_layers.png}
-    \caption[Die Faltung in einem CNN]{Die Faltungsoperation geschieht durch eine Punktprodukt Operation über des Filters, was über alle räumlichen Positionen wiederholt wird \enquote{Tiefe} sind die 3 Farbkanäle (rot, grün, blau) aus \cite*[321]{Aggarwal2018}.}
-    \label{Kap2:Conv}
-  \end{figure}
-
-  \subsubsection{Padding}
-  Es ist zu beobachtung, dass die Faltungsoperation die Größe der $(q + 1)$-ten Schicht im Vergleich zur Größe der $q$-ten Schicht verringert. Diese Art der Größenreduzierung ist im Allgemeinen nicht wünschenswert, da sie dazu neigt, einige Informationen entlang der Bildränder (oder der Feature-Map im Fall von ausgeblendeten Ebenen) zu verlieren. Dieses Problem kann durch Auffüllen (padding) gelöst werden. Beim Auffüllen werden  \enquote{Pixel} rund um die Ränder der Feature-Map hinzugefügt. Der Wert jedes dieser aufgefüllten Feature-Werte wird auf 0 gesetzt, unabhängig davon, ob die Eingabe oder die ausgeblendeten Ebenen aufgefüllt werden. Diese Bereiche tragen nicht zum endgültigen Punktprodukt bei, da ihre Werte auf 0 gesetzt sind. Ein Teil des Filters aus den Rändern der Schicht wird \enquote{herausragt} und dann durch das Durchführen des Punktprodukts nur über den Teil der Ebene, in dem die Werte definiert sind ersetzt \cite*[323]{Aggarwal2018}.
+    \subsubsection{Padding}
+    Es ist zu beobachtung, dass die Faltungsoperation die Größe der $(q + 1)$-ten Schicht im Vergleich zur Größe der $q$-ten Schicht verringert. Diese Art der Größenreduzierung ist im Allgemeinen nicht wünschenswert, da sie dazu neigt, einige Informationen entlang der Bildränder (oder der Feature-Map im Fall von ausgeblendeten Ebenen) zu verlieren. Dieses Problem kann durch Auffüllen (padding) gelöst werden. Beim Auffüllen werden  \enquote{Pixel} rund um die Ränder der Feature-Map hinzugefügt. Der Wert jedes dieser aufgefüllten Feature-Werte wird auf 0 gesetzt, unabhängig davon, ob die Eingabe oder die ausgeblendeten Ebenen aufgefüllt werden. Diese Bereiche tragen nicht zum endgültigen Punktprodukt bei, da ihre Werte auf 0 gesetzt sind. Ein Teil des Filters aus den Rändern der Schicht wird \enquote{herausragt} und dann durch das Durchführen des Punktprodukts nur über den Teil der Ebene, in dem die Werte definiert sind ersetzt \cite*[323]{Aggarwal2018}.
 
 
 \subsection{Pooling Layer}
 Es ist üblich, regelmäßig eine Pooling-Ebene zwischen aufeinanderfolgenden Conv-Ebenen in eine ConvNet-Architektur einzufügen. Seine Funktion besteht darin, die räumliche Größe der Darstellung schrittweise zu verringern, um die Anzahl der Parameter und die Berechnung im Netzwerk zu verringern und damit auch die Überanpassung zu steuern. Die Pooling-Ebene arbeitet unabhängig mit jedem Tiefenabschnitt der Eingabe und ändert die Größe räumlich mithilfe der MAX-Operation. Die gebräuchlichste Form ist eine Pooling-Ebene mit Filtern der Größe 2x2, die mit einem Schritt (Stride) von 2 Downsamples pro Tiefenscheibe in der Eingabe um 2 entlang der Breite und Höhe angewendet werden, wobei 75\% der Aktivierungen verworfen werden. Jede MAX-Operation würde in diesem Fall maximal 4 Zahlen annehmen. Der \enquote{Volumen} bleibt unverändert \cite*{StanfordUniversityCoursecs231n2018a}.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=9cm]{kapitel2/maxpooling.png}
-  \caption[Max-Pooling]{Ein Beispiel für ein Max-Pooling einer Aktivierungskarte der Größe 7 × 7 mit Stride von 1 und 2. Ein Stride von 1 erzeugt eine 5 × 5-Aktivierungskarte mit stark wiederholten Elementen aufgrund der Maximierung in überlappenden Regionen. Ein Stride von 2 erzeugt eine 3 × 3-Aktivierungskarte mit weniger Überlappung \cite*[326]{Aggarwal2018}.}
-  \label{Kap2:Pooling}
+    \centering
+    \includegraphics[width=9cm]{kapitel2/maxpooling.png}
+    \caption[Max-Pooling]{Ein Beispiel für ein Max-Pooling einer Aktivierungskarte der Größe 7 × 7 mit Stride von 1 und 2. Ein Stride von 1 erzeugt eine 5 × 5-Aktivierungskarte mit stark wiederholten Elementen aufgrund der Maximierung in überlappenden Regionen. Ein Stride von 2 erzeugt eine 3 × 3-Aktivierungskarte mit weniger Überlappung \cite*[326]{Aggarwal2018}.}
+    \label{Kap2:Pooling}
 \end{figure}
 
 
@@ -365,10 +365,10 @@ Anstelle von Bildpixeln können die Eingaben für die meisten NLP-Aufgaben Sätz
 In der Vision \enquote{gleiten} die Filter über lokale \enquote{pathces} eines Bildes, in NLP wird jedoch der Filter über die ganze Zeilen der Matrix (Wörter) gleiten. Daher entspricht die Breite der Filter normalerweise der Breite der Eingabematrix. Die Höhe oder Regionsgröße kann variieren, aber \enquote{Schiebefenster} mit jeweils mehr als 2-5 Wörtern sind typisch. Pixel, die nahe beieinander liegen, sind wahrscheinlich semantisch verwandt (Teil desselben Objekts), aber das Gleiche gilt nicht immer für Wörter. In vielen Sprachen können Teile von Phrasen durch mehrere andere Wörter getrennt werden. Der kompositorische Aspekt ist ebenfalls nicht offensichtlich. Es ist klar, dass Wörter in gewisser Weise zusammengesetzt sind, wie ein Adjektiv, das ein Substantiv modifiziert, aber wie genau dies funktioniert, was Darstellungen auf höherer Ebene tatsächlich \enquote{bedeuten}, ist nicht so offensichtlich wie im Fall von Computer Vision. Angesichts all dessen scheinen CNNs nicht gut für NLP-Aufgaben geeignet zu sein. Wiederkehrende neuronale Netze (RNNs) sind intuitiver. Sie ähneln der Art und Weise, wie wir Sprache verarbeiten (oder zumindest wie wir denken, dass wir Sprache verarbeiten). Lesen nacheinander von links nach rechts. Glücklicherweise bedeutet dies nicht, dass CNNs nicht funktionieren. Alle Modelle sind falsch, aber einige sind nützlich. Es stellt sich heraus, dass CNNs, die auf NLP-Probleme angewendet werden, recht gut funktionieren. Ein großes Argument für CNNs ist, dass sie schnell sind. Faltungen sind ein zentraler Bestandteil der Computergrafik und werden auf Hardwareebene auf GPUs implementiert. Mit einem großen Wortschatz kann das Berechnen schnell \enquote{teuer} werden. Faltungsfilter lernen automatisch gute Darstellungen, ohne das gesamte Vokabular darstellen zu müssen \cite*{widlml}.
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=10cm]{kapitel2/cnnnlp.png}
-  \caption[CNN in der Textverarbeitung]{Illustration einer CNN-Architektur zur Satzklassifizierung. Es sind drei Filterbereichsgrößen vorhanden: 2, 3 und 4. Filter führen Faltungen in der Satzmatrix durch und generieren Feature-Maps (mit variabler Länge). Über jede Karte wird ein 1-Max-Pooling durchgeführt, d. H. die größte Anzahl von jeder Merkmalskarte wird aufgezeichnet. Somit wird aus allen sechs Karten ein univariater Merkmalsvektor erzeugt, und diese sechs Merkmale werden verkettet, um einen Merkmalsvektor für die vorletzte Schicht zu bilden. Die letzte Softmax-Schicht empfängt dann diesen Merkmalsvektor als Eingabe und verwendet ihn zur Klassifizierung des Satzes an. Hier wird eineeine binäre Klassifikation angewendet und es gibt daher zwei mögliche Ausgangszustände dar \cite*{Zhang}.}
-  \label{Kap2:Pooling}
+    \centering
+    \includegraphics[width=10cm]{kapitel2/cnnnlp.png}
+    \caption[CNN in der Textverarbeitung]{Illustration einer CNN-Architektur zur Satzklassifizierung. Es sind drei Filterbereichsgrößen vorhanden: 2, 3 und 4. Filter führen Faltungen in der Satzmatrix durch und generieren Feature-Maps (mit variabler Länge). Über jede Karte wird ein 1-Max-Pooling durchgeführt, d. H. die größte Anzahl von jeder Merkmalskarte wird aufgezeichnet. Somit wird aus allen sechs Karten ein univariater Merkmalsvektor erzeugt, und diese sechs Merkmale werden verkettet, um einen Merkmalsvektor für die vorletzte Schicht zu bilden. Die letzte Softmax-Schicht empfängt dann diesen Merkmalsvektor als Eingabe und verwendet ihn zur Klassifizierung des Satzes an. Hier wird eineeine binäre Klassifikation angewendet und es gibt daher zwei mögliche Ausgangszustände dar \cite*{Zhang}.}
+    \label{Kap2:Pooling}
 \end{figure}
 
 %   \section{Backpropagation}

@@ -1,3 +1,63 @@
+\chapter{Die Natürliche Sprache}
+Die Verarbeitung natürlicher Sprache (NLP) ist ein Teilbereich des maschinellen Lernens (ML), der sich mit natürlicher Sprache befasst, häufig in Form von Text, der selbst aus kleineren Einheiten wie Wörtern und Zeichen besteht. Der Umgang mit Textdaten ist problematisch, da unsere Computer, Skripte und Modelle für maschinelles Lernen, keinen Text im menschlichen Sinne lesen und verstehen können.
+Wenn ich das Wort \enquote{Katze} lese, werden viele verschiedene Assoziationen aufgerufen - es ist ein kleines Pelztier, Fische frisst und 4 Beine hat. Aber diese sprachlichen Assoziationen sind das Ergebnis recht komplexer neurologischer Berechnungen, die über Millionen Jahre verfeinert wurden. Während unsere ML-Modelle ohne vorgefertigtes Verständnis der Wortbedeutung von vorne beginnen müssen.
+
+\section{One-Hot-Codierung}
+Die numerischen Werte sollten so viel wie möglich von der sprachlichen Bedeutung eines Wortes erfassen. Eine gut ausgewählte, informative Eingabedarstellung kann einen massiven Einfluss auf die Gesamtleistung des Modells haben. Worteinbettungen sind der vorherrschende Ansatz für dieses Problem und so weit verbreitet, dass ihre Verwendung praktisch in jedem NLP-Projekt angenommen wird. Unabhängig davon, ob Sie ein Projekt in den Bereichen Textklassifizierung, Sentimentanalyse oder maschinelle Übersetzung starten.
+
+Angenommen es wird ein Modell entwickelt mit einem Wortschatz von 10.000 Wörtern. Eine Möglichkeit wäre es, ein Index aufzustellen und jedem Wort ein Integer zu geben. Dieser Integer würde dann in ein Vektor umgewandelt, wobei das este Wort einen Vektor [1, 0, 0, 0, …, 0] hätte und das also ein Vektor mit einer 1 am Anfang und  9.998 Nullen. Diese Repräsentation des Wortschatzes wird  wird als \enquote{one-hot vector encoding} bezeichnet.
+
+Angenommen, unser NLP-Projekt erstellt ein Übersetzungsmodell und wir möchten den englischen Eingabesatz \enquote{Die Katze ist schwarz} in eine andere Sprache übersetzen. Wir müssen zuerst jedes Wort mit einer One-Hot-Codierung darstellen. Wir würden zuerst den Index des ersten Wortes \enquote{the} nachschlagen und feststellen, dass sein Index in der Vokabelliste 8676 ist. Wir könnten dann das Wort \enquote{the} unter Verwendung eines Vektors mit einer Länge von 10.000 darstellen, wobei jeder Eintrag eine 0 ist, abgesehen von dem Eintrag an Position 8676, der eine 1 ist. Wir führen diese Indexsuche für jedes Wort im Eingabesatz durch und erstellen einen Vektor, der jedes Eingabewort darstellt. Dieser Prozess generiert für jedes Eingabewort einen sehr \enquote{spärlichen} (meist null) Merkmalsvektor.
+
+Idealerweise möchten wir, dass ähnliche Wörter wie \enquote{Katze} und \enquote{Tiger} ähnliche Merkmale aufweisen. Aber mit One-Hot-Codierung sind Vektoren für \enquote{Katze}  und \enquote{Tiger} so ähnlich wie buchstäblich jedes andere Wort. Ein weiterer Punkt ist, dass wir möglicherweise analoge Vektoroperationen für die Worteinbettungen durchführen möchten (wie z.B. \enquote{Katze} + \enquote{groß} = \enquote{Tiger}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{kapitel3/onhot.png}
+    \caption[One-Hot-Codierung als Eingabematrix]{Die Grafik zeigt wie ein Beispielkorpus welches aus 5 Sätzen besteht, in einer Matrix dargestellt werden kann. Je nach Häufigkeit wird jedes Wort im Wortschaft entsprechend den Sätzen im Korpus abgebildet. Der Korpus besteht aus 5 Sätzen (\enquote{Dies ist ein Satz mit einer Katze und einem Hund.}, \enquote{Die Katze läuft den Berg hoch.}, \enquote{Der Hund schläft noch.}, \enquote{Ein Satz mit Katze Katze Katze Katze.} und \enquote{Ein Hund.}) (eigene Darstellung).}
+    \label{OneHotGrafik}
+\end{figure}
+
+Wenn bei One-Hot-Codierung der Wortschatz um $n$ erhöht wird, erhöhen sich auch die Merkmalsgrößenvektoren um die Länge $n$. Die One-Hot-Vektordimensionalität entspricht der Anzahl der Wörter. Mehr Features bedeuten nämlich, dass mehr Parameter geschätzt werden müssen, und exponentiell mehr Daten benötigt werden, um diese Parameter gut genug zu schätzen, um ein einigermaßen verallgemeinerbares Modell zu erstellen (\enquote{curse of dimensionality}).
+
+\section{Worteinbettungen}
+Wenn davon ausgegangen wird, dass Wörter wie \enquote{Katze} und \enquote{Tiger} tatsächlich ähnlich sind, möchten wir diese Informationen auf irgendeine Weise an das Modell weitergeben. Dies wird besonders wichtig, wenn eines der Wörter selten ist (z. B. \enquote{Liger}), da es auf den Berechnungspfad zurückgreifen kann, den ein ähnliches, häufigeres Wort durch das Modell führt. Dies liegt daran, dass das Modell während des Trainings lernt, die eingegebene \enquote{Katze} auf eine bestimmte Weise zu behandeln, indem es sie durch Schichten von Transformationen sendet, die durch Gewichte und Bias-Parameter definiert sind. Wenn das Netzwerk schließlich \enquote{Liger} sieht und seine Einbettung \enquote{Katze} ähnelt, wird es einen ähnlichen Weg wie \enquote{Katze} einschlagen, anstatt dass das Netzwerk lernen muss, wie es vollständig von Grund auf neu zu handhaben ist. Es ist sehr schwierig, Vorhersagen über Dinge zu treffen, die das Modell noch nie zuvor gesehen hat, jedoch viel einfacher, wenn es sich auf etwas bezieht, dass es gesehen hat.
+
+
+\subsection{Vortrainierte Worteinbettungen}
+
+Die am häufigsten verwendeten Modelle für Worteinbettungen sind word2vec und GloVe, beides Ansätze des Unüberwachtes Lernens \textit{unsupervised learning}. Diese Modelle basieren
+auf der Verteilungshypothese (Wörter, die in den selben Kontexten vorkommen, haben tendenziell ähnliche Bedeutungen).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm]{kapitel3/wordem.png}
+    \caption[Worteinbettungen erzeugen Analogien zwischen Wörtern]{Durch Worteinbettungen können interessante Analogien zwischen einzelnen Wörtern gefunden werden. (Entnommen aus \cite*{wordemdgood})}
+    \label{Word2Vex}
+\end{figure}
+
+
+Word2Vec \cite*{Mikolov2013} Worteinbettungen sind Vektordarstellungen von Wörtern, die normalerweise von einem Modell gelernt werden, wenn große Textmengen als Eingabe eingegeben werden (z. B. Wikipedia, Wissenschaft, Nachrichten, Artikel usw.). Diese Darstellung von Wörtern erfasst die semantische Ähnlichkeit zwischen Wörtern unter anderen Eigenschaften. Word2Vec-Worteinbettungen werden so gelernt, dass der Abstand zwischen Vektoren für Wörter mit enger Bedeutung (z. B. \enquote{König} und \enquote{Königin}) näher ist als der Abstand für Wörter mit völlig unterschiedlichen Bedeutungen (z. B. \enquote{König} und \enquote{Katze}).
+
+Bei der One-Hot-Codierung haben die Wörter \enquote{gut} und \enquote{großartig}
+Wir haben gesehen, dass bei der One-Hot-Codierung gibt es keine Projektion entlang der anderen Dimensionen. Dies bedeutet, dass \enquote{gut} und \enquote{großartig} so unterschiedlich sind wie \enquote{Tag} und \enquote{haben}, was nicht stimmt. Hier kommt die Idee, verteilte Darstellungen zu erzeugen. Intuitiv wird eine gewisse Abhängigkeit eines Wortes von den anderen Wörtern eingeführt. Die Wörter im Kontext dieses Wortes würden einen größeren Anteil dieser Abhängigkeit erhalten. In der One-Hot-Coding-Darstellung sind alle Wörter unabhängig voneinander, wie bereits erwähnt.
+
+Word2Vec ist eine Methode zum Erstellen einer solchen Einbettung. Es kann mit zwei Methoden (beide mit neuronalen Netzen) erhalten werden: Skip Gram und Common Bag Of Words (CBOW).
+
+
+\paragraph{Das CBOW-Modell}
+Das CBOW-Modell sagt das Mittelwort aus umgebendem Kontext vorher. Der Ansatz besteht darin, [\enquote{Die}, \enquote{Katze}, \enquote{über}, \enquote{die}, \enquote{Pfütze}] als Kontext zu behandeln und aus diesen Wörten in der Lage zu sein, das Mittelwort \enquote{gesprungen} vorherzusagen oder zu generieren. Dieser Ansatz ist die kontinuierliche Behandlung der Wörter und wird \enquote{Continuous Bag of Words} genannt.
+
+
+
+
+
+\subsubsection{Glove}
+Eine andere Methode zum Einbetten von Wörtern ist Glove (\enquote{Global Vectors}). Es basiert auf Matrixfaktorisierungstechniken für die Wortkontextmatrix. Zunächst wird eine große Matrix von Informationen zum gleichzeitigen Auftreten von Wörter und Kontext erstellt, d. H. für jedes \enquote{Wort} (die Zeilen) wird gezählt, wie häufig dieses Wort in einem \enquote{Kontext} (den Spalten) in einem großen Korpus angezeigt wird. Dann wird diese Matrix in eine niederdimensionale Matrix Wort und Merkmale zerlegt, in der jede Zeile nun eine Vektordarstellung für jedes Wort speichert. Dies geschieht im Allgemeinen durch Minimierung eines \enquote{Rekonstruktionsverlusts}. Dieser Verlust versucht, die niederdimensionalen Darstellungen zu finden, die den größten Teil der Varianz in den hochdimensionalen Daten erklären können.
+
+
+
+
 % \chapter{Grobe Zeit- und Ressourcenplanung}
 % % \label{Kap3}
 % Grobe Zeitplanung und die Anteile der Kapitel and er Arbeit:
