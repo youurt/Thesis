@@ -68,24 +68,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Die Natürliche Sprache}{27}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}One-Hot-Codierung}{27}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Textverarbeitung und Textnormalisierung}{27}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Worteinbettungen}{29}{section.3.2}%
+\contentsline {section}{\numberline {3.2}One-Hot-Codierung}{27}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Vortrainierte Worteinbettungen}{29}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Worteinbettungen}{29}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Das CBOW-Modell}{30}{paragraph*.23}%
+\contentsline {subsection}{\numberline {3.3.1}Word2Vec mit der Skip-Gram Architektur}{30}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Glove}{31}{subsubsection*.25}%
+\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vii}{chapter*.23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vii}{chapter*.26}%
+\contentsline {chapter}{Tabellenverzeichnis}{ix}{section*.24}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Tabellenverzeichnis}{ix}{section*.27}%
+\contentsline {chapter}{Abbildungsverzeichnis}{xi}{section*.26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abbildungsverzeichnis}{xi}{section*.29}%
+\contentsline {chapter}{Quellcodeverzeichnis}{xiii}{section*.28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Quellcodeverzeichnis}{xiii}{section*.31}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{xv}{chapter*.33}%
+\contentsline {chapter}{\nonumberline Literatur}{xv}{chapter*.30}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

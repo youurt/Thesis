@@ -2,6 +2,9 @@
 Die Verarbeitung natürlicher Sprache (NLP) ist ein Teilbereich des maschinellen Lernens (ML), der sich mit natürlicher Sprache befasst, häufig in Form von Text, der selbst aus kleineren Einheiten wie Wörtern und Zeichen besteht. Der Umgang mit Textdaten ist problematisch, da unsere Computer, Skripte und Modelle für maschinelles Lernen, keinen Text im menschlichen Sinne lesen und verstehen können.
 Wenn ich das Wort \enquote{Katze} lese, werden viele verschiedene Assoziationen aufgerufen - es ist ein kleines Pelztier, Fische frisst und 4 Beine hat. Aber diese sprachlichen Assoziationen sind das Ergebnis recht komplexer neurologischer Berechnungen, die über Millionen Jahre verfeinert wurden. Während unsere ML-Modelle ohne vorgefertigtes Verständnis der Wortbedeutung von vorne beginnen müssen.
 
+\section{Textverarbeitung und Textnormalisierung}
+
+
 \section{One-Hot-Codierung}
 Die numerischen Werte sollten so viel wie möglich von der sprachlichen Bedeutung eines Wortes erfassen. Eine gut ausgewählte, informative Eingabedarstellung kann einen massiven Einfluss auf die Gesamtleistung des Modells haben. Worteinbettungen sind der vorherrschende Ansatz für dieses Problem und so weit verbreitet, dass ihre Verwendung praktisch in jedem NLP-Projekt angenommen wird. Unabhängig davon, ob Sie ein Projekt in den Bereichen Textklassifizierung, Sentimentanalyse oder maschinelle Übersetzung starten.
 
@@ -23,11 +26,9 @@ Wenn bei One-Hot-Codierung der Wortschatz um $n$ erhöht wird, erhöhen sich auc
 \section{Worteinbettungen}
 Wenn davon ausgegangen wird, dass Wörter wie \enquote{Katze} und \enquote{Tiger} tatsächlich ähnlich sind, möchten wir diese Informationen auf irgendeine Weise an das Modell weitergeben. Dies wird besonders wichtig, wenn eines der Wörter selten ist (z. B. \enquote{Liger}), da es auf den Berechnungspfad zurückgreifen kann, den ein ähnliches, häufigeres Wort durch das Modell führt. Dies liegt daran, dass das Modell während des Trainings lernt, die eingegebene \enquote{Katze} auf eine bestimmte Weise zu behandeln, indem es sie durch Schichten von Transformationen sendet, die durch Gewichte und Bias-Parameter definiert sind. Wenn das Netzwerk schließlich \enquote{Liger} sieht und seine Einbettung \enquote{Katze} ähnelt, wird es einen ähnlichen Weg wie \enquote{Katze} einschlagen, anstatt dass das Netzwerk lernen muss, wie es vollständig von Grund auf neu zu handhaben ist. Es ist sehr schwierig, Vorhersagen über Dinge zu treffen, die das Modell noch nie zuvor gesehen hat, jedoch viel einfacher, wenn es sich auf etwas bezieht, dass es gesehen hat.
 
+Vektoren zur Darstellung von Wörtern werden im Allgemeinen als Einbettungen bezeichnet, da das Wort in einen bestimmten Vektorraum eingebettet wird \cite*[99]{Jurafskya}.
 
-\subsection{Vortrainierte Worteinbettungen}
 
-Die am häufigsten verwendeten Modelle für Worteinbettungen sind word2vec und GloVe, beides Ansätze des Unüberwachtes Lernens \textit{unsupervised learning}. Diese Modelle basieren
-auf der Verteilungshypothese (Wörter, die in den selben Kontexten vorkommen, haben tendenziell ähnliche Bedeutungen).
 
 \begin{figure}[H]
     \centering
@@ -42,18 +43,71 @@ Word2Vec \cite*{Mikolov2013} Worteinbettungen sind Vektordarstellungen von Wört
 Bei der One-Hot-Codierung haben die Wörter \enquote{gut} und \enquote{großartig}
 Wir haben gesehen, dass bei der One-Hot-Codierung gibt es keine Projektion entlang der anderen Dimensionen. Dies bedeutet, dass \enquote{gut} und \enquote{großartig} so unterschiedlich sind wie \enquote{Tag} und \enquote{haben}, was nicht stimmt. Hier kommt die Idee, verteilte Darstellungen zu erzeugen. Intuitiv wird eine gewisse Abhängigkeit eines Wortes von den anderen Wörtern eingeführt. Die Wörter im Kontext dieses Wortes würden einen größeren Anteil dieser Abhängigkeit erhalten. In der One-Hot-Coding-Darstellung sind alle Wörter unabhängig voneinander, wie bereits erwähnt.
 
-Word2Vec ist eine Methode zum Erstellen einer solchen Einbettung. Es kann mit zwei Methoden (beide mit neuronalen Netzen) erhalten werden: Skip Gram und Common Bag Of Words (CBOW).
-
-
-\paragraph{Das CBOW-Modell}
-Das CBOW-Modell sagt das Mittelwort aus umgebendem Kontext vorher. Der Ansatz besteht darin, [\enquote{Die}, \enquote{Katze}, \enquote{über}, \enquote{die}, \enquote{Pfütze}] als Kontext zu behandeln und aus diesen Wörten in der Lage zu sein, das Mittelwort \enquote{gesprungen} vorherzusagen oder zu generieren. Dieser Ansatz ist die kontinuierliche Behandlung der Wörter und wird \enquote{Continuous Bag of Words} genannt.
 
 
 
+% DDas CBOW-Modell sagt das Mittelwort aus umgebendem Kontext vorher. Der Ansatz besteht darin, [\enquote{Die}, \enquote{Katze}, \enquote{über}, \enquote{die}, \enquote{Pfütze}] als Kontext zu behandeln und aus diesen Wörten in der Lage zu sein, das Mittelwort \enquote{gesprungen} vorherzusagen oder zu generieren. Dieser Ansatz ist die kontinuierliche Behandlung der Wörter und wird \enquote{Continuous Bag of Words} genannt. 
+% Die Continuous Bag of Words (CBOW) ist eine von zwei eingeführten Modellarchitekturen des Word2Vec
+% von \cite*{Mikolov2013}. Das CBOW-Modell lernt Wortrepräsentationen durch ein probabilistisches neuronales Feedforward-Netzwerk, um das Zielwort anhand der Kontextwörter vorherzusagen. Die CBOW-Architektur sagt das aktuelle Wort basierend auf dem Kontext voraus.
+
+% Das Skip-Gram-Modell ähnelt CBOW, versucht jedoch, anstatt das Zielwort basierend auf dem Kontext vorherzusagen, die Kontextwörter innerhalb eines Radius vorherzusagen, der dem Zielwort gegeben ist. Die Skip-Gram-Architektur kehrt also die Verwendung von Ziel- und Mittelwörtern um.
 
 
-\subsubsection{Glove}
-Eine andere Methode zum Einbetten von Wörtern ist Glove (\enquote{Global Vectors}). Es basiert auf Matrixfaktorisierungstechniken für die Wortkontextmatrix. Zunächst wird eine große Matrix von Informationen zum gleichzeitigen Auftreten von Wörter und Kontext erstellt, d. H. für jedes \enquote{Wort} (die Zeilen) wird gezählt, wie häufig dieses Wort in einem \enquote{Kontext} (den Spalten) in einem großen Korpus angezeigt wird. Dann wird diese Matrix in eine niederdimensionale Matrix Wort und Merkmale zerlegt, in der jede Zeile nun eine Vektordarstellung für jedes Wort speichert. Dies geschieht im Allgemeinen durch Minimierung eines \enquote{Rekonstruktionsverlusts}. Dieser Verlust versucht, die niederdimensionalen Darstellungen zu finden, die den größten Teil der Varianz in den hochdimensionalen Daten erklären können.
+
+
+\subsection{Word2Vec mit der Skip-Gram Architektur}
+
+Wörter können als spärliche, lange Vektoren mit vielen Dimensionen dargestellt werden. Eine alternative Methode ist die Darstellung eines Wortes mit der Verwendung von kurzen Vektoren, mit einer Länge von vielleicht 50-1000 und einer großen dichte (die meisten Werte sind nicht Null). Es stellt sich heraus, dass dichte Vektoren in jeder NLP-Aufgabe besser funktionieren als spärliche Vektoren. Erstens können dichte Vektoren erfolgreicher als Features in maschinellen Lernsystemen aufgenommen werden. Wenn wir beispielsweise 100-dimensionale Worteinbettungen als Merkmale verwenden, kann ein Klassifizierer nur 100 Gewichte lernen, um die Bedeutung des Wortes darzustellen. Wenn wir stattdessen einen 50.000-dimensionalen Vektor eingeben, müsste ein Klassifizierer Zehntausende von Gewichten für jede der spärlichen Dimensionen lernen. Zweitens können dichte Vektoren besser verallgemeinern und helfen, eine Überanpassung zu vermeiden, da sie weniger Parameter als spärliche Vektoren mit expliziten Zählungen enthalten. Schließlich können dichte Vektoren die Synonymie besser erfassen als spärliche Vektoren. Zum Beispiel sind Auto und Automobil Synonyme; In einer typischen spärlichen Vektordarstellung sind beide Dimensionen unterschiedliche Dimensionen. Da die Beziehung zwischen diesen beiden Dimensionen nicht modelliert wird, können spärliche Vektoren möglicherweise die Ähnlichkeit zwischen einem Wort mit dem Auto als Nachbarn und einem Wort mit dem Automobil als Nachbarn nicht erfassen \cite*[110-111]{Jurafskya}.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{kapitel3/cbowskipgr.png}
+    \caption[Vergleich zwischen CBOW und Skip-Gram Architektur]{Die CBOW-Architektur sagt das aktuelle Wort basierend auf dem Kontext voraus, während das Skip-Gramm die umgebenden Wörter voraussagt, wenn das aktuelle Wort gegeben ist aus \cite*{Mikolov}).}
+    \label{cbowskipgr}
+\end{figure}
+
+Der Skip-Gram-Algorithmus ist einer von zwei Algorithmen in einem Softwarepaket namens word2vec, und so wird der Algorithmus manchmal auch als word2vec bezeichnet \cite*{Mikolov2013}\cite*{Mikolov}. Die Intuition von word2vec ist, dass anstatt zu zählen, wie of jedes Wort $w$ in der Nähe von einem anderen Wort vorkommt, einen Klassifikator für eine binäre Vorhersageaufgabe zu trainieren. Die erlernten Klassifikatorgewichte werden dann als Worteinbettungen genommen \cite*[111]{Jurafskya}.
+
+Beim Skip-Gram besteht das Ziel, eine Klassifikation zu trainieren. Dabei wird ein Zielwort $t$ mit Kandidaten aus dem Kontext \textit{c} in ein Tuple gesetzt. \textit{P(+|t,c)} sagt dann aus, wie wahrscheinlich es ist, dass ein Kontextwort \textit{c} ein echter Kontext ist. Zum beispiel sei gegeben der Satz \enquote{Wir essen Spaghetti zum Abendessen...}. Wenn nur der Kontext $\pm 2$ Wörter betrachtet wird, und \textit{t} das Wort \enquote{essen} ist, wird die Klassifikation für das Tuple \textit{(essen,spaghetti)} \enquote{true} und für das Tuple \textit{(essen,auto)} \enquote{false} zurückgeben \cite*[111]{Jurafskya}.
+
+\begin{equation} \label{Formel3_1}
+    P(-|t,c) = 1-P(+|t,c)
+\end{equation}
+
+Die ähnlichkeit eines Wortes zu einem anderen Wort, kann berechnet werden, indem das Skalarprodukt berechnet wird. Dies ist zunächst nur eine Zahl zwischen $-\infty$ und $+\infty$. Um aus diesem Produkt eine Wahrscheinlichkeit zu berechnen, wird die \textbf{\textit{sigmoid}} Funktion $\sigma(x)$ angewendet. Die Logistikfunktion gibt eine Zahl zwischen0 und 1 zurück. Um die Wahrscheinlichkeit zu berechnen, muss gewährleistet werden, dass die Summe \textit{c ist das Kontextwort} und \textit{c ist nicht das Kontextwort} eine 1 ergeben \cite*[112]{Jurafskya}.
+
+\begin{equation} \label{Formel3_2}
+    P(-|t,c) = 1-P(+|t,c) = \frac{e^{-t\cdot c}}{1+e^{-t\cdot c}}
+\end{equation}
+
+Skip-Gramm macht die starke, aber sehr nützliche vereinfachende Annahme, dass alle Kontextwörter unabhängig sind, so dass ihre Wahrscheinlichkeiten multipliziert werden können:
+
+\begin{equation} \label{Formel3_3}
+    P(+|t,c_{1:k}) = \prod ^{k}_{i=1}\frac{1}{1+e^{-t\cdot c_{i}}}
+\end{equation}
+
+\begin{equation} \label{Formel3_4}
+    \log P(+|t,c_{1:k}) =\sum ^{k}_{i=1} \log \frac{1}{1+e^{-t\cdot c_{i}}}.
+\end{equation}
+
+
+Skip-Gramm trainiert einen probabilistischen Klassifikator, der einem Zielwort und seinem Kontextfenster eine Wahrscheinlichkeit zuweist, die darauf basiert, wie ähnlich dieses Kontextfenster dem Zielwort ist. Die Wahrscheinlichkeit basiert auf der Anwendung der logistischen Sigmoidfunktion auf das Punktprodukt der Einbettungen des Zielworts mit jedem Kontextwort \cite*[113]{Jurafskya}.
+
+Word2vec lernt Einbettungen, indem es mit einem anfänglichen Satz von Einbettungsvektoren beginnt und dann die Einbettung jedes Wortes $w$ iterativ verschiebt, um mehr den Einbettungen von Wörtern zu ähneln die in der Nähe der Wörter vorkommen. Für das Training eines binären Klassifikators werden negative Beispiele nötig sein. Das Skip-Gram benötigt mehr negative als positive Beispiele für das Training. Das Verhältnis zwischen positiven und negativen Beispielen wird mit einem Parameter $k$ festgelegt. Für jedes der Trainingseinheiten \textit{t, c} werden \textit{k} negative Stichproben erstellt, die jeweils aus dem Ziel \textit{t} plus einem \enquote{noise word} besteht. EIn \enquote{noise word} is ein zufälliges Wort aus dem Lexikon, das nicht das Zielwort \enquote{t} sein darf \cite*[113]{Jurafskya}.
+
+Das Ziel des Lernalgorithmus besteht darin, mittels gegebenen positiven und negativen Beispielen diese Einbettungen so anzupassen, dass die Ähnlichkeit der Ziel- und Kontextwortpaare \textit{(t, c)} aus den positiven Beispielen maximiert werden und die Ähnlichkeit der Paare \textit{(t, c)} aus den negativen Beispielen minimiert wird. Formell lässt sich dieses mit folgender Formel ausdrücken:
+
+\begin{gather} \label{Formel3_5}
+    L(\theta) = \sum_{(t,c)\in +}\log P(+|t,c)+\sum_{(t,c)\in -} \log P(-|t,c) =  \notag\\
+    \log \sigma(c \cdot t)+\sum^{k}_{i=1}\log \sigma(-n_{i} \cdot t) = \notag\\
+    \log \frac{1}{1+e^{-c \cdot t}}+\sum^{k}_{i=1}\log\frac{1}{1+e^{n_{1} \cdot t}}.
+\end{gather}
+
+Das heißt, wir möchten das Punktprodukt des Wortes mit den tatsächlichen Kontextwörtern maximieren und die Punktprodukte des Wortes mit den k negativen Nichtnachbarwörtern minimieren. Wir können dann den stochastischen Gradientenabstieg verwenden, um dieses Ziel zu erreichen, indem wir die Parameter (die Einbettungen für jedes Zielwort $t$ und jedes Kontextwort oder \enquote{noise word} $c$ im Vokabular) iterativ modifizieren \cite*[114]{Jurafskya}.
+
+% \subsubsection{Glove}
+% Eine andere Methode zum Einbetten von Wörtern ist Glove (\enquote{Global Vectors}). Es basiert auf Matrixfaktorisierungstechniken für die Wortkontextmatrix. Zunächst wird eine große Matrix von Informationen zum gleichzeitigen Auftreten von Wörter und Kontext erstellt, d. H. für jedes \enquote{Wort} (die Zeilen) wird gezählt, wie häufig dieses Wort in einem \enquote{Kontext} (den Spalten) in einem großen Korpus angezeigt wird. Dann wird diese Matrix in eine niederdimensionale Matrix Wort und Merkmale zerlegt, in der jede Zeile nun eine Vektordarstellung für jedes Wort speichert. Dies geschieht im Allgemeinen durch Minimierung eines \enquote{Rekonstruktionsverlusts}. Dieser Verlust versucht, die niederdimensionalen Darstellungen zu finden, die den größten Teil der Varianz in den hochdimensionalen Daten erklären können.
 
 
 

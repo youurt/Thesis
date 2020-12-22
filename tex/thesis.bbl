@@ -252,7 +252,7 @@
       \field{title}{{The Math of Neural Networks}}
       \field{year}{2017}
       \verb{file}
-      \verb :Users/ugurtigu/Downloads/The Math of Neural Networks by Michael Taylor, Mark Koning (z-lib.org).epub.pdf:pdf
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Taylor - 2017 - The Math of Neural Networks.pdf:pdf
       \endverb
     \endentry
     \entry{Chollet2017}{book}{}
@@ -280,7 +280,7 @@
       \verb 10.23919/ICIF.2018.8455530
       \endverb
       \verb{file}
-      \verb :Users/ugurtigu/Downloads/Deep learning with Python by Chollet, Francois (z-lib.org).pdf:pdf
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Chollet - 2017 - Deep learning with Python.pdf:pdf
       \endverb
     \endentry
     \entry{AntonioGuili;AmitaKapoor;SujitPal2019}{book}{}
@@ -304,7 +304,7 @@
       \field{title}{{Deep Learning with TensorFlow 2 and Keras: Regression, ConvNets, GANs, RNNs, NLP, and More with TensorFlow 2 and the Keras API}}
       \field{year}{2019}
       \verb{file}
-      \verb :Users/ugurtigu/Downloads/Deep Learning with TensorFlow 2.0 and Keras Regression, ConvNets, GANs, RNNs, NLP more with TF 2.0 and the Keras API by Antonio Gulli, Amita Kapoor, Sujit Pal (z-lib.org).pdf:pdf
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Antonio Guili Amita Kapoor Sujit Pal - 2019 - Deep Learning with TensorFlow 2 and Keras Regression, ConvNets, GANs, RNNs, NLP, and More.pdf:pdf
       \endverb
     \endentry
     \entry{IanGoodfellowYoshuaBengio2016}{book}{}
@@ -365,7 +365,7 @@
       \field{pages}{1\bibrangedash 73}
       \range{pages}{73}
       \verb{file}
-      \verb :Users/ugurtigu/Downloads/Deep Learning A Practitioners Approach by J. Patterson, A. Gibson (z-lib.org).pdf:pdf
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Patterson, Gibson - 2019 - Deep Learning a Practitioner'S Approach.pdf:pdf
       \endverb
     \endentry
     \entry{Ruder2016}{article}{}
@@ -583,8 +583,27 @@
       \endverb
     \endentry
     \entry{widlml}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=2823227040db0fb9953a68c781f0565c}{%
+           family={{Francois Chaubard}},
+           familyi={F\bibinitperiod},
+           given={Rohit},
+           giveni={R\bibinitperiod}}}%
+        {{hash=769cda2e6c89ce1142647f575d271fcb}{%
+           family={Mundra},
+           familyi={M\bibinitperiod},
+           given={Richard\bibnamedelima Socher},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c20057159afdd8aec0393f6e86c0710b}
+      \strng{fullhash}{c20057159afdd8aec0393f6e86c0710b}
+      \strng{bibnamehash}{c20057159afdd8aec0393f6e86c0710b}
+      \strng{authorbibnamehash}{c20057159afdd8aec0393f6e86c0710b}
+      \strng{authornamehash}{c20057159afdd8aec0393f6e86c0710b}
+      \strng{authorfullhash}{c20057159afdd8aec0393f6e86c0710b}
       \field{sortinit}{5}
       \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Understanding Convolutional Neural Networks for NLP – WildML}}
       \field{urlday}{15}
@@ -596,6 +615,35 @@
       \endverb
       \verb{url}
       \verb http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
+      \endverb
+    \endentry
+    \entry{Jurafskya}{report}{}
+      \name{author}{2}{}{%
+        {{hash=bd33d7a70284b5ead9c7985cb5c9929c}{%
+           family={Jurafsky},
+           familyi={J\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9ed8bee488b2703da341cded66bf83cb}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{fullhash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{bibnamehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{authorbibnamehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{authornamehash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \strng{authorfullhash}{b5e6a2accdc2023c51f42c6ec010d19b}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Speech and Language Processing An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition Third Edition draft}}
+      \field{type}{techreport}
+      \verb{file}
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Jurafsky, Martin - Unknown - Speech and Language Processing An Introduction to Natural Language Processing, Computational Linguistics, a.pdf:pdf
       \endverb
     \endentry
     \entry{wordemdgood}{misc}{}
@@ -643,6 +691,7 @@
       \strng{authorbibnamehash}{f24c60896b6daa69474b40efb61f4e88}
       \strng{authornamehash}{ed4d154f6ad724ee86e4b498231228f3}
       \strng{authorfullhash}{f24c60896b6daa69474b40efb61f4e88}
+      \field{extraname}{1}
       \field{sortinit}{6}
       \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
@@ -659,6 +708,57 @@
       \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Mikolov et al. - 2013 - Distributed Representations of Words and Phrases and their Compositionality.pdf:pdf
       \endverb
       \keyw{()}
+    \endentry
+    \entry{Mikolov}{report}{}
+      \name{author}{4}{}{%
+        {{hash=a2d359b12ca2fadf0b40136a73f021bb}{%
+           family={Mikolov},
+           familyi={M\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ee3f7d7b96add98106db907e189d6c13}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3d11e6f2a0d0a1183b2cf62996525afc}{%
+           family={Corrado},
+           familyi={C\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4aecfb0cc2e1e3b7899129fa2a94e2b8}{%
+           family={Dean},
+           familyi={D\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed4d154f6ad724ee86e4b498231228f3}
+      \strng{fullhash}{f24c60896b6daa69474b40efb61f4e88}
+      \strng{bibnamehash}{f24c60896b6daa69474b40efb61f4e88}
+      \strng{authorbibnamehash}{f24c60896b6daa69474b40efb61f4e88}
+      \strng{authornamehash}{ed4d154f6ad724ee86e4b498231228f3}
+      \strng{authorfullhash}{f24c60896b6daa69474b40efb61f4e88}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose two novel model architectures for computing continuous vector representations of words from very large data sets. The quality of these representations is measured in a word similarity task, and the results are compared to the previously best performing techniques based on different types of neural networks. We observe large improvements in accuracy at much lower computational cost, i.e. it takes less than a day to learn high quality word vectors from a 1.6 billion words data set. Furthermore, we show that these vectors provide state-of-the-art performance on our test set for measuring syntactic and semantic word similarities.}
+      \field{eprinttype}{arXiv}
+      \field{title}{{Efficient Estimation of Word Representations in Vector Space}}
+      \field{type}{techreport}
+      \verb{eprint}
+      \verb 1301.3781v3
+      \endverb
+      \verb{file}
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Mikolov et al. - Unknown - Efficient Estimation of Word Representations in Vector Space.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ronan.collobert.com/senna/
+      \endverb
+      \verb{url}
+      \verb http://ronan.collobert.com/senna/
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
