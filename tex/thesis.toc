@@ -76,14 +76,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3.1}Word2Vec mit der Skip-Gram Architektur}{30}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vii}{chapter*.23}%
+\contentsline {chapter}{\numberline {4}Verwandte Arbeiten}{35}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Tabellenverzeichnis}{ix}{section*.24}%
+\contentsline {section}{\numberline {4.1}Einleitung}{35}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abbildungsverzeichnis}{xi}{section*.26}%
+\contentsline {section}{\numberline {4.2}Analyse der Literatur}{35}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Quellcodeverzeichnis}{xiii}{section*.28}%
+\contentsline {section}{\numberline {4.3}Schluss}{37}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{xv}{chapter*.30}%
+\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vii}{chapter*.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Tabellenverzeichnis}{ix}{section*.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abbildungsverzeichnis}{xi}{section*.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Quellcodeverzeichnis}{xiii}{section*.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{xv}{chapter*.31}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

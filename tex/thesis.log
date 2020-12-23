@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.16)  22 DEC 2020 09:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.16)  23 DEC 2020 10:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1392,7 +1392,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-<bilder//kapitel2/multilayer.png, id=223, 688.5725pt x 416.55624pt>
+<bilder//kapitel2/multilayer.png, id=234, 688.5725pt x 416.55624pt>
 File: bilder//kapitel2/multilayer.png Graphic file (type png)
 <use bilder//kapitel2/multilayer.png>
 Package pdftex.def Info: bilder//kapitel2/multilayer.png  used on input line 46.
@@ -1411,7 +1411,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-<bilder//kapitel2/sig_plot.png, id=255, 379.4175pt x 252.945pt>
+<bilder//kapitel2/sig_plot.png, id=266, 379.4175pt x 252.945pt>
 File: bilder//kapitel2/sig_plot.png Graphic file (type png)
 <use bilder//kapitel2/sig_plot.png>
 Package pdftex.def Info: bilder//kapitel2/sig_plot.png  used on input line 79.
@@ -1425,7 +1425,7 @@ Overfull \hbox (0.49602pt too wide) in paragraph at lines 96--97
 Underfull \vbox (badness 3386) has occurred while \output is active []
 
  [8 </Users/ugurtigu/MasterThesis/tex/bilder//kapitel2/sig_plot.png>]
-<bilder//kapitel2/tanh_plot.png, id=271, 377.41pt x 252.945pt>
+<bilder//kapitel2/tanh_plot.png, id=282, 377.41pt x 252.945pt>
 File: bilder//kapitel2/tanh_plot.png Graphic file (type png)
 <use bilder//kapitel2/tanh_plot.png>
 Package pdftex.def Info: bilder//kapitel2/tanh_plot.png  used on input line 112.
@@ -1434,13 +1434,13 @@ Package pdftex.def Info: bilder//kapitel2/tanh_plot.png  used on input line 112.
 Underfull \vbox (badness 1448) has occurred while \output is active []
 
  [9 </Users/ugurtigu/MasterThesis/tex/bilder//kapitel2/tanh_plot.png>]
-<bilder//kapitel2/relu_plot.png, id=287, 379.4175pt x 252.945pt>
+<bilder//kapitel2/relu_plot.png, id=299, 379.4175pt x 252.945pt>
 File: bilder//kapitel2/relu_plot.png Graphic file (type png)
 <use bilder//kapitel2/relu_plot.png>
 Package pdftex.def Info: bilder//kapitel2/relu_plot.png  used on input line 136.
 (pdftex.def)             Requested size: 227.62204pt x 151.74887pt.
  [10 </Users/ugurtigu/MasterThesis/tex/bilder//kapitel2/relu_plot.png>]
-<bilder//kapitel2/gradient.png, id=297, 899.36pt x 656.4525pt>
+<bilder//kapitel2/gradient.png, id=308, 899.36pt x 656.4525pt>
 File: bilder//kapitel2/gradient.png Graphic file (type png)
 <use bilder//kapitel2/gradient.png>
 Package pdftex.def Info: bilder//kapitel2/gradient.png  used on input line 153.
@@ -1464,7 +1464,7 @@ Overfull \hbox (20.7971pt too wide) in paragraph at lines 178--179
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-<bilder//kapitel2/learnrate.png, id=320, 598.235pt x 430.60875pt>
+<bilder//kapitel2/learnrate.png, id=331, 598.235pt x 430.60875pt>
 File: bilder//kapitel2/learnrate.png Graphic file (type png)
 <use bilder//kapitel2/learnrate.png>
 Package pdftex.def Info: bilder//kapitel2/learnrate.png  used on input line 192.
@@ -1473,7 +1473,7 @@ Package pdftex.def Info: bilder//kapitel2/learnrate.png  used on input line 192.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
-<bilder//kapitel2/overundefit.png, id=330, 749.80125pt x 248.93pt>
+<bilder//kapitel2/overundefit.png, id=341, 749.80125pt x 248.93pt>
 File: bilder//kapitel2/overundefit.png Graphic file (type png)
 <use bilder//kapitel2/overundefit.png>
 Package pdftex.def Info: bilder//kapitel2/overundefit.png  used on input line 202.
@@ -1485,7 +1485,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15 </Users/ugurtigu/MasterThesis/tex/bilder//kapitel2/overundefit.png>]
-<bilder//kapitel2/dropout.png, id=351, 783.92876pt x 696.6025pt>
+<bilder//kapitel2/dropout.png, id=362, 783.92876pt x 696.6025pt>
 File: bilder//kapitel2/dropout.png Graphic file (type png)
 <use bilder//kapitel2/dropout.png>
 Package pdftex.def Info: bilder//kapitel2/dropout.png  used on input line 223.
@@ -1500,7 +1500,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-<bilder//kapitel2/entropie.png, id=400, 577.15625pt x 305.14pt>
+<bilder//kapitel2/entropie.png, id=411, 577.15625pt x 305.14pt>
 File: bilder//kapitel2/entropie.png Graphic file (type png)
 <use bilder//kapitel2/entropie.png>
 Package pdftex.def Info: bilder//kapitel2/entropie.png  used on input line 303.
@@ -1514,7 +1514,7 @@ Underfull \hbox (badness 1072) in paragraph at lines 304--304
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20 </Users/ugurtigu/MasterThesis/tex/bilder//kapitel2/entropie.png>]
-<bilder//kapitel2/conv.png, id=414, 757.83125pt x 165.61874pt>
+<bilder//kapitel2/conv.png, id=426, 757.83125pt x 165.61874pt>
 File: bilder//kapitel2/conv.png Graphic file (type png)
 <use bilder//kapitel2/conv.png>
 Package pdftex.def Info: bilder//kapitel2/conv.png  used on input line 318.
@@ -1526,7 +1526,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21 </Users/ugurtigu/MasterThesis/tex/bilder//kapitel2/conv.png>]
-<bilder//kapitel2/conv_layers.png, id=427, 766.865pt x 682.55pt>
+<bilder//kapitel2/conv_layers.png, id=438, 766.865pt x 682.55pt>
 File: bilder//kapitel2/conv_layers.png Graphic file (type png)
 <use bilder//kapitel2/conv_layers.png>
 Package pdftex.def Info: bilder//kapitel2/conv_layers.png  used on input line 339.
@@ -1539,7 +1539,7 @@ Overfull \hbox (0.16681pt too wide) in paragraph at lines 349--350
 \T1/ptm/m/n/12 Es ist üb-lich, re-gel-mä-ÿig ei-ne Pooling-Ebene zwi-schen auf-ein-an-der-fol-gen-den Conv-
  []
 
-<bilder//kapitel2/maxpooling.png, id=438, 744.7825pt x 672.5125pt>
+<bilder//kapitel2/maxpooling.png, id=449, 744.7825pt x 672.5125pt>
 File: bilder//kapitel2/maxpooling.png Graphic file (type png)
 <use bilder//kapitel2/maxpooling.png>
 Package pdftex.def Info: bilder//kapitel2/maxpooling.png  used on input line 353.
@@ -1557,7 +1557,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24 </Users/ugurtigu/MasterThesis/tex/bilder//kapitel2/maxpooling.png>]
-<bilder//kapitel2/cnnnlp.png, id=457, 639.38875pt x 701.62125pt>
+<bilder//kapitel2/cnnnlp.png, id=468, 639.38875pt x 701.62125pt>
 File: bilder//kapitel2/cnnnlp.png Graphic file (type png)
 <use bilder//kapitel2/cnnnlp.png>
 Package pdftex.def Info: bilder//kapitel2/cnnnlp.png  used on input line 369.
@@ -1574,13 +1574,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-<bilder//kapitel3/onhot.png, id=476, 350.30875pt x 284.06125pt>
+<bilder//kapitel3/onhot.png, id=487, 350.30875pt x 284.06125pt>
 File: bilder//kapitel3/onhot.png Graphic file (type png)
 <use bilder//kapitel3/onhot.png>
 Package pdftex.def Info: bilder//kapitel3/onhot.png  used on input line 19.
 (pdftex.def)             Requested size: 227.62204pt x 184.58125pt.
  [28 </Users/ugurtigu/MasterThesis/tex/bilder//kapitel3/onhot.png>]
-<bilder//kapitel3/wordem.png, id=484, 842.14626pt x 304.13625pt>
+<bilder//kapitel3/wordem.png, id=495, 842.14626pt x 304.13625pt>
 File: bilder//kapitel3/wordem.png Graphic file (type png)
 <use bilder//kapitel3/wordem.png>
 Package pdftex.def Info: bilder//kapitel3/wordem.png  used on input line 35.
@@ -1589,7 +1589,7 @@ Package pdftex.def Info: bilder//kapitel3/wordem.png  used on input line 35.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
-<bilder//kapitel3/cbowskipgr.png, id=503, 706.64pt x 423.5825pt>
+<bilder//kapitel3/cbowskipgr.png, id=514, 706.64pt x 423.5825pt>
 File: bilder//kapitel3/cbowskipgr.png Graphic file (type png)
 <use bilder//kapitel3/cbowskipgr.png>
 Package pdftex.def Info: bilder//kapitel3/cbowskipgr.png  used on input line 65.
@@ -1604,7 +1604,29 @@ Underfull \vbox (badness 1009) has occurred while \output is active []
  [31 </Users/ugurtigu/MasterThesis/tex/bilder//kapitel3/cbowskipgr.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32]) (/Users/ugurtigu/MasterThesis/tex/kapitel/kapitel4.tex) [33] [34
+ [32]) (/Users/ugurtigu/MasterThesis/tex/kapitel/kapitel4.tex [33] [34
+
+
+]
+chapter 4.
+
+Overfull \hbox (6.33713pt too wide) in paragraph at lines 10--11
+\T1/ptm/m/n/12 für Nicht-Clickbait-Kategorien ge-sam-melt. Für die Nicht-Clickbaits-Kategorien wur-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+<bilder//kapitel4/tsne.png, id=571, 670.505pt x 408.52625pt>
+File: bilder//kapitel4/tsne.png Graphic file (type png)
+<use bilder//kapitel4/tsne.png>
+Package pdftex.def Info: bilder//kapitel4/tsne.png  used on input line 29.
+(pdftex.def)             Requested size: 341.43306pt x 208.02771pt.
+) [37 </Users/ugurtigu/MasterThesis/tex/bilder//kapitel4/tsne.png>] [38
 
 
 ]
@@ -1647,10 +1669,7 @@ chapter without number
 
 ]
 chapter without number
-[15] [16] [17] [18
-
-
-] (/Users/ugurtigu/MasterThesis/tex/thesis.ind) (/Users/ugurtigu/MasterThesis/tex/kapitel/anhang-a.tex) (/Users/ugurtigu/MasterThesis/tex/kapitel/anhang-b.tex) (/Users/ugurtigu/MasterThesis/tex/thesis.aux)
+[15] [16] [17] [18] (/Users/ugurtigu/MasterThesis/tex/thesis.ind) (/Users/ugurtigu/MasterThesis/tex/kapitel/anhang-a.tex) (/Users/ugurtigu/MasterThesis/tex/kapitel/anhang-b.tex) (/Users/ugurtigu/MasterThesis/tex/thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1662,20 +1681,20 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35693 strings out of 479383
- 700832 string characters out of 5869387
- 1657445 words of memory out of 5000000
- 51920 multiletter control sequences out of 15000+600000
+ 35777 strings out of 479383
+ 703110 string characters out of 5869387
+ 1657120 words of memory out of 5000000
+ 51980 multiletter control sequences out of 15000+600000
  468891 words of font info for 95 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  110i,20n,113p,10651b,2262s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section*.31} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{section*.32} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/ugurtigu/MasterThesis/tex/thesis.pdf (54 pages, 1846389 bytes).
+Output written on /Users/ugurtigu/MasterThesis/tex/thesis.pdf (58 pages, 2119857 bytes).
 PDF statistics:
- 877 PDF objects out of 1000 (max. 8388607)
- 748 compressed objects within 8 object streams
- 169 named destinations out of 1000 (max. 500000)
- 434 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 972 PDF objects out of 1000 (max. 8388607)
+ 834 compressed objects within 9 object streams
+ 191 named destinations out of 1000 (max. 500000)
+ 471 words of extra memory for PDF output out of 10000 (max. 10000000)
 
