@@ -106,108 +106,48 @@
       \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Hinton, Osindero - Unknown - A Fast Learning Algorithm for Deep Belief Nets Yee-Whye Teh.pdf:pdf
       \endverb
     \endentry
-    \entry{Schmidhuber2014}{report}{}
-      \name{author}{1}{}{%
-        {{hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
-           family={Schmidhuber},
-           familyi={S\bibinitperiod},
-           given={Jürgen},
-           giveni={J\bibinitperiod}}}%
+    \entry{Lecun2015}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d0ab8cbca75df7aa3e0b6024d60ac5f8}{%
+           family={Lecun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9a8750ccdb2a4cf14d2655face1ce016}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod}}}%
       }
-      \strng{namehash}{288bdbcfe1b91ad7484d7a24f74f99ed}
-      \strng{fullhash}{288bdbcfe1b91ad7484d7a24f74f99ed}
-      \strng{bibnamehash}{288bdbcfe1b91ad7484d7a24f74f99ed}
-      \strng{authorbibnamehash}{288bdbcfe1b91ad7484d7a24f74f99ed}
-      \strng{authornamehash}{288bdbcfe1b91ad7484d7a24f74f99ed}
-      \strng{authorfullhash}{288bdbcfe1b91ad7484d7a24f74f99ed}
+      \strng{namehash}{df147ee3262b14a19bae8c3ffe34845e}
+      \strng{fullhash}{df147ee3262b14a19bae8c3ffe34845e}
+      \strng{bibnamehash}{df147ee3262b14a19bae8c3ffe34845e}
+      \strng{authorbibnamehash}{df147ee3262b14a19bae8c3ffe34845e}
+      \strng{authornamehash}{df147ee3262b14a19bae8c3ffe34845e}
+      \strng{authorfullhash}{df147ee3262b14a19bae8c3ffe34845e}
       \field{sortinit}{4}
       \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{In recent years, deep artificial neural networks (including recurrent ones) have won numerous contests in pattern recognition and machine learning. This historical survey compactly summarises relevant work, much of it from the previous millennium. Shallow and deep learners are distinguished by the depth of their credit assignment paths, which are chains of possibly learnable, causal links between actions and effects. I review deep supervised learning (also recapitulating the history of backpropagation), unsupervised learning, reinforcement learning {\&} evolutionary computation, and indirect search for short programs encoding deep and large networks. LATEX source: Preface This is the preprint of an invited Deep Learning (DL) overview. One of its goals is to assign credit to those who contributed to the present state of the art. I acknowledge the limitations of attempting to achieve this goal. The DL research community itself may be viewed as a continually evolving, deep network of scientists who have influenced each other in complex ways. Starting from recent DL results, I tried to trace back the origins of relevant ideas through the past half century and beyond, sometimes using "local search" to follow citations of citations backwards in time. Since not all DL publications properly acknowledge earlier relevant work, additional global search strategies were employed , aided by consulting numerous neural network experts. As a result, the present preprint mostly consists of references. Nevertheless, through an expert selection bias I may have missed important work. A related bias was surely introduced by my special familiarity with the work of my own DL research group in the past quarter-century. For these reasons, this work should be viewed as merely a snapshot of an ongoing credit assignment process. To help improve it, please do not hesitate to send corrections and suggestions to juergen@idsia.ch.}
-      \field{eprinttype}{arXiv}
-      \field{title}{{Deep Learning in Neural Networks: An Overview}}
-      \field{type}{techreport}
-      \field{year}{2014}
-      \verb{eprint}
-      \verb 1404.7828v4
+      \field{abstract}{Deep learning allows computational models that are composed of multiple processing layers to learn representations of data with multiple levels of abstraction. These methods have dramatically improved the state-of-the-art in speech recognition, visual object recognition, object detection and many other domains such as drug discovery and genomics. Deep learning discovers intricate structure in large data sets by using the backpropagation algorithm to indicate how a machine should change its internal parameters that are used to compute the representation in each layer from the representation in the previous layer. Deep convolutional nets have brought about breakthroughs in processing images, video, speech and audio, whereas recurrent nets have shone light on sequential data such as text and speech.}
+      \field{issn}{14764687}
+      \field{journaltitle}{Nature}
+      \field{number}{7553}
+      \field{title}{{Deep learning}}
+      \field{volume}{521}
+      \field{year}{2015}
+      \field{pages}{436\bibrangedash 444}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1038/nature14539
       \endverb
       \verb{file}
-      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Schmidhuber - 2014 - Deep Learning in Neural Networks An Overview.pdf:pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://www.idsia.ch/˜juergen/DeepLearning8Oct2014.texCompleteBIBTEXfile
-      \endverb
-      \verb{url}
-      \verb http://www.idsia.ch/%CB%9Cjuergen/DeepLearning8Oct2014.texCompleteBIBTEXfile
-      \endverb
-    \endentry
-    \entry{Rumelhart1986}{article}{}
-      \name{author}{3}{}{%
-        {{hash=55cd5380bb5b15032a6d5a2015f56e3f}{%
-           family={Rumelhart},
-           familyi={R\bibinitperiod},
-           given={David\bibnamedelima E.},
-           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=813bd95fe553e6079cd53a567b238287}{%
-           family={Hinton},
-           familyi={H\bibinitperiod},
-           given={Geoffrey\bibnamedelima E.},
-           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=6cbc29ad7fd57ffdb9ed4728418fd988}{%
-           family={Williams},
-           familyi={W\bibinitperiod},
-           given={Ronald\bibnamedelima J.},
-           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \strng{namehash}{fd75cea68d6982b503a0cd84f7cc7b51}
-      \strng{fullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
-      \strng{bibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
-      \strng{authorbibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
-      \strng{authornamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
-      \strng{authorfullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{We describe a new learning procedure, back-propagation, for networks of neurone-like units. The procedure repeatedly adjusts the weights of the connections in the network so as to minimize a measure of the difference between the actual output vector of the net and the desired output vector. As a result of the weight adjustments, internal 'hidden' units which are not part of the input or output come to represent important features of the task domain, and the regularities in the task are captured by the interactions of these units. The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure 1. {©} 1986 Nature Publishing Group.}
-      \field{issn}{00280836}
-      \field{journaltitle}{Nature}
-      \field{number}{6088}
-      \field{title}{{Learning representations by back-propagating errors}}
-      \field{volume}{323}
-      \field{year}{1986}
-      \verb{doi}
-      \verb 10.1038/323533a0
-      \endverb
-    \endentry
-    \entry{Herculano-Houzel2009}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=844747f22b37db160509d1c43124abcb}{%
-           family={Herculano-Houzel},
-           familyi={H\bibinithyphendelim H\bibinitperiod},
-           given={Suzana},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{844747f22b37db160509d1c43124abcb}
-      \strng{fullhash}{844747f22b37db160509d1c43124abcb}
-      \strng{bibnamehash}{844747f22b37db160509d1c43124abcb}
-      \strng{authorbibnamehash}{844747f22b37db160509d1c43124abcb}
-      \strng{authornamehash}{844747f22b37db160509d1c43124abcb}
-      \strng{authorfullhash}{844747f22b37db160509d1c43124abcb}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The human brain has often been viewed as outstanding among mammalian brains: the most cognitively able, the largest-than-expected from body size, endowed with an overdeveloped cerebral cortex that represents over 80{\%} of brain mass, and purportedly containing 100 billion neurons and 10× more glial cells. Such uniqueness was seemingly necessary to justify the superior cognitive abilities of humans over larger-brained mammals such as elephants and whales. However, our recent studies using a novel method to determine the cellular composition of the brain of humans and other primates as well as of rodents and insectivores show that, since different cellular scaling rules apply to the brains within these orders, brain size can no longer be considered a proxy for the number of neurons in the brain. These studies also showed that the human brain is not exceptional in its cellular composition, as it was found to contain as many neuronal and non-neuronal cells as would be expected of a primate brain of its size. Additionally, the so-called overdeveloped human cerebral cortex holds only 19{\%} of all brain neurons, a fraction that is similar to that found in other mammals. In what regards absolute numbers of neurons, however, the human brain does have two advantages compared to other mammalian brains: compared to rodents, and probably to whales and elephants as well, it is built according to the very economical, space-saving scaling rules that apply to other primates; and, among economically built primate brains, it is the largest, hence containing the most neurons. These findings argue in favor of a view of cognitive abilities that is centered on absolute numbers of neurons, rather than on body size or encephalization, and call for a re-examination of several concepts related to the exceptionality of the human brain. {©} 2009 Herculano-Houzel.}
-      \field{booktitle}{Frontiers in Human Neuroscience}
-      \field{issn}{16625161}
-      \field{number}{NOV}
-      \field{title}{{The human brain in numbers: A linearly scaled-up primate brain}}
-      \field{volume}{3}
-      \field{year}{2009}
-      \verb{doi}
-      \verb 10.3389/neuro.09.031.2009
+      \verb :Users/ugurtigu/Downloads/nature14539.pdf:pdf
       \endverb
     \endentry
     \entry{Nielsen2015}{article}{}
@@ -224,36 +164,52 @@
       \strng{authorbibnamehash}{17279793dcf098cfda8570111ee5cfd9}
       \strng{authornamehash}{17279793dcf098cfda8570111ee5cfd9}
       \strng{authorfullhash}{17279793dcf098cfda8570111ee5cfd9}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Neural networks and deep learning}}
       \field{year}{2015}
     \endentry
-    \entry{Taylor2017}{book}{}
-      \name{author}{1}{}{%
-        {{hash=5efe73c0ef8f0e873d520c4ea41f807e}{%
-           family={Taylor},
-           familyi={T\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
+    \entry{Gardner1998}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5707ebdded50437381e5df9123e740bd}{%
+           family={Gardner},
+           familyi={G\bibinitperiod},
+           given={M.\bibnamedelimi W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=1c61530acf4dd19fcef40271ea17a5f0}{%
+           family={Dorling},
+           familyi={D\bibinitperiod},
+           given={S.\bibnamedelimi R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
       }
-      \strng{namehash}{5efe73c0ef8f0e873d520c4ea41f807e}
-      \strng{fullhash}{5efe73c0ef8f0e873d520c4ea41f807e}
-      \strng{bibnamehash}{5efe73c0ef8f0e873d520c4ea41f807e}
-      \strng{authorbibnamehash}{5efe73c0ef8f0e873d520c4ea41f807e}
-      \strng{authornamehash}{5efe73c0ef8f0e873d520c4ea41f807e}
-      \strng{authorfullhash}{5efe73c0ef8f0e873d520c4ea41f807e}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \strng{namehash}{d3b069cf54786f3af7509cc758fbdd6c}
+      \strng{fullhash}{d3b069cf54786f3af7509cc758fbdd6c}
+      \strng{bibnamehash}{d3b069cf54786f3af7509cc758fbdd6c}
+      \strng{authorbibnamehash}{d3b069cf54786f3af7509cc758fbdd6c}
+      \strng{authornamehash}{d3b069cf54786f3af7509cc758fbdd6c}
+      \strng{authorfullhash}{d3b069cf54786f3af7509cc758fbdd6c}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{The Math of Neural Networks}}
-      \field{year}{2017}
-      \verb{file}
-      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Taylor - 2017 - The Math of Neural Networks.pdf:pdf
+      \field{abstract}{Artificial neural networks are appearing as useful alternatives to traditional statistical modelling techniques in many scientific disciplines. This paper presents a general introduction and discussion of recent applications of the multilayer perceptron, one type of artificial neural network, in the atmospheric sciences.}
+      \field{issn}{13522310}
+      \field{journaltitle}{Atmospheric Environment}
+      \field{number}{14-15}
+      \field{title}{{Artificial neural networks (the multilayer perceptron) - a review of applications in the atmospheric sciences}}
+      \field{volume}{32}
+      \field{year}{1998}
+      \field{pages}{2627\bibrangedash 2636}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/S1352-2310(97)00447-0
       \endverb
+      \verb{file}
+      \verb :Users/ugurtigu/Downloads/s1352-2310(97)00447-0.pdf:pdf
+      \endverb
+      \keyw{Artificial intelligence,Backpropagation,Neural network,Statistical modelling}
     \endentry
     \entry{Chollet2017}{book}{}
       \name{author}{1}{}{%
@@ -332,42 +288,6 @@
       \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Ian Goodfellow, Yoshua Bengio - 2016 - Deep Learning.pdf:pdf
       \endverb
     \endentry
-    \entry{Patterson2019}{book}{}
-      \name{author}{2}{}{%
-        {{hash=b437b3540ca6290b1af286f81e1918f1}{%
-           family={Patterson},
-           familyi={P\bibinitperiod},
-           given={Josh},
-           giveni={J\bibinitperiod}}}%
-        {{hash=6cc15cc3c2db75f3b76f461a16e7acd5}{%
-           family={Gibson},
-           familyi={G\bibinitperiod},
-           given={Adam},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{57d3e134e29f75914b76c446039ab8bf}
-      \strng{fullhash}{57d3e134e29f75914b76c446039ab8bf}
-      \strng{bibnamehash}{57d3e134e29f75914b76c446039ab8bf}
-      \strng{authorbibnamehash}{57d3e134e29f75914b76c446039ab8bf}
-      \strng{authornamehash}{57d3e134e29f75914b76c446039ab8bf}
-      \strng{authorfullhash}{57d3e134e29f75914b76c446039ab8bf}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{"Deep learning is a form of machine learning that enables computers to learn from experience and understand the world in terms of a hierarchy of concepts. Because the computer gathers knowledge from experience, there is no need for a human computer operator to formally specify all the knowledge that the computer needs. The hierarchy of concepts allows the computer to learn complicated concepts by building them out of simpler ones; a graph of these hierarchies would be many layers deep. This book introduces a broad range of topics in deep learning. The text offers mathematical and conceptual background, covering relevant concepts in linear algebra, probability theory and information theory, numerical computation, and machine learning. It describes deep learning techniques used by practitioners in industry, including deep feedforward networks, regularization, optimization algorithms, convolutional networks, sequence modeling, and practical methodology; and it surveys such applications as natural language processing, speech recognition, computer vision, online recommendation systems, bioinformatics, and video games. Finally, the book offers research perspectives, covering such theoretical topics as linear factor models, autoencoders, representation learning, structured probabilistic models, Monte Carlo methods, the partition function, approximate inference, and deep generative models. Deep Learning can be used by undergraduate or graduate students planning careers in either industry or research, and by software engineers who want to begin using deep learning in their products or platforms. A website offers supplementary material for both readers and instructors"--Page 4 of cover. Introduction -- Applied math and machine learning basics. Linear algebra -- Probability and information theory -- Numerical computation -- Machine learning basics -- Deep networks: modern practices. Deep feedforward networks -- Regularization for deep learning -- Optimization for training deep models -- Convolutional networks -- Sequence modeling: recurrent and recursive nets -- Practical methodology -- Applications -- Deep learning research. Linear factor models -- Autoencoders -- Representation learning -- Structured probabilistic models for deep learning -- Monte Carlo methods -- Confronting the partition function -- Approximate inference -- Deep generative models.}
-      \field{booktitle}{Nature}
-      \field{isbn}{3463353563306}
-      \field{number}{7553}
-      \field{title}{{Deep Learning a Practitioner'S Approach}}
-      \field{volume}{29}
-      \field{year}{2019}
-      \field{pages}{1\bibrangedash 73}
-      \range{pages}{73}
-      \verb{file}
-      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Patterson, Gibson - 2019 - Deep Learning a Practitioner'S Approach.pdf:pdf
-      \endverb
-    \endentry
     \entry{Ruder2016}{article}{}
       \name{author}{1}{}{%
         {{hash=b468248a20d75c52ee742f4592c2569f}{%
@@ -402,6 +322,58 @@
       \endverb
       \verb{url}
       \verb http://arxiv.org/abs/1609.04747
+      \endverb
+    \endentry
+    \entry{hackernoon}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{{Gradient Descent: All You Need to Know | Hacker Noon}}
+      \field{urlday}{24}
+      \field{urlmonth}{12}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://hackernoon.com/gradient-descent-aynk-7cbe95a778da
+      \endverb
+      \verb{url}
+      \verb https://hackernoon.com/gradient-descent-aynk-7cbe95a778da
+      \endverb
+    \endentry
+    \entry{Patterson2019}{book}{}
+      \name{author}{2}{}{%
+        {{hash=b437b3540ca6290b1af286f81e1918f1}{%
+           family={Patterson},
+           familyi={P\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6cc15cc3c2db75f3b76f461a16e7acd5}{%
+           family={Gibson},
+           familyi={G\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{57d3e134e29f75914b76c446039ab8bf}
+      \strng{fullhash}{57d3e134e29f75914b76c446039ab8bf}
+      \strng{bibnamehash}{57d3e134e29f75914b76c446039ab8bf}
+      \strng{authorbibnamehash}{57d3e134e29f75914b76c446039ab8bf}
+      \strng{authornamehash}{57d3e134e29f75914b76c446039ab8bf}
+      \strng{authorfullhash}{57d3e134e29f75914b76c446039ab8bf}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{"Deep learning is a form of machine learning that enables computers to learn from experience and understand the world in terms of a hierarchy of concepts. Because the computer gathers knowledge from experience, there is no need for a human computer operator to formally specify all the knowledge that the computer needs. The hierarchy of concepts allows the computer to learn complicated concepts by building them out of simpler ones; a graph of these hierarchies would be many layers deep. This book introduces a broad range of topics in deep learning. The text offers mathematical and conceptual background, covering relevant concepts in linear algebra, probability theory and information theory, numerical computation, and machine learning. It describes deep learning techniques used by practitioners in industry, including deep feedforward networks, regularization, optimization algorithms, convolutional networks, sequence modeling, and practical methodology; and it surveys such applications as natural language processing, speech recognition, computer vision, online recommendation systems, bioinformatics, and video games. Finally, the book offers research perspectives, covering such theoretical topics as linear factor models, autoencoders, representation learning, structured probabilistic models, Monte Carlo methods, the partition function, approximate inference, and deep generative models. Deep Learning can be used by undergraduate or graduate students planning careers in either industry or research, and by software engineers who want to begin using deep learning in their products or platforms. A website offers supplementary material for both readers and instructors"--Page 4 of cover. Introduction -- Applied math and machine learning basics. Linear algebra -- Probability and information theory -- Numerical computation -- Machine learning basics -- Deep networks: modern practices. Deep feedforward networks -- Regularization for deep learning -- Optimization for training deep models -- Convolutional networks -- Sequence modeling: recurrent and recursive nets -- Practical methodology -- Applications -- Deep learning research. Linear factor models -- Autoencoders -- Representation learning -- Structured probabilistic models for deep learning -- Monte Carlo methods -- Confronting the partition function -- Approximate inference -- Deep generative models.}
+      \field{booktitle}{Nature}
+      \field{isbn}{3463353563306}
+      \field{number}{7553}
+      \field{title}{{Deep Learning a Practitioner'S Approach}}
+      \field{volume}{29}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 73}
+      \range{pages}{73}
+      \verb{file}
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Patterson, Gibson - 2019 - Deep Learning a Practitioner'S Approach.pdf:pdf
       \endverb
     \endentry
     \entry{StanfordUniversityCoursecs231n2018}{article}{}
@@ -542,79 +514,144 @@
       \verb https://cs231n.github.io/convolutional-networks/
       \endverb
     \endentry
-    \entry{Zhang}{report}{}
-      \name{author}{2}{}{%
-        {{hash=5ddec46e090404e1224890533cbaa882}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Ye},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=dcf3fece96fc55df5a003eccf64d2961}{%
-           family={Wallace},
-           familyi={W\bibinitperiod},
-           given={Byron\bibnamedelima C},
-           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+    \entry{Liddy}{report}{}
+      \name{author}{1}{}{%
+        {{hash=f58f8bb3262004b24e666c5ff9ed930f}{%
+           family={Liddy},
+           familyi={L\bibinitperiod},
+           given={Elizabeth\bibnamedelima D},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
-      \strng{namehash}{615367a133b779975ce17728b05f6a32}
-      \strng{fullhash}{615367a133b779975ce17728b05f6a32}
-      \strng{bibnamehash}{615367a133b779975ce17728b05f6a32}
-      \strng{authorbibnamehash}{615367a133b779975ce17728b05f6a32}
-      \strng{authornamehash}{615367a133b779975ce17728b05f6a32}
-      \strng{authorfullhash}{615367a133b779975ce17728b05f6a32}
+      \strng{namehash}{f58f8bb3262004b24e666c5ff9ed930f}
+      \strng{fullhash}{f58f8bb3262004b24e666c5ff9ed930f}
+      \strng{bibnamehash}{f58f8bb3262004b24e666c5ff9ed930f}
+      \strng{authorbibnamehash}{f58f8bb3262004b24e666c5ff9ed930f}
+      \strng{authornamehash}{f58f8bb3262004b24e666c5ff9ed930f}
+      \strng{authorfullhash}{f58f8bb3262004b24e666c5ff9ed930f}
       \field{sortinit}{5}
       \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Convolutional Neural Networks (CNNs) have recently achieved remarkably strong performance on the practically important task of sentence classification (Kim, 2014; Kalchbrenner et al., 2014; Johnson and Zhang, 2014). However, these models require practitioners to specify an exact model architecture and set accompanying hyperparameters, including the filter region size, regularization parameters, and so on. It is currently unknown how sensitive model performance is to changes in these configurations for the task of sentence classification. We thus conduct a sensitivity analysis of one-layer CNNs to explore the effect of architecture components on model performance; our aim is to distinguish between important and comparatively inconsequential design decisions for sentence classification. We focus on one-layer CNNs (to the exclusion of more complex models) due to their comparative simplicity and strong empirical performance, which makes it a modern standard baseline method akin to Support Vector Machine (SVMs) and logistic regression. We derive practical advice from our extensive empirical results for those interested in getting the most out of CNNs for sentence classification in real world settings.}
-      \field{eprinttype}{arXiv}
-      \field{title}{{A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification}}
+      \field{title}{{SURFACE SURFACE Center for Natural Language Processing School of Information Studies (iSchool) 2001 Natural Language Processing Natural Language Processing Natural Language Processing 1}}
       \field{type}{techreport}
-      \verb{eprint}
-      \verb 1510.03820v4
-      \endverb
       \verb{file}
-      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Zhang, Wallace - Unknown - A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classifica.pdf:pdf
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Liddy - Unknown - SURFACE SURFACE Center for Natural Language Processing School of Information Studies (iSchool) 2001 Natural Language P.pdf:pdf
       \endverb
       \verb{urlraw}
-      \verb http://nlp.stanford.edu/projects/
+      \verb https://surface.syr.edu/cnlp
       \endverb
       \verb{url}
-      \verb http://nlp.stanford.edu/projects/
+      \verb https://surface.syr.edu/cnlp
       \endverb
     \endentry
-    \entry{widlml}{misc}{}
-      \name{author}{2}{}{%
-        {{hash=2823227040db0fb9953a68c781f0565c}{%
-           family={{Francois Chaubard}},
-           familyi={F\bibinitperiod},
-           given={Rohit},
+    \entry{Bengio2003}{report}{}
+      \name{author}{9}{}{%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dcb65deeb8d2de03d00f0aeeb3499771}{%
+           family={Ducharme},
+           familyi={D\bibinitperiod},
+           given={Réjean},
            giveni={R\bibinitperiod}}}%
-        {{hash=769cda2e6c89ce1142647f575d271fcb}{%
-           family={Mundra},
-           familyi={M\bibinitperiod},
-           given={Richard\bibnamedelima Socher},
-           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=da21e966c02c3cfd33d74369c7435c1a}{%
+           family={Vincent},
+           familyi={V\bibinitperiod},
+           given={Pascal},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bd9126e06687017f43910a8eb056bb0a}{%
+           family={Jauvin},
+           familyi={J\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=fd22dc084c72d3665935e5c76cd1579a}{%
+           family={Ca},
+           familyi={C\bibinitperiod},
+           given={Jauvinc@iro\bibnamedelima Umontreal},
+           giveni={J\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=7a76df59366b2cd67950e21661526bdf}{%
+           family={Kandola},
+           familyi={K\bibinitperiod},
+           given={Jaz},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ee42cfed2ff3020233d2de97c356eaee}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f65eec80d26b2ab02398d1e78643c9a6}{%
+           family={Poggio},
+           familyi={P\bibinitperiod},
+           given={Tomaso},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8feae4ec394a5f6905c74b1a7abff875}{%
+           family={Shawe-Taylor},
+           familyi={S\bibinithyphendelim T\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
       }
-      \strng{namehash}{c20057159afdd8aec0393f6e86c0710b}
-      \strng{fullhash}{c20057159afdd8aec0393f6e86c0710b}
-      \strng{bibnamehash}{c20057159afdd8aec0393f6e86c0710b}
-      \strng{authorbibnamehash}{c20057159afdd8aec0393f6e86c0710b}
-      \strng{authornamehash}{c20057159afdd8aec0393f6e86c0710b}
-      \strng{authorfullhash}{c20057159afdd8aec0393f6e86c0710b}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \strng{namehash}{725bfe7fa99eb3477fe935c2ef46ed6a}
+      \strng{fullhash}{68e68897d128ca68159c0a4396171233}
+      \strng{bibnamehash}{68e68897d128ca68159c0a4396171233}
+      \strng{authorbibnamehash}{68e68897d128ca68159c0a4396171233}
+      \strng{authornamehash}{725bfe7fa99eb3477fe935c2ef46ed6a}
+      \strng{authorfullhash}{68e68897d128ca68159c0a4396171233}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{Understanding Convolutional Neural Networks for NLP – WildML}}
-      \field{urlday}{15}
-      \field{urlmonth}{12}
-      \field{urlyear}{2020}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
+      \field{abstract}{A goal of statistical language modeling is to learn the joint probability function of sequences of words in a language. This is intrinsically difficult because of the curse of dimensionality: a word sequence on which the model will be tested is likely to be different from all the word sequences seen during training. Traditional but very successful approaches based on n-grams obtain generalization by concatenating very short overlapping sequences seen in the training set. We propose to fight the curse of dimensionality by learning a distributed representation for words which allows each training sentence to inform the model about an exponential number of semantically neighboring sentences. The model learns simultaneously (1) a distributed representation for each word along with (2) the probability function for word sequences, expressed in terms of these representations. Generalization is obtained because a sequence of words that has never been seen before gets high probability if it is made of words that are similar (in the sense of having a nearby representation) to words forming an already seen sentence. Training such large models (with millions of parameters) within a reasonable time is itself a significant challenge. We report on experiments using neural networks for the probability function, showing on two text corpora that the proposed approach significantly improves on state-of-the-art n-gram models, and that the proposed approach allows to take advantage of longer contexts.}
+      \field{booktitle}{Journal of Machine Learning Research}
+      \field{title}{{A Neural Probabilistic Language Model}}
+      \field{type}{techreport}
+      \field{volume}{3}
+      \field{year}{2003}
+      \field{pages}{1137\bibrangedash 1155}
+      \range{pages}{19}
+      \verb{file}
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Bengio et al. - 2003 - A Neural Probabilistic Language Model.pdf:pdf
       \endverb
-      \verb{url}
-      \verb http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
+      \keyw{Statistical language modeling,artificial neural networks,curse of dimensionality,distributed representation}
+    \endentry
+    \entry{Rumelhart1986}{article}{}
+      \name{author}{3}{}{%
+        {{hash=55cd5380bb5b15032a6d5a2015f56e3f}{%
+           family={Rumelhart},
+           familyi={R\bibinitperiod},
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6cbc29ad7fd57ffdb9ed4728418fd988}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Ronald\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{fullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{bibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authorbibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authornamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authorfullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We describe a new learning procedure, back-propagation, for networks of neurone-like units. The procedure repeatedly adjusts the weights of the connections in the network so as to minimize a measure of the difference between the actual output vector of the net and the desired output vector. As a result of the weight adjustments, internal 'hidden' units which are not part of the input or output come to represent important features of the task domain, and the regularities in the task are captured by the interactions of these units. The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure 1. {©} 1986 Nature Publishing Group.}
+      \field{issn}{00280836}
+      \field{journaltitle}{Nature}
+      \field{number}{6088}
+      \field{title}{{Learning representations by back-propagating errors}}
+      \field{volume}{323}
+      \field{year}{1986}
+      \verb{doi}
+      \verb 10.1038/323533a0
       \endverb
     \endentry
     \entry{Jurafskya}{report}{}
@@ -739,8 +776,8 @@
       \strng{authornamehash}{ed4d154f6ad724ee86e4b498231228f3}
       \strng{authorfullhash}{f24c60896b6daa69474b40efb61f4e88}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We propose two novel model architectures for computing continuous vector representations of words from very large data sets. The quality of these representations is measured in a word similarity task, and the results are compared to the previously best performing techniques based on different types of neural networks. We observe large improvements in accuracy at much lower computational cost, i.e. it takes less than a day to learn high quality word vectors from a 1.6 billion words data set. Furthermore, we show that these vectors provide state-of-the-art performance on our test set for measuring syntactic and semantic word similarities.}
@@ -758,6 +795,81 @@
       \endverb
       \verb{url}
       \verb http://ronan.collobert.com/senna/
+      \endverb
+    \endentry
+    \entry{Zhang}{report}{}
+      \name{author}{2}{}{%
+        {{hash=5ddec46e090404e1224890533cbaa882}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Ye},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dcf3fece96fc55df5a003eccf64d2961}{%
+           family={Wallace},
+           familyi={W\bibinitperiod},
+           given={Byron\bibnamedelima C},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{615367a133b779975ce17728b05f6a32}
+      \strng{fullhash}{615367a133b779975ce17728b05f6a32}
+      \strng{bibnamehash}{615367a133b779975ce17728b05f6a32}
+      \strng{authorbibnamehash}{615367a133b779975ce17728b05f6a32}
+      \strng{authornamehash}{615367a133b779975ce17728b05f6a32}
+      \strng{authorfullhash}{615367a133b779975ce17728b05f6a32}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Convolutional Neural Networks (CNNs) have recently achieved remarkably strong performance on the practically important task of sentence classification (Kim, 2014; Kalchbrenner et al., 2014; Johnson and Zhang, 2014). However, these models require practitioners to specify an exact model architecture and set accompanying hyperparameters, including the filter region size, regularization parameters, and so on. It is currently unknown how sensitive model performance is to changes in these configurations for the task of sentence classification. We thus conduct a sensitivity analysis of one-layer CNNs to explore the effect of architecture components on model performance; our aim is to distinguish between important and comparatively inconsequential design decisions for sentence classification. We focus on one-layer CNNs (to the exclusion of more complex models) due to their comparative simplicity and strong empirical performance, which makes it a modern standard baseline method akin to Support Vector Machine (SVMs) and logistic regression. We derive practical advice from our extensive empirical results for those interested in getting the most out of CNNs for sentence classification in real world settings.}
+      \field{eprinttype}{arXiv}
+      \field{title}{{A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification}}
+      \field{type}{techreport}
+      \verb{eprint}
+      \verb 1510.03820v4
+      \endverb
+      \verb{file}
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Zhang, Wallace - Unknown - A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classifica.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://nlp.stanford.edu/projects/
+      \endverb
+      \verb{url}
+      \verb http://nlp.stanford.edu/projects/
+      \endverb
+    \endentry
+    \entry{widlml}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=2823227040db0fb9953a68c781f0565c}{%
+           family={{Francois Chaubard}},
+           familyi={F\bibinitperiod},
+           given={Rohit},
+           giveni={R\bibinitperiod}}}%
+        {{hash=769cda2e6c89ce1142647f575d271fcb}{%
+           family={Mundra},
+           familyi={M\bibinitperiod},
+           given={Richard\bibnamedelima Socher},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c20057159afdd8aec0393f6e86c0710b}
+      \strng{fullhash}{c20057159afdd8aec0393f6e86c0710b}
+      \strng{bibnamehash}{c20057159afdd8aec0393f6e86c0710b}
+      \strng{authorbibnamehash}{c20057159afdd8aec0393f6e86c0710b}
+      \strng{authornamehash}{c20057159afdd8aec0393f6e86c0710b}
+      \strng{authorfullhash}{c20057159afdd8aec0393f6e86c0710b}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Understanding Convolutional Neural Networks for NLP – WildML}}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
+      \endverb
+      \verb{url}
+      \verb http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
       \endverb
     \endentry
     \entry{Chakrabortya}{report}{}
@@ -789,8 +901,8 @@
       \strng{authorbibnamehash}{a87ad7e2cb48cb880d3a44cd1a867d53}
       \strng{authornamehash}{68658d1e359f50a29e3d1dc0800b5a38}
       \strng{authorfullhash}{a87ad7e2cb48cb880d3a44cd1a867d53}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Most of the online news media outlets rely heavily on the revenues generated from the clicks made by their readers, and due to the presence of numerous such outlets, they need to compete with each other for reader attention. To attract the readers to click on an article and subsequently visit the media site, the outlets often come up with catchy headlines accompanying the article links, which lure the readers to click on the link. Such headlines are known as Clickbaits. While these baits may trick the readers into clicking, in the long-run, clickbaits usually don't live up to the expectation of the readers, and leave them disappointed. In this work, we attempt to automatically detect clickbaits and then build a browser extension which warns the readers of different media sites about the possibility of being baited by such headlines. The extension also offers each reader an option to block clickbaits she doesn't want to see. Then, using such reader choices, the extension automatically blocks similar clickbaits during her future visits. We run extensive offline and online experiments across multiple media sites and find that the proposed clickbait detection and the personalized blocking approaches perform very well achieving 93{\%} accuracy in detecting and 89{\%} accuracy in blocking clickbaits.}
@@ -833,8 +945,8 @@
       \strng{authorbibnamehash}{5576f353e5bff3f6073d7fb342634f89}
       \strng{authornamehash}{52c27533ca68fed91d1d9e41ba2e1ec9}
       \strng{authorfullhash}{5576f353e5bff3f6073d7fb342634f89}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Clickbait has grown to become a nuisance to social media users and social media operators alike. Malicious content publishers misuse social media to manipulate as many users as possible to visit their websites using clickbait messages. Machine learning technology may help to handle this problem, giving rise to automatic clickbait detection. To accelerate progress in this direction, we organized the Clickbait Challenge 2017, a shared task inviting the submission of clickbait detectors for a comparative evaluation. A total of 13 detectors have been submitted, achieving significant improvements over the previous state of the art in terms of detection performance. Also, many of the submitted approaches have been published open source, rendering them reproducible, and a good starting point for newcomers. While the 2017 challenge has passed, we maintain the evaluation system and answer to new registrations in support of the ongoing research on better clickbait detectors.}
@@ -928,7 +1040,7 @@
       \verb 10.1109/NGCT.2016.7877426
       \endverb
       \verb{file}
-      \verb :Users/ugurtigu/Desktop/07877426.pdf:pdf
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Agrawal - 2017 - Clickbait detection using deep learning.pdf:pdf
       \endverb
       \keyw{Clickbait,Convolutional neural networks,Deep learning}
     \endentry
@@ -1037,8 +1149,8 @@
       \strng{authorbibnamehash}{beae80dbb74d9cf7d185717281312cfd}
       \strng{authornamehash}{4a5f22eae5e09e34233d29237f1701e3}
       \strng{authorfullhash}{beae80dbb74d9cf7d185717281312cfd}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2019 3rd International Conference on Trends in Electronics and Informatics (ICOEI)}
@@ -1047,7 +1159,7 @@
       \field{pages}{1318\bibrangedash 1321}
       \range{pages}{4}
       \verb{file}
-      \verb :Users/ugurtigu/Desktop/08862781.pdf:pdf
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Chawda et al. - 2019 - A Novel Approach for Clickbait Detection.pdf:pdf
       \endverb
     \endentry
     \entry{Zannettou2018}{article}{}
@@ -1082,8 +1194,8 @@
       \strng{authorbibnamehash}{5f99ef5ce0af49b39491849781e10d3b}
       \strng{authornamehash}{335a0d5bcde6e714e530affc5dfc4176}
       \strng{authorfullhash}{5f99ef5ce0af49b39491849781e10d3b}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The use of deceptive techniques in user-generated video portals is ubiquitous. Unscrupulous uploaders deliberately mislabel video descriptors aiming at increasing their views and subsequently their ad revenue. This problem, usually referred to as 'clickbait,' may severely undermine user experience. In this work, we study the clickbait problem on YouTube by collecting metadata for 206k videos. To address it, we devise a deep learning model based on variational autoencoders that supports the diverse modalities of data that videos include. The proposed model relies on a limited amount of manually labeled data to classify a large corpus of unlabeled data. Our evaluation indicates that the proposed model offers improved performance when compared to other conventional models. Our analysis of the collected data indicates that YouTube recommendation engine does not take into account clickbait. Thus, it is susceptible to recommending misleading videos to users.}
@@ -1097,7 +1209,7 @@
       \verb 10.1109/SPW.2018.00018
       \endverb
       \verb{file}
-      \verb :Users/ugurtigu/Desktop/08424634.pdf:pdf
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Zannettou et al. - 2018 - The good, the bad and the bait Detecting and characterizing clickbait on youtube.pdf:pdf
       \endverb
       \keyw{Clickbait,Deep learning,YouTube}
     \endentry
@@ -1303,8 +1415,8 @@
       \strng{authorbibnamehash}{db4c3657618a41fc0777ec9d7e86512c}
       \strng{authornamehash}{db4c3657618a41fc0777ec9d7e86512c}
       \strng{authorfullhash}{db4c3657618a41fc0777ec9d7e86512c}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Clickbaits are articles with misleading titles, exaggerating the content on the landing page. Their goal is to entice users to click on the title in order to monetize the landing page. The content on the landing page is usually of low quality. Their presence in user homepage stream of news aggregator sites (e.g., Yahoo news, Google news) may adversely impact user experience. Hence, it is important to identify and demote or block them on homepages. In this paper, we present a machine-learning model to detect clickbaits. We use a variety of features and show that the degree of informality of a web-page (as measured by different metrics) is a strong indicator of it being a clickbait. We conduct extensive experiments to evaluate our approach and analyze properties of clickbait and non-clickbait articles. Our model achieves high performance (74.9{\%} F-1 score) in predicting clickbaits.}
@@ -1315,7 +1427,7 @@
       \field{pages}{94\bibrangedash 100}
       \range{pages}{7}
       \verb{file}
-      \verb :Users/ugurtigu/Desktop/Ref1.4.pdf:pdf
+      \verb :Users/ugurtigu/Library/Application Support/Mendeley Desktop/Downloaded/Biyani, Tsioutsiouliklis, Blackmer - 2016 - Detecting Clickbaits in News Streams Using Article Informality.pdf:pdf
       \endverb
       \keyw{Technical Papers: Artificial Intelligence and the}
     \endentry

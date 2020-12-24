@@ -1,19 +1,19 @@
 [0] Config.pm:312> INFO - This is Biber 2.15
 [0] Config.pm:315> INFO - Logfile is 'thesis.blg'
-[101] biber-darwin:330> INFO - === Wed Dec 23, 2020, 10:31:51
-[128] Biber.pm:415> INFO - Reading 'thesis.bcf'
-[251] Biber.pm:952> INFO - Found 36 citekeys in bib section 0
-[267] Biber.pm:4334> INFO - Processing section 0
-[282] Biber.pm:4523> INFO - Looking for bibtex format file 'library.bib' for section 0
-[296] bibtex.pm:1682> INFO - LaTeX decoding ...
-[451] bibtex.pm:1494> INFO - Found BibTeX data source 'library.bib'
-[555] Utils.pm:395> WARN - ISBN '3463353563306' in entry 'Patterson2019' is invalid - run biber with '--validate_datamodel' for details.
-[559] Utils.pm:395> WARN - month field 'sep' in entry 'Ruder2016' is not an integer - this will probably not sort properly.
-[682] Utils.pm:395> WARN - BibTeX subsystem: /var/folders/s7/6jx2525j5wbdd8g9_b06hy100000gn/T/biber_tmp_Cbsm/7f56027f9015dc497dc7645faffbdd71_16331.utf8, line 6, warning: 176 characters of junk seen at toplevel
-[719] UCollate.pm:68> INFO - Overriding locale 'de_DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[719] UCollate.pm:68> INFO - Overriding locale 'de_DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[719] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de_DE'
-[720] Biber.pm:4168> INFO - No sort tailoring available for locale 'de_DE'
-[750] bbl.pm:651> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[774] bbl.pm:754> INFO - Output to thesis.bbl
-[774] Biber.pm:128> INFO - WARNINGS: 3
+[90] biber-darwin:330> INFO - === Thu Dec 24, 2020, 16:47:56
+[114] Biber.pm:415> INFO - Reading 'thesis.bcf'
+[234] Biber.pm:952> INFO - Found 38 citekeys in bib section 0
+[249] Biber.pm:4334> INFO - Processing section 0
+[263] Biber.pm:4523> INFO - Looking for bibtex format file 'library.bib' for section 0
+[277] bibtex.pm:1682> INFO - LaTeX decoding ...
+[434] bibtex.pm:1494> INFO - Found BibTeX data source 'library.bib'
+[532] Utils.pm:395> WARN - month field 'sep' in entry 'Ruder2016' is not an integer - this will probably not sort properly.
+[538] Utils.pm:395> WARN - ISBN '3463353563306' in entry 'Patterson2019' is invalid - run biber with '--validate_datamodel' for details.
+[689] Utils.pm:395> WARN - BibTeX subsystem: /var/folders/s7/6jx2525j5wbdd8g9_b06hy100000gn/T/biber_tmp_6euD/7f56027f9015dc497dc7645faffbdd71_7105.utf8, line 6, warning: 176 characters of junk seen at toplevel
+[729] UCollate.pm:68> INFO - Overriding locale 'de_DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[729] UCollate.pm:68> INFO - Overriding locale 'de_DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[729] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de_DE'
+[729] Biber.pm:4168> INFO - No sort tailoring available for locale 'de_DE'
+[766] bbl.pm:651> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[794] bbl.pm:754> INFO - Output to thesis.bbl
+[794] Biber.pm:128> INFO - WARNINGS: 3

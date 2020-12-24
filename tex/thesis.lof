@@ -8,43 +8,45 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Das mehrschichtige Perzeptron}}{6}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Das mehrschichtige Perzeptron}}{5}{figure.caption.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Darstellung der Sigmoid-Aktivierungsfunktion}}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Darstellung der Sigmoid-Aktivierungsfunktion}}{7}{figure.caption.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Darstellung der Tanh-Aktivierungsfunktion}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Darstellung der Tanh-Aktivierungsfunktion}}{8}{figure.caption.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Darstellung der ReLu-Aktivierungsfunktion}}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Darstellung der ReLu-Aktivierungsfunktion}}{9}{figure.caption.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Der Gradientenabstieg}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Der Gradientenabstieg}}{10}{figure.caption.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Einfluss der Lernrate auf den Verlust}}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Die Vorwärts- und Rückwärtsschritte im Backpropagation}}{12}{figure.caption.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Vergleich der Unteranpassung mit der Überanpassung}}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Einfluss der Lernrate auf den Verlust}}{13}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Basis-Netzwerks und Ensemble im Vergleich}}{16}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Vergleich der Unteranpassung mit der Überanpassung}}{14}{figure.caption.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Darstellung der Kreuzentropie am beispiel eines Neurons}}{20}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Basis-Netzwerks und Ensemble im Vergleich}}{16}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Vergleich eines NN mit einem CNN}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Darstellung der Kreuzentropie am beispiel eines Neurons}}{19}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Die Faltung in einem CNN}}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Vergleich eines NN mit einem CNN}}{20}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Max-Pooling}}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Die Faltung in einem CNN}}{21}{figure.caption.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.13}{\ignorespaces CNN in der Textverarbeitung}}{26}{figure.caption.19}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces One-Hot-Codierung als Eingabematrix}}{28}{figure.caption.20}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Worteinbettungen erzeugen Analogien zwischen Wörtern}}{29}{figure.caption.21}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Vergleich zwischen CBOW und Skip-Gram Architektur}}{31}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Max-Pooling}}{23}{figure.caption.19}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Clustering von Überschriften mit t-SNE}}{37}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces One-Hot-Codierung als Eingabematrix}}{26}{figure.caption.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Worteinbettungen erzeugen Analogien zwischen Wörtern}}{27}{figure.caption.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Vergleich zwischen CBOW und Skip-Gram Architektur}}{28}{figure.caption.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces CNN in der Textverarbeitung}}{32}{figure.caption.23}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Clustering von Überschriften mit t-SNE}}{35}{figure.caption.24}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

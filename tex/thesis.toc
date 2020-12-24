@@ -10,88 +10,90 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Einleitung}{3}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Das Perzeptron}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Überwachtes Lernen}{4}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Bias}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Das Perzeptron}{4}{section.2.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Mehrschichtiges Perzeptron}{5}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Sigmoid-Neuron}{7}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Sigmoid-Neuron}{5}{section.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Aktivierungsfunktionen}{7}{section.2.6}%
+\contentsline {section}{\numberline {2.6}Aktivierungsfunktionen}{6}{section.2.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.1}Sigmoid}{8}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.1}Sigmoid}{6}{subsection.2.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.2}Tanh}{9}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.2}Tanh}{7}{subsection.2.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.3}ReLu}{9}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.3}ReLu}{8}{subsection.2.6.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.4}softmax}{10}{subsection.2.6.4}%
+\contentsline {subsection}{\numberline {2.6.4}softmax}{9}{subsection.2.6.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Optimierungsalgorithmen}{11}{section.2.7}%
+\contentsline {section}{\numberline {2.7}Optimierungsalgorithmen}{9}{section.2.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.1}Batch Gradientenabstiegsverfahren}{12}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.1}Gradientenverfahren}{10}{subsection.2.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.2}Stochastische Gradientenabstiegsverfahren}{12}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.2}Batch Gradientenabstiegsverfahren}{10}{subsection.2.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.8}Lernrate im Deep Learning}{13}{section.2.8}%
+\contentsline {subsection}{\numberline {2.7.3}Stochastische Gradientenabstiegsverfahren}{11}{subsection.2.7.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.9}Unteranpassung und Überanpassung}{14}{section.2.9}%
+\contentsline {section}{\numberline {2.8}Backpropagation}{11}{section.2.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.10}Regularisierung}{15}{section.2.10}%
+\contentsline {section}{\numberline {2.9}Lernrate im Deep Learning}{13}{section.2.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.10.1}Early Stopping}{15}{subsection.2.10.1}%
+\contentsline {section}{\numberline {2.10}Unteranpassung und Überanpassung}{13}{section.2.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.10.2}Dropout}{16}{subsection.2.10.2}%
+\contentsline {section}{\numberline {2.11}Regularisierung}{14}{section.2.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.10.3}L1 und L2}{17}{subsection.2.10.3}%
+\contentsline {subsection}{\numberline {2.11.1}Early Stopping}{15}{subsection.2.11.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.11}Verlustfunktion und Kreuzentropie}{17}{section.2.11}%
+\contentsline {subsection}{\numberline {2.11.2}Dropout}{15}{subsection.2.11.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.11.1}Verlustfunktionen}{17}{subsection.2.11.1}%
+\contentsline {subsection}{\numberline {2.11.3}L1 und L2}{16}{subsection.2.11.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.11.2}Kreuzentropie}{18}{subsection.2.11.2}%
+\contentsline {section}{\numberline {2.12}Verlustfunktion und Kreuzentropie}{17}{section.2.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.12}Convolutional Neural Network}{20}{section.2.12}%
+\contentsline {subsection}{\numberline {2.12.1}Verlustfunktionen}{17}{subsection.2.12.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.1}Architektur}{21}{subsection.2.12.1}%
+\contentsline {subsection}{\numberline {2.12.2}Kreuzentropie}{18}{subsection.2.12.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.2}Convolutional Layer}{22}{subsection.2.12.2}%
+\contentsline {section}{\numberline {2.13}Convolutional Neural Network}{19}{section.2.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Padding}{23}{subsubsection*.17}%
+\contentsline {subsection}{\numberline {2.13.1}Architektur}{20}{subsection.2.13.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.3}Pooling Layer}{23}{subsection.2.12.3}%
+\contentsline {subsection}{\numberline {2.13.2}Convolutional Layer}{21}{subsection.2.13.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.4}Vollständig verbundene Ebenen}{24}{subsection.2.12.4}%
+\contentsline {subsubsection}{\nonumberline Padding}{22}{subsubsection*.18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.5}CNN in der Textverarbeitung}{24}{subsection.2.12.5}%
+\contentsline {subsection}{\numberline {2.13.3}Pooling Layer}{22}{subsection.2.13.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Die Natürliche Sprache}{27}{chapter.3}%
+\contentsline {subsection}{\numberline {2.13.4}Vollständig verbundene Ebenen}{23}{subsection.2.13.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Textverarbeitung und Textnormalisierung}{27}{section.3.1}%
+\contentsline {chapter}{\numberline {3}Die Natürliche Sprache}{25}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}One-Hot-Codierung}{27}{section.3.2}%
+\contentsline {section}{\numberline {3.1}Wie können Deep Learning Modelle die Natürliche Sprache lernen?}{25}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Worteinbettungen}{29}{section.3.3}%
+\contentsline {section}{\numberline {3.2}Worteinbettungen}{27}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Word2Vec mit der Skip-Gram Architektur}{30}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.2.1}Word2Vec mit der Skip-Gram Architektur}{27}{subsection.3.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Verwandte Arbeiten}{35}{chapter.4}%
+\contentsline {subsection}{\numberline {3.2.2}CNN in der Textverarbeitung}{30}{subsection.3.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Einleitung}{35}{section.4.1}%
+\contentsline {chapter}{\numberline {4}Verwandte Arbeiten}{33}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Analyse der Literatur}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.1}Einleitung}{33}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Schluss}{37}{section.4.3}%
+\contentsline {section}{\numberline {4.2}Analyse der Literatur}{33}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vii}{chapter*.24}%
+\contentsline {section}{\numberline {4.3}Schluss}{35}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Tabellenverzeichnis}{ix}{section*.25}%
+\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vii}{chapter*.25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abbildungsverzeichnis}{xi}{section*.27}%
+\contentsline {chapter}{Tabellenverzeichnis}{ix}{section*.26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Quellcodeverzeichnis}{xiii}{section*.29}%
+\contentsline {chapter}{Abbildungsverzeichnis}{xi}{section*.28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{xv}{chapter*.31}%
+\contentsline {chapter}{Quellcodeverzeichnis}{xiii}{section*.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{xv}{chapter*.32}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
