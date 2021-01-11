@@ -36,17 +36,29 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces One-Hot-Codierung als Eingabematrix}}{26}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces One-Hot-Codierung als Eingabematrix}}{28}{figure.caption.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Worteinbettungen erzeugen Analogien zwischen Wörtern}}{27}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Worteinbettungen erzeugen Analogien zwischen Wörtern}}{29}{figure.caption.22}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Vergleich zwischen CBOW und Skip-Gram Architektur}}{28}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Vergleich zwischen CBOW und Skip-Gram Architektur}}{30}{figure.caption.23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces CNN in der Textverarbeitung}}{32}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces CNN in der Textverarbeitung}}{34}{figure.caption.24}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Clustering von Überschriften mit t-SNE}}{35}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Die Kernformen des Clickbaits}}{36}{figure.caption.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Clustering von Überschriften mit t-SNE}}{39}{figure.caption.26}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Darstellung der Konzeption}}{41}{figure.caption.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Vergleich der Wortlängen der Rohdaten}}{46}{figure.caption.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Word Cloud Analyse für die Clickbaits Schlagzeilen}}{49}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Word Cloud Analyse für die Wikinews Schlagzeilen}}{49}{figure.caption.33}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

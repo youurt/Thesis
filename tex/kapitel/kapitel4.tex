@@ -1,12 +1,30 @@
 
-\chapter{Verwandte Arbeiten}% \chapter{Checkliste}
+\chapter{Clickbaits und die Klassifizierung von Clickbaits}% \chapter{Checkliste}
 
 
 \section{Einleitung}
 Clickbaits besitzen semantische und syntaktische Nuancen, auf die besonders vorgegangen werden muss. Dies geschieht in Form von analyse und vorverarbeitung der Titel. In diesem Abschnitt werden Ansätze aus der Literatur verglichen, die diese semantischen und syntaktischen Besonderheiten bearbeiten. In diesem Kapitel werden Ansätzte aus der Literatur vorgestellt, die die Aufgabe Clickbait Klassifizierung und die damit entstehenden Unteraufgaben wie das Sammeln von Daten, Einbetten der Wörter und schließlich entwickeln der Deep Learning Modelle haben.
 
 
-\section{Analyse der Literatur}
+
+\section{Was sind Clickbaits?}
+Was sich hinter einer Schlagzeile, einem Titel verbirgt ist ohne weiteres nicht ersichtlich. Die meisten Menschen nehmen heutzutage Ihre Nachrichten über soziale Medien auf. Auf sozialen Medien werden meistens nur die Schlagzeilen gezeigt und wenn der Nutzer einen entsprechenden Eintrag interessant oder lesenswert findet, klickt er auf diesen Link. Das Wort Clickbait stammt aus den beiden Wörtern \enquote{Klick} und \enquote{Köder}, es ist also eine Falle. Viele Medienunternehmen, teilweise auch große, nutzen diese Falle um mehr Klicks zu generieren. Das Problem dabei ist es oftmals, dass die Nutzer durch die \enquote{Spannung} oder \enquote{Frage} in der Schlagzeile eine Erwartung haben, die nicht immer oder nur teilweise erfüllt wird. In der Studie von \cite*{Main} wurden ca. 1,6 Mio. Facebook-Posts untersucht und es wurde festgestellt, dass 25 bis 60\% der Fälle Clickbaits-Posts waren, je nach Medienunternehmen und Thema.
+
+Es gibt keine eindeutige Definition für Clickbaits. Clickbaits weisen unterschiedliche Formen. Nach \cite*{Biyani2016} sind Clickbaits, als eine Praxis um Klicks zu generieren, durch eine attraktive Überschrift, wessen Inhalt die Erwartungen nur teilweise oder gar nicht erfüllt. Clickbaits kann also eine Täuschung oder Trick der Medien betrachtet werden. Eine andere Definition \cite*{Potthasta} betrachtet das Thema Clickbait eher als Werbung für Onlineinhalte und die damit verbundene verbreitung oder viral gehen durch die sozialen Medien.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm]{kapitel4/clickbaits.png}
+    \caption[Die Kernformen des Clickbaits]{Die 4 Kernformen des Clickbaits in Anlehnung an \cite*[71]{Hrsg2020}}
+    \label{TSNE}
+\end{figure}
+
+In \cite*[70-71]{Hrsg2020} werden CLickbaits formal in 4 Kategorien aufgeteilt. Der Autor bezieht sich dabei auf 4 Quellen und teilt Clickbaits als Listicles \cite*{Vijgen2014}, Fragen \cite*{Lai2014}, Forward Referencing \cite*{Blom2015} und Thumbnails \cite*{Zannettou2018} auf. Diese 4 Kategorien betrachtet der Autor als Kernkategorien. Aus \cite*[71]{Hrsg2020} werden Clickbaits außerdem in weitere Gestaltungsformen wie etwa, dass sie \enquote{Übertreibungen} sein können also falsche Versprechen geben, oder irreführend sind und unklar sein können.Es wird außerdem auf die unangemessene und vulgäre Sprache und der Formatierung, wie etwa den übertriebenen Gebrauch von Großschreibung oder Satzzeichen aufmerksam gemacht. Der Autor macht auf \cite*[75-76]{Hrsg2020} deutlich, dass Clickbaits kein neu eingesetztes Stilmittel im Journalismus sei. Schließlich verwendet der Autor den Begriff \enquote{Neugier} beim Leser. Leser wollen oftmals über Themen wie Tod, Gewalt, Sex und Prominente \cite*{Tenenboim2015} unterhalten werden.
+
+
+
+
+\section{Wie werden Clickbaits klassifiziert?}
 Mit der Arbeit aus \cite*{Chakrabortya} wurde eine Browser-Erweiterung erstellt, welches Clickbaits erkennen soll. Es wurden umfangreiche Daten sowohl für Clickbaits als auch für Nicht-Clickbait-Kategorien gesammelt. Für die Nicht-Clickbaits-Kategorien wurden 18.513 Wikinews Artikeln gesammelt. Der Vorteil dieser Artikel ist, dass diese von einer Community erstellt werden und jeder Nachrichtenartikel vor der Veröffentlichung von der Community geprüft werden. Es gibt Stilrichtlinien, die eingehalten werden müssen. Um Clickbaits zu finden, haben die Autoren manuell aus Seiten wie \enquote{Buzzfeed} oder \enquote{Upworthy} ca. 8000 Titel gecrawlt. Um falsche Negative zu vermeiden (d. h. die Artikel in diesen Bereichen, bei denen es sich nicht um Clickbaits handelt), wurden sechs Freiwillige rekrutiert um die Überschriften zu labeln. Schließlich wurden 7500 Titel zu jeder der beiden Kategorien zugefügt.
 
 % \section{Analyse Textdaten}

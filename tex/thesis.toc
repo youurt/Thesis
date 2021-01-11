@@ -70,30 +70,52 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Die Natürliche Sprache}{25}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Wie können Deep Learning Modelle die Natürliche Sprache lernen?}{25}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Tokenisieren und Extrahieren durch Reguläre Ausdrücke}{25}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Worteinbettungen}{27}{section.3.2}%
+\contentsline {section}{\numberline {3.2}N-Gramm}{26}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Word2Vec mit der Skip-Gram Architektur}{27}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Part-of-Speech Tagging}{27}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}CNN in der Textverarbeitung}{30}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.4}Wie können Deep Learning Modelle die Natürliche Sprache lernen?}{27}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Verwandte Arbeiten}{33}{chapter.4}%
+\contentsline {section}{\numberline {3.5}Worteinbettungen}{28}{section.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Einleitung}{33}{section.4.1}%
+\contentsline {section}{\numberline {3.6}Word2Vec mit der Skip-Gram Architektur}{29}{section.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Analyse der Literatur}{33}{section.4.2}%
+\contentsline {section}{\numberline {3.7}CNN in der Textverarbeitung}{32}{section.3.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Schluss}{35}{section.4.3}%
+\contentsline {chapter}{\numberline {4}Clickbaits und die Klassifizierung von Clickbaits}{35}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vii}{chapter*.25}%
+\contentsline {section}{\numberline {4.1}Einleitung}{35}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Tabellenverzeichnis}{ix}{section*.26}%
+\contentsline {section}{\numberline {4.2}Was sind Clickbaits?}{35}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abbildungsverzeichnis}{xi}{section*.28}%
+\contentsline {section}{\numberline {4.3}Wie werden Clickbaits klassifiziert?}{37}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Quellcodeverzeichnis}{xiii}{section*.30}%
+\contentsline {section}{\numberline {4.4}Schluss}{39}{section.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{xv}{chapter*.32}%
+\contentsline {chapter}{\numberline {5}Implementierung}{41}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Konzeption und Methodik}{41}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Erstellung des Datensatzes}{43}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Erste Rohdatenbeschaffung durch Web Scraping}{43}{subsection.5.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Explorative Datenanalyse der Rohdaten}{45}{subsection.5.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.3}Labeln der Daten}{46}{subsection.5.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.4}Analyse der Daten}{48}{subsection.5.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{vii}{chapter*.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Tabellenverzeichnis}{ix}{section*.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abbildungsverzeichnis}{xi}{section*.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Quellcodeverzeichnis}{xiii}{section*.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{xv}{chapter*.41}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

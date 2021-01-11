@@ -6,6 +6,67 @@ Die \textbf{Verarbeitung natürlicher Sprache} (NLP) ist ein theoretisch motivie
 Der Umgang mit Textdaten ist problematisch, da unsere Computer, Skripte und Modelle für maschinelles Lernen, keinen Text im menschlichen Sinne lesen und verstehen können. Wörter können viele verschiedene Assoziationen aufrufen, diese sprachlichen Assoziationen sind das Ergebnis recht komplexer neurologischer Berechnungen. ML-Modelle sind haben dieses vorgefertigte Verständnis der Wortbedeutung nicht.
 
 
+% regular expressions
+% tokenize
+% part of speech tagging
+% ngrams
+
+\section{Tokenisieren und Extrahieren durch Reguläre Ausdrücke}
+Das Segmentieren eines Textes in seine Einheiten ist die erste Voraussetzung für dessen Weiterverarbeitung. In der Informatik können einzelne Wörter bzw. Tokens durch Leerzeichen voneinander abgetrennt werden.
+
+Reguläre Ausdrücke können die Tokenisierung verbessern. Reguläre Ausdrücke sind eine Sprache zur Angabe von Textsuchzeichenfolgen. Diese praktische Sprache wird in allen Computersprachen, Textverarbeitungs- und Textverarbeitungswerkzeugen verwendet. Formal ist ein regulärer Ausdruck eine algebraische Notation zur Charakterisierung einer Reihe von Zeichenfolgen. Sie sind besonders nützlich für die Suche in Texten, wenn ein Muster gesucht wird und ein Korpus von Texten durchsucht werden muss. Eine Suchfunktion für reguläre Ausdrücke durchsucht den Korpus und gibt alle Texte zurück, die dem Muster entsprechen. Der Korpus kann ein einzelnes Dokument oder eine Sammlung sein \cite*[3]{Jurafskya}. Reguläre Ausdrücke sind also bestimmte Regeln die Muster in einem Text erkennen lassen. Neben der Tokenisierung können sie auch für das extrahieren von Informationen aus Textsequenzen verwendet werden, siehe Listing~\ref{Regex}.
+
+
+\begin{lstlisting}[language=Python,caption=Das extrahieren der Zahlen aus einer URL]
+>>> import re
+>>> url = "http://www.example.com/this-2-me-4/123456-subj"
+>>> print(re.search("/([0-9]+)-", url).group(1))
+
+123456
+\end{lstlisting}\label{Regex}
+\section{N-Gramm}
+
+Sprachmodelle sind Wortfolgen zu denen Wahrscheinlichkeiten zugewiesen wurden. Das einfachste Sprachmodell ist das N-Gramm Sprachmodell. Es ist eine Folge von N Wörtern (ein 2-Gramm oder Bigramm ist eine Folge von zwei Wörtern usw.). N-Gramm wird meistens dafür verwendet, um das nächste Wort in aus einer Sequenz vorherzusagen \cite*[31]{Jurafskya}. Angenommen ein Korpus besteht aus folgenden 4 Sätzen:
+
+\begin{enumerate}
+    \item Es regnet in Berlin.
+    \item Es regnet in Köln und es ist 10 Grad.
+    \item Es regnet und hagelt in ganz Deutschland.
+    \item In Deutschland herrscht Regen.
+\end{enumerate}
+
+Um die Wahrscheinlichkeit \textit{P (regnet | in)} herauszufinden, wird die Anzahl des Wortes \enquote{regnet} im Korpus gezählt. Es wird gezählt, wie oft \enquote{regnet} und \enquote{in} zusammen vorkommen (2 Mal) und dieses wird dividiert durch 3, da \enquote{regnet} insgesamt 3 Mal im Korpus vorkommt. Das Bigramm \enquote{regnet in} hat also eine Wahrscheinlichkeit von 2/3.
+
+\section{Part-of-Speech Tagging}
+Part-of-Speech Tagging ist der Prozess des Zuweisens einer Tags zu jedem Wort in einem Eingabetext. Die Eingabe in einen Kennzeichnungsalgorithmus ist eine Folge von tokenisierten Wörtern und einem Tag-Satz, und die Ausgabe ist eine Folge von Tags, eines pro Token \cite*[148]{Jurafskya}. Je nach Sprache gibt es verschiedene Tagger, für das Deutsche gibt es das Stuttgart-Tübingen-Tagset\cite*{tagger}, einige Tags können aus der Tabelle~\ref{STTS} entnommen werden. Die Tagger wurden ursprünglich manuell erfasst und in heutiger Zeit durch das Maschinelle Lernen automatisiert.
+
+
+
+\begin{table}[h]
+    \caption{Beispiele aus dem Stuttgart-Tübingen-Tagset}
+    \label{STTS}
+    \renewcommand{\arraystretch}{1.2}
+    \centering
+    \sffamily
+    \begin{footnotesize}
+        \begin{tabular}{l l l}
+            \toprule
+            \textbf{POS} & \textbf{Beschreibung}                  & \textbf{Beispiel}                                  \\
+            \midrule
+            ADJA         & attributives Adjektiv                  & das \textit{große} Haus                            \\
+            ADJD         & adverbiales oder prädikatives Adjektiv & er fährt \textit{schnell}, er ist \textit{schnell} \\
+            ADV          & Adverb                                 & \textit{schon}, \textit{bald}, doch                \\
+            NE           & Eigennamen                             & \textit{Hans}, \textit{Hamburg}, \textit{HSV}      \\
+            NN           & normales Nomen                         & \textit{Tisch}, \textit{Herr}, das \textit{Reisen} \\
+            VVFIN        & finites Verb, voll                     & du \textit{gehst}, wir \textit{kommen} an          \\
+            \bottomrule
+        \end{tabular}
+    \end{footnotesize}
+    \rmfamily
+\end{table}
+
+
+
 
 \section{Wie können Deep Learning Modelle die Natürliche Sprache lernen?}
 
@@ -39,7 +100,7 @@ Bei der \textit{One-Hot-Codierung} sind die Wörter \enquote{gut} und \enquote{g
 
 
 
-\subsection{Word2Vec mit der Skip-Gram Architektur}
+\section{Word2Vec mit der Skip-Gram Architektur}
 
 Wörter können als spärliche, lange Vektoren mit vielen Dimensionen dargestellt werden. Eine alternative Methode ist die Darstellung eines Wortes mit der Verwendung von \textit{kurzen Vektoren}, mit einer Länge von 50-1000 und einer \textit{großen dichte} (die meisten Werte sind nicht Null). Es stellt sich heraus, dass dichte Vektoren in jeder NLP-Aufgabe besser funktionieren als spärliche Vektoren. Erstens können dichte Vektoren erfolgreicher als Features in maschinellen Lernsystemen aufgenommen werden.
 
@@ -89,7 +150,7 @@ Das Ziel des Lernalgorithmus besteht darin, mittels gegebenen positiven und nega
 Die stochastische Gradientenabstieg kann verwendet werden, um dieses Ziel zu erreichen, indem die Parameter (die Einbettungen für jedes Zielwort $t$ und jedes Kontextwort oder \enquote{noise word} $c$ im Vokabular) iterativ modifiziert werden \cite*[114]{Jurafskya}.
 
 
-\subsection{CNN in der Textverarbeitung}
+\section{CNN in der Textverarbeitung}
 Anstelle von Bildpixeln können die Eingaben für die meisten NLP-Aufgaben Sätze oder Dokumente, als eine Matrix dargestellt werden. Jede Zeile der Matrix entspricht einem Token, normalerweise einem Wort, aber es kann sich auch um ein Zeichen handeln. Das heißt, jede Zeile ist ein Vektor, der ein Wort darstellt. Typischerweise sind diese Vektoren Worteinbettungen (niedrigdimensionale Darstellungen) wie word2vec oder GloVe, aber sie können auch One-Hot-Vektoren sein, die das Wort in ein Vokabular indizieren. Für einen 10-Wort-Satz unter Verwendung einer 100-dimensionalen Einbettung hätten wir eine 10 × 100-Matrix als Eingabe \cite*{Zhang}.
 
 In der Vision \enquote{gleiten} die Filter über lokale \enquote{pathces} eines Bildes, in NLP wird jedoch der Filter über die ganze Zeilen der Matrix (Wörter) gleiten. Daher entspricht die Breite der Filter normalerweise der Breite der Eingabematrix. Die Höhe oder Regionsgröße kann variieren, aber \enquote{Schiebefenster} mit jeweils mehr als 2-5 Wörtern sind typisch. Pixel, die nahe beieinander liegen, sind wahrscheinlich semantisch verwandt (Teil desselben Objekts), aber das Gleiche gilt nicht immer für Wörter. In vielen Sprachen können Teile von Phrasen durch mehrere andere Wörter getrennt werden. Der kompositorische Aspekt ist ebenfalls nicht offensichtlich. Es ist klar, dass Wörter in gewisser Weise zusammengesetzt sind, wie ein Adjektiv, das ein Substantiv modifiziert, aber wie genau dies funktioniert, was Darstellungen auf höherer Ebene tatsächlich \enquote{bedeuten}, ist nicht so offensichtlich wie im Fall von Computer Vision. Angesichts all dessen scheinen CNNs nicht gut für NLP-Aufgaben geeignet zu sein. Wiederkehrende neuronale Netze (RNNs) sind intuitiver. Sie ähneln der Art und Weise, wie wir Sprache verarbeiten (oder zumindest wie wir denken, dass wir Sprache verarbeiten). Lesen nacheinander von links nach rechts. Glücklicherweise bedeutet dies nicht, dass CNNs nicht funktionieren. Alle Modelle sind falsch, aber einige sind nützlich. Es stellt sich heraus, dass CNNs, die auf NLP-Probleme angewendet werden, recht gut funktionieren. Ein großes Argument für CNNs ist, dass sie schnell sind. Faltungen sind ein zentraler Bestandteil der Computergrafik und werden auf Hardwareebene auf GPUs implementiert. Mit einem großen Wortschatz kann das Berechnen schnell \enquote{teuer} werden. Faltungsfilter lernen automatisch gute Darstellungen, ohne das gesamte Vokabular darstellen zu müssen \cite*{widlml}.
